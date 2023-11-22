@@ -43,7 +43,7 @@
         android:layout_marginTop="@dimen/margin_top_body"
         android:layout_marginEnd="@dimen/margin_laterales_body"
         android:layout_marginStart="@dimen/margin_laterales_body"
-        app:cardCornerRadius="100dp">
+        app:cardCornerRadius="@dimen/dimen_radius_body">
         <Button
             android:id="@+id/btn_ileostomia_lateral"
             android:layout_width="match_parent"
@@ -66,7 +66,7 @@
         android:layout_marginTop="@dimen/margin_top_body"
         android:layout_marginEnd="@dimen/margin_laterales_body"
         android:layout_marginStart="@dimen/margin_laterales_body"
-        app:cardCornerRadius="100dp">
+        app:cardCornerRadius="@dimen/dimen_radius_body">
         <Button
             android:id="@+id/btn_colostomia_terminal"
             android:layout_width="match_parent"

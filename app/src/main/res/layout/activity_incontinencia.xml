@@ -30,7 +30,7 @@
         android:layout_marginTop="@dimen/margin_top_body"
         android:layout_marginEnd="@dimen/margin_laterales_body"
         android:layout_marginStart="@dimen/margin_laterales_body"
-        app:cardCornerRadius="100dp">
+        app:cardCornerRadius="@dimen/dimen_radius_body">
         <Button
             android:id="@+id/btn_informacion_del_proceso"
             android:layout_width="match_parent"
@@ -52,7 +52,7 @@
         android:layout_marginTop="@dimen/margin_top_body"
         android:layout_marginEnd="@dimen/margin_laterales_body"
         android:layout_marginStart="@dimen/margin_laterales_body"
-        app:cardCornerRadius="100dp">
+        app:cardCornerRadius="@dimen/dimen_radius_body">
         <Button
             android:id="@+id/btn_preoperatorio"
             android:layout_width="match_parent"
@@ -74,7 +74,7 @@
         android:layout_marginTop="@dimen/margin_top_body"
         android:layout_marginEnd="@dimen/margin_laterales_body"
         android:layout_marginStart="@dimen/margin_laterales_body"
-        app:cardCornerRadius="100dp">
+        app:cardCornerRadius="@dimen/dimen_radius_body">
         <Button
             android:id="@+id/btn_postoperatorio"
             android:layout_width="match_parent"

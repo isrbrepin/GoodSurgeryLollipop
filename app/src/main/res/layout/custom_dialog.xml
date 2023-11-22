@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/dialogTitle"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
@@ -24,20 +24,22 @@
 
     <TextView
         android:id="@+id/telefono"
+        android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/divider"
         android:layout_marginTop="8dp"
-        android:text="Teléfono: XXX XXX XXX"
+        android:text="@string/telefono"
         />
 
     <TextView
         android:id="@+id/dialogText"
+        android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/telefono"
         android:layout_marginTop="5dp"
-        android:text="Email: xxxxxxxxxxx@gmail.com"
+        android:text="@string/email"
         />
     <Button
         android:id="@+id/dismiss_button"

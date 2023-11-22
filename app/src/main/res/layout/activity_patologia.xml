@@ -31,7 +31,7 @@
       android:layout_marginTop="@dimen/margin_top_body"
       android:layout_marginEnd="@dimen/margin_laterales_body"
       android:layout_marginStart="@dimen/margin_laterales_body"
-      app:cardCornerRadius="100dp">
+      app:cardCornerRadius="@dimen/dimen_radius_body">
     <Button
         android:id="@+id/btn_cirugia_abdominal"
         android:layout_width="match_parent"
@@ -53,7 +53,7 @@
       android:layout_marginTop="@dimen/margin_top_body"
       android:layout_marginEnd="@dimen/margin_laterales_body"
       android:layout_marginStart="@dimen/margin_laterales_body"
-      app:cardCornerRadius="100dp">
+      app:cardCornerRadius="@dimen/dimen_radius_body">
     <Button
         android:id="@+id/btn_proctologia"
         android:layout_width="match_parent"
@@ -77,7 +77,7 @@
       android:layout_marginTop="@dimen/margin_top_body"
       android:layout_marginEnd="@dimen/margin_laterales_body"
       android:layout_marginStart="@dimen/margin_laterales_body"
-      app:cardCornerRadius="100dp">
+      app:cardCornerRadius="@dimen/dimen_radius_body">
     <Button
         android:id="@+id/btn_suelo_pelvico"
         android:layout_width="match_parent"

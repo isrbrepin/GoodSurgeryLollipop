@@ -7,4 +7,5 @@
     <dimen name="height_body_buttons_pequeños_dimen">90dp</dimen>
     <dimen name="dimen_titulo">50dp</dimen>
     <dimen name="dimen_subtitulo">50dp</dimen>
+    <dimen name="dimen_radius_body">100dp</dimen>
 </resources>
