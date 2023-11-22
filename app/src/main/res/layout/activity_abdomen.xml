@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="0dp"
+    android:layout_marginVertical="0dp"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <!-- Incluir el header reutilizable -->
+    <include layout="@layout/activity_header" />
+
+    <!-- Resto del contenido -->
+
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="match_parent"
+        android:gravity="top|center"
+        android:background="@drawable/pagactual2_drawable"
+        android:layout_height="50dp"
+        android:text="@string/text_patologia"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_abdomen"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/pagactual_drawable"
+        android:layout_height="50dp"
+        android:text="@string/text_abdominal"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_body_buttons_dimen"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_top_body"
+        android:layout_marginEnd="@dimen/margin_laterales_body"
+        android:layout_marginStart="@dimen/margin_laterales_body"
+        app:cardCornerRadius="100dp">
+    <Button
+        android:id="@+id/btn_polipos_colorrectales"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_body_buttons_dimen"
+        android:backgroundTint="@color/white"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/body_buttons_dimens"
+        android:text="@string/polipos_colorrectales"
+        android:textColor="@color/black"
+        />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_body_buttons_dimen"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_top_body"
+        android:layout_marginEnd="@dimen/margin_laterales_body"
+        android:layout_marginStart="@dimen/margin_laterales_body"
+        app:cardCornerRadius="100dp">
+        <Button
+            android:id="@+id/btn_reconstruccion_del_transito"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_body_buttons_dimen"
+            android:backgroundTint="@color/white"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/body_buttons_dimens"
+            android:text="@string/transito"
+            android:textColor="@color/black"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_body_buttons_dimen"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_top_body"
+        android:layout_marginEnd="@dimen/margin_laterales_body"
+        android:layout_marginStart="@dimen/margin_laterales_body"
+        app:cardCornerRadius="100dp">
+        <Button
+            android:id="@+id/btn_inflamatoria"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_body_buttons_dimen"
+            android:backgroundTint="@color/white"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/body_buttons_dimens"
+            android:text="@string/inflamatoria"
+            android:textColor="@color/black"
+            />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

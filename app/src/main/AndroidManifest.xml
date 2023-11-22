@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GoodSurgery"
+        tools:targetApi="31">
+        <activity
+            android:name=".screens.PrincipalActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.rectocele.preoperatorio.IngresoRectoceleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.rectocele.postoperatorio.PostoperatorioRectoceleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.prolapso.postoperatorio.PostoperatorioProlapsoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.prolapso.preoperatorio.PreoperatorioProlapsoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.incontinencia.preoperatorio.PreoperatorioIncontinenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.incontinencia.postoperatorio.PostoperatorioIncontinenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.hemorroides.postoperatorio.PostoperatorioHemorroidesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.hemorroides.preoperatorio.PreoperatorioHemorroidesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fisura.postoperatorio.PostoperatorioFisuraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fisura.preoperatorio.PreoperatorioFisuraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fistula.postoperatorio.PostoperatorioFistulaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fistula.preoperatorio.PreoperatorioFistulaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.postoperatorio.PostoperatorioReseccionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.preoperatorio.PreoperatorioReseccionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.recto.postoperatorio.PostoperatorioRectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.recto.preoperatorio.PreoperatorioRectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.postoperatorio.PostoperatorioIleostomaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.preoperatorio.PreoperatorioIleostomaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.postoperatorio.PostoperatorioEstomaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.preoperatorio.PreoperatorioEstomaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.colostomia.postoperatorio.PostoperatorioColostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.colostomia.preoperatorio.PreoperatorioColostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.colon.postoperatorio.PostoperatorioColonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.colon.preoperatorio.PreoperatorioColonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.rectocele.postoperatorio.AltaRectoceleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.rectocele.preoperatorio.PreoperatorioRectoceleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.rectocele.preoperatorio.PreparacionRectoceleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.rectocele.preoperatorio.HospitalRectoceleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.rectocele.preoperatorio.AnestesiaRectoceleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.rectocele.postoperatorio.OstomiaRectoceleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.prolapso.preoperatorio.PreparacionProlapsoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.prolapso.postoperatorio.OstomiaProlapsoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.prolapso.preoperatorio.IngresoProlapsoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.prolapso.preoperatorio.HospitalProlapsoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.prolapso.preoperatorio.AnestesiaProlapsoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.prolapso.postoperatorio.AltaProlapsoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.incontinencia.preoperatorio.PreparacionIncontinenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.incontinencia.postoperatorio.OstomiaIncontinenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.incontinencia.preoperatorio.IngresoIncontinenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.incontinencia.preoperatorio.HospitalIncontinenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.incontinencia.preoperatorio.AnestesiaIncontinenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.incontinencia.postoperatorio.AltaIncontinenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.hemorroides.preoperatorio.PreparacionHemorroidesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.hemorroides.postoperatorio.OstomiaHemorroidesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.hemorroides.preoperatorio.IngresoHemorroidesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.hemorroides.preoperatorio.HospitalHemorroidesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.hemorroides.preoperatorio.AnestesiaHemorroidesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.hemorroides.postoperatorio.AltaHemorroidesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fisura.preoperatorio.PreparacionFisuraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fisura.postoperatorio.OstomiaFisuraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fisura.preoperatorio.IngresoFisuraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fisura.preoperatorio.HospitalFisuraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fisura.preoperatorio.AnestesiaFisuraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fisura.postoperatorio.AltaFisuraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fistula.preoperatorio.PreparacionFistulaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fistula.postoperatorio.OstomiaFistulaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fistula.preoperatorio.IngresoFistulaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fistula.preoperatorio.HospitalFistulaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fistula.preoperatorio.AnestesiaFistulaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fistula.postoperatorio.AltaFistulaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.preoperatorio.PreparacionReseccionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.postoperatorio.OstomiaReseccionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.preoperatorio.IngresoReseccionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.preoperatorio.HospitalReseccionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.preoperatorio.AnestesiaReseccionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.postoperatorio.AltaReseccionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.recto.preoperatorio.PreparacionRectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.recto.postoperatorio.OstomiaRectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.recto.preoperatorio.IngresoRectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.recto.preoperatorio.HospitalRectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.recto.preoperatorio.AnestesiaRectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.recto.postoperatorio.AltaRectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.preoperatorio.PreparacionIleostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.postoperatorio.OstomiaIleostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.preoperatorio.IngresoIleostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.preoperatorio.HospitalIleostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.preoperatorio.AnestesiaIleostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.postoperatorio.AltaIleostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.preoperatorio.PreparacionEstomaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.postoperatorio.OstomiaEstomaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.preoperatorio.IngresoEstomaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.preoperatorio.HospitalEstomaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.preoperatorio.AnestesiaEstomaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.postoperatorio.AltaEstomaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.colostomia.preoperatorio.PreparacionColostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.colostomia.postoperatorio.OstomiaColostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.colostomia.preoperatorio.IngresoColostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.colostomia.preoperatorio.HospitalColostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.colostomia.preoperatorio.AnestesiaColostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.colostomia.postoperatorio.AltaColostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.colon.postoperatorio.OstomiaColonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.colon.postoperatorio.AltaColonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.colon.preoperatorio.IngresoColonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.colon.preoperatorio.PreparacionColonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.colon.preoperatorio.HospitalColonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.colon.preoperatorio.AnestesiaColonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.rectocele.InfoRectoceleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.rectocele.RectoceleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.prolapso.InfoProlapsoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.prolapso.ProlapsoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.incontinencia.InfoIncontinenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.incontinencia.IncontinenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.hemorroides.InfoHemorroidesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.hemorroides.HemorroidesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fisura.InfoFisuraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fisura.FisuraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fistula.InfoFistulaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.fistula.FistulaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.InfoReseccionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.ReseccionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.InfoEstomaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.EstomaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.InfoIleostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.IleostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.colostomia.InfoColostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.colostomia.ColostomiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.recto.InfoRectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.recto.RectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.colon.InfoColonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.colon.ColonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.InflamatoriaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.reconstruccion.TransitoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.AbdomenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.suelopelvico.SueloActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.proctologia.ProctologiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.CancerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.HeaderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.PatologiaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".screens.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

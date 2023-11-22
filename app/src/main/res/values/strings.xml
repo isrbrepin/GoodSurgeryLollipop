@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Goodsurgery</string>
+    <string name="text_logo_app">Logo_App</string>
+    <string name="text_help">Ayuda</string>
+    <string name="text_info_proceso">Información del proceso</string>
+    <string name="text_preoperatorio">Preoperatorio.\nAntes de la cirugía.</string>
+    <string name="text_preoperatorio2">Preoperatorio - Antes de la cirugía</string>
+    <string name="text_postoperatorio">Postoperatorio.\nTras la cirugía.</string>
+    <string name="text_postoperatorio2">Postoperatorio - Tras la cirugía</string>
+    <string name="text_cancer">Cáncer colorrectal</string>
+    <string name="text_proctologia">Elija su patología > Proctología</string>
+    <string name="text_suelo">Elija su patología > Suelo pélvico</string>
+    <string name="text_anestesia">Anestesia</string>
+    <string name="text_preparacion">¿Cómo me debo preparar?</string>
+    <string name="text_ingreso">El día del ingreso</string>
+    <string name="text_hospital">En el Hospital</string>
+    <string name="text_atras">Volver atrás</string>
+    <string name="text_info_colon">Información sobre colon</string>
+    <string name="text_info_recto">Información sobre recto</string>
+    <string name="text_alta">Al Alta</string>
+    <string name="text_ostomia">Ostomia</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dialog_start_game">Contacto</string>
+    <string name="start">Start\n</string>
+    <string name="cancel">end\n</string>
+    <string name="tittle_ayuda">Contacte con su médico</string>
+    <string name="text_info_contacto">Teléfono: XXX XXX XXX \nEmail: aaaaaaaaaaa@gmail.com</string>
+    <string name="text_cerrar">(Pulse fuera de la pantalla para cerrar)</string>
+    <string name="text_comenzar">Pulse aquí para comenzar</string>
+    <string name="text_tittle_instrucciones">Instrucciones de uso de la aplicación</string>
+    <string name="text_instrucciones">\n1. Pulse en “pulse aquí para comenzar”\n\n2. Una vez presione, seleccione el tipo de intervención/proceso/patología que le hayan explicado en la consulta\n\n3. Una vez dentro encontrará la informacion necesaria para el proceso, preoperatorio y postoperatorio\n\n4. ----------\n\n5. ----------\n\n6. ------------
+    </string>
+    <string name="text_patologia">Elija su patología</string>
+    <string name="text_abdominal">Elija su patología > Cirugía abdominal</string>
+    <string name="polipos_colorrectales">Polipos colorrectales</string>
+    <string name="reconstrucci_n_del_tr_nsito">Elija su patología > Cirugía de abdomen > Reconstrucción del tránsito</string>
+    <string name="enfermedad_inflamatoria_intestinal">Elija su patología > Cirugía abdominal > Enfermedad inflamatoria intestinal</string>
+    <string name="polipo_colon">Polipo colon</string>
+    <string name="polipo_recto">Polipo recto</string>
+    <string name="ilestomia_lateral">Cierre de ileostomia lateral</string>
+    <string name="cierre_de_colostomia_terminal">Cierre de colostomia terminal</string>
+    <string name="text_reseccion">Resección intestinal</string>
+    <string name="text_estoma">Creación de estoma</string>
+    <string name="hemorroides">Hemorroides</string>
+    <string name="fisura_anal">Fisura anal</string>
+    <string name="fistula_anal">Fistula anal</string>
+    <string name="incontinencia">Incontinencia fecal</string>
+    <string name="rectocele">Rectocele</string>
+    <string name="prolapso">Prolapso</string>
+    <string name="polipos"><![CDATA[Elija su patología > Cirugía abdominal > Polipos colorrectales]]></string>
+    <string name="transito">Reconstrucción del tránsito</string>
+    <string name="inflamatoria">Enfermedad inflamatoria intestinal</string>
+    <string name="procto">Proctología</string>
+    <string name="suelo">Suelo pélvico</string>
+    <string name="abdominal">Cirugía abdominal</string>
+    <string name="info_patologia">Información sobre la patología</string>
+    <string name="txt_ins1">1. Pulse en “pulse aquí para comenzar</string>
+    <string name="txt_ins2">2. Una vez presione, seleccione el tipo de intervención/proceso/patología que le hayan explicado en la consulta</string>
+    <string name="txt_ins3">3. Una vez dentro encontrará la informacion necesaria para el proceso, preoperatorio y postoperatorio</string>
+    <string name="txt_ins4">4. .............................................</string>
+    <string name="txt_ins5">5. .............................................</string>
+    <string name="txt_ins6">6. ..............................................</string>
+    <string name="salir">Salir</string>
+    <string name="portada">Portada</string>
+
+</resources>

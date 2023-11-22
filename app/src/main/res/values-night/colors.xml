@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_background">#ECFDE6</color>
+    <color name="background">#ECFDE6</color>
+    <color name="color_fondo_subtitulos">#268E97</color>
+    <color name="color_fondo_titulo">#00655C</color>
+</resources>
