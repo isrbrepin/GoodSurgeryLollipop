@@ -9,11 +9,47 @@ import android.view.WindowManager
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
+import com.us.goodsurgery.screens.patologias.suelopelvico.incontinencia.preoperatorio.AnestesiaIncontinenciaActivity
+import com.us.goodsurgery.screens.patologias.suelopelvico.incontinencia.preoperatorio.HospitalIncontinenciaActivity
+import com.us.goodsurgery.screens.patologias.suelopelvico.incontinencia.preoperatorio.IngresoIncontinenciaActivity
+import com.us.goodsurgery.screens.patologias.suelopelvico.incontinencia.preoperatorio.PreparacionIncontinenciaActivity
 
 class PreoperatorioProlapsoActivity : AppCompatActivity() {
+
+    private lateinit var btnAnestesia:Button
+    private lateinit var btnHospital:Button
+    private lateinit var btnIngreso:Button
+    private lateinit var btnPreparacion:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_preoperatorio_prolapso)
+
+        btnHospital = findViewById(R.id.btn_hospital)
+        btnHospital.setOnClickListener{
+            intent = Intent(this, HospitalProlapsoActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnAnestesia = findViewById(R.id.btn_anestesia)
+        btnAnestesia.setOnClickListener{
+            intent = Intent(this, AnestesiaProlapsoActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnIngreso = findViewById(R.id.btn_ingreso)
+        btnIngreso.setOnClickListener{
+            intent = Intent(this, IngresoProlapsoActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnPreparacion = findViewById(R.id.btn_preparacion)
+        btnPreparacion.setOnClickListener{
+            intent = Intent(this, PreparacionProlapsoActivity::class.java)
+            startActivity(intent)
+        }
+
+
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 
         btnOpenOverlay.setOnClickListener {

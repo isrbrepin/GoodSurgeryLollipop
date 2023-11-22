@@ -21,10 +21,38 @@ import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.CancerActi
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.reconstruccion.TransitoActivity
 
 class AbdomenActivity : AppCompatActivity() {
+
+    private lateinit var btnInflamatoria:Button
+    private lateinit var btnPolipos:Button
+    private lateinit var btnReconstruccion:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_abdomen)
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
+
+        // Lógica de los botones
+
+        btnInflamatoria = findViewById(R.id.btn_inflamatoria)
+        btnInflamatoria.setOnClickListener{
+            intent = Intent(this, InflamatoriaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnPolipos = findViewById(R.id.btn_polipos_colorrectales)
+        btnPolipos.setOnClickListener{
+            intent = Intent(this, CancerActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnReconstruccion = findViewById(R.id.btn_reconstruccion_del_transito)
+        btnReconstruccion.setOnClickListener{
+            intent = Intent(this, TransitoActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        //Lógica del header
 
         btnOpenOverlay.setOnClickListener {
             val dialogView = layoutInflater.inflate(R.layout.custom_dialog, null)

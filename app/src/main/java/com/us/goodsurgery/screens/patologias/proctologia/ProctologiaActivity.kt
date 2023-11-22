@@ -17,15 +17,42 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.PatologiaActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.InflamatoriaActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.CancerActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.reconstruccion.TransitoActivity
 import com.us.goodsurgery.screens.patologias.proctologia.fistula.FistulaActivity
 import com.us.goodsurgery.screens.patologias.proctologia.fisura.FisuraActivity
 import com.us.goodsurgery.screens.patologias.proctologia.hemorroides.HemorroidesActivity
 
 class ProctologiaActivity : AppCompatActivity() {
+
+    private lateinit var btnHemorroides:Button
+    private lateinit var btnFistula:Button
+    private lateinit var btnFisura:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_proctologia)
 
+        btnHemorroides = findViewById(R.id.btn_hemorroides)
+        btnHemorroides.setOnClickListener{
+            intent = Intent(this, HemorroidesActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnFistula = findViewById(R.id.btn_fistula_anal)
+        btnFistula.setOnClickListener{
+            intent = Intent(this, FistulaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnFisura = findViewById(R.id.btn_fisura_anal)
+        btnFisura.setOnClickListener{
+            intent = Intent(this, FisuraActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Lógica del header
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 
         btnOpenOverlay.setOnClickListener {

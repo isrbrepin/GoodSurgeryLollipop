@@ -17,16 +17,43 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.PatologiaActivity
+import com.us.goodsurgery.screens.patologias.proctologia.fistula.FistulaActivity
+import com.us.goodsurgery.screens.patologias.proctologia.fisura.FisuraActivity
+import com.us.goodsurgery.screens.patologias.proctologia.hemorroides.HemorroidesActivity
 import com.us.goodsurgery.screens.patologias.suelopelvico.incontinencia.IncontinenciaActivity
 import com.us.goodsurgery.screens.patologias.suelopelvico.prolapso.ProlapsoActivity
 import com.us.goodsurgery.screens.patologias.suelopelvico.rectocele.RectoceleActivity
 
 class SueloActivity : AppCompatActivity() {
+
+    private lateinit var btnIncontinencia:Button
+    private lateinit var btnRectocele:Button
+    private lateinit var btnProlapso:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_suelo)
 
+        //Lógica de los botones
+        btnIncontinencia = findViewById(R.id.btn_incontinencia_fecal)
+        btnIncontinencia.setOnClickListener{
+            intent = Intent(this, IncontinenciaActivity::class.java)
+            startActivity(intent)
+        }
 
+        btnRectocele = findViewById(R.id.btn_rectocele)
+        btnRectocele.setOnClickListener{
+            intent = Intent(this, RectoceleActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnProlapso = findViewById(R.id.btn_prolapso)
+        btnProlapso.setOnClickListener{
+            intent = Intent(this, ProlapsoActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Lógica del header
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 
         btnOpenOverlay.setOnClickListener {

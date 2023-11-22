@@ -22,9 +22,28 @@ import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.estom
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.reseccion.ReseccionActivity
 
 class InflamatoriaActivity : AppCompatActivity() {
+
+    private lateinit var btnEstoma:Button
+    private lateinit var btnReseccion:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inflamatoria)
+
+        btnEstoma = findViewById(R.id.btn_creacion_de_estoma)
+        btnEstoma.setOnClickListener{
+            intent = Intent(this, EstomaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnReseccion = findViewById(R.id.btn_reseccion_intestinal)
+        btnReseccion.setOnClickListener{
+            intent = Intent(this, ReseccionActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        //Lógica del header
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 
         btnOpenOverlay.setOnClickListener {

@@ -16,7 +16,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:background="@drawable/pagactual2_drawable"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/dimen_titulo"
         android:text="@string/prolapso"
         android:textAlignment="center"
         android:textSize="23sp"

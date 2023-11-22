@@ -9,11 +9,31 @@ import android.view.WindowManager
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.postoperatorio.AltaIleostomiaActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.postoperatorio.OstomiaIleostomiaActivity
 
 class PostoperatorioFistulaActivity : AppCompatActivity() {
+
+    private lateinit var btnAlta:Button
+    private lateinit var btnOstomia:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_postoperatorio_fistula)
+
+        btnAlta = findViewById(R.id.btn_al_alta)
+        btnAlta.setOnClickListener{
+            intent = Intent(this, AltaFistulaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnOstomia = findViewById(R.id.btn_ostomia)
+        btnOstomia.setOnClickListener{
+            intent = Intent(this, OstomiaFistulaActivity::class.java)
+            startActivity(intent)
+        }
+
+
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 
         btnOpenOverlay.setOnClickListener {

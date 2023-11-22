@@ -11,12 +11,38 @@ import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.colon.postoperatorio.PostoperatorioColonActivity
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.colon.preoperatorio.PreoperatorioColonActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.recto.InfoRectoActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.recto.postoperatorio.PostoperatorioRectoActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.recto.preoperatorio.PreoperatorioRectoActivity
 
 
 class ColonActivity : AppCompatActivity() {
+
+    private lateinit var btnInformacion:Button
+    private lateinit var btnPreoperatorio:Button
+    private lateinit var btnPostoperatorio:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_colon)
+
+        btnInformacion = findViewById(R.id.btn_informacion_del_proceso)
+        btnInformacion.setOnClickListener{
+            intent = Intent(this, InfoColonActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnPreoperatorio = findViewById(R.id.btn_preoperatorio)
+        btnPreoperatorio.setOnClickListener{
+            intent = Intent(this, PreoperatorioColonActivity::class.java)
+            startActivity(intent)
+        }
+        btnPostoperatorio = findViewById(R.id.btn_postoperatorio)
+        btnPostoperatorio.setOnClickListener{
+            intent = Intent(this, PostoperatorioColonActivity::class.java)
+            startActivity(intent)
+        }
+
 
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 

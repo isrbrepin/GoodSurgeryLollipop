@@ -13,9 +13,9 @@
     <TextView
         android:id="@+id/text_incontinencia"
         android:layout_width="match_parent"
-        android:gravity="top|center"
+        android:gravity="center"
         android:background="@drawable/pagactual2_drawable"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/dimen_titulo"
         android:text="@string/incontinencia"
         android:textSize="22sp"
         android:textColor="#FFFFFF"
@@ -24,7 +24,7 @@
     <TextView
         android:id="@+id/text_preoperatorio2"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/dimen_subtitulo"
         android:layout_gravity="center"
         android:background="@drawable/pagactual_drawable"
         android:gravity="center"

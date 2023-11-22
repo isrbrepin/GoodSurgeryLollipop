@@ -5,4 +5,6 @@
     <dimen name="margin_laterales_body">15dp</dimen>
     <dimen name="margin_top_body">20dp</dimen>
     <dimen name="height_body_buttons_pequeños_dimen">90dp</dimen>
+    <dimen name="dimen_titulo">50dp</dimen>
+    <dimen name="dimen_subtitulo">50dp</dimen>
 </resources>

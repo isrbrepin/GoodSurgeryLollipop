@@ -11,11 +11,36 @@ import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.estoma.postoperatorio.PostoperatorioEstomaActivity
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.estoma.preoperatorio.PreoperatorioEstomaActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.reseccion.ReseccionActivity
 
 class EstomaActivity : AppCompatActivity() {
+
+    private lateinit var btnInformacion:Button
+    private lateinit var btnPreoperatorio:Button
+    private lateinit var btnPostoperatorio:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_estoma)
+
+
+        btnInformacion = findViewById(R.id.btn_informacion_del_proceso)
+        btnInformacion.setOnClickListener{
+            intent = Intent(this, InfoEstomaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnPreoperatorio = findViewById(R.id.btn_preoperatorio)
+        btnPreoperatorio.setOnClickListener{
+            intent = Intent(this, PreoperatorioEstomaActivity::class.java)
+            startActivity(intent)
+        }
+        btnPostoperatorio = findViewById(R.id.btn_postoperatorio)
+        btnPostoperatorio.setOnClickListener{
+            intent = Intent(this, PostoperatorioEstomaActivity::class.java)
+            startActivity(intent)
+        }
+
 
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 

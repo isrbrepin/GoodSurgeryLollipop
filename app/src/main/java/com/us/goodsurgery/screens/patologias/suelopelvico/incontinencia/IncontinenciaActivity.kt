@@ -9,13 +9,39 @@ import android.view.WindowManager
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
+import com.us.goodsurgery.screens.patologias.proctologia.hemorroides.InfoHemorroidesActivity
+import com.us.goodsurgery.screens.patologias.proctologia.hemorroides.postoperatorio.PostoperatorioHemorroidesActivity
+import com.us.goodsurgery.screens.patologias.proctologia.hemorroides.preoperatorio.PreoperatorioHemorroidesActivity
 import com.us.goodsurgery.screens.patologias.suelopelvico.incontinencia.postoperatorio.PostoperatorioIncontinenciaActivity
 import com.us.goodsurgery.screens.patologias.suelopelvico.incontinencia.preoperatorio.PreoperatorioIncontinenciaActivity
 
 class IncontinenciaActivity : AppCompatActivity() {
+
+    private lateinit var btnInformacion:Button
+    private lateinit var btnPreoperatorio:Button
+    private lateinit var btnPostoperatorio:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_incontinencia)
+
+        btnInformacion = findViewById(R.id.btn_informacion_del_proceso)
+        btnInformacion.setOnClickListener{
+            intent = Intent(this, InfoIncontinenciaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnPreoperatorio = findViewById(R.id.btn_preoperatorio)
+        btnPreoperatorio.setOnClickListener{
+            intent = Intent(this, PreoperatorioIncontinenciaActivity::class.java)
+            startActivity(intent)
+        }
+        btnPostoperatorio = findViewById(R.id.btn_postoperatorio)
+        btnPostoperatorio.setOnClickListener{
+            intent = Intent(this, PostoperatorioIncontinenciaActivity::class.java)
+            startActivity(intent)
+        }
+
 
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 

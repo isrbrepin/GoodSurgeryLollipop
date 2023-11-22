@@ -12,9 +12,9 @@
     <TextView
         android:id="@+id/text_estoma"
         android:layout_width="match_parent"
-        android:gravity="top|center"
+        android:gravity="center"
         android:background="@drawable/pagactual2_drawable"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/dimen_titulo"
         android:text="@string/text_estoma"
         android:textSize="22sp"
         android:textColor="#FFFFFF"

@@ -18,13 +18,34 @@ import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.PatologiaActivity
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.AbdomenActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.colon.ColonActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.recto.RectoActivity
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.reconstruccion.colostomia.ColostomiaActivity
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.IleostomiaActivity
 
 class TransitoActivity : AppCompatActivity() {
+
+    private lateinit var btnColostomia:Button
+    private lateinit var btnIleostomia:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_transito)
+
+        //Lógica del boton
+        btnColostomia = findViewById(R.id.btn_colostomia_terminal)
+        btnColostomia.setOnClickListener{
+            intent = Intent(this, ColostomiaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnIleostomia = findViewById(R.id.btn_ileostomia_lateral)
+        btnIleostomia.setOnClickListener{
+            intent = Intent(this, IleostomiaActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Lógica del header
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 
         btnOpenOverlay.setOnClickListener {

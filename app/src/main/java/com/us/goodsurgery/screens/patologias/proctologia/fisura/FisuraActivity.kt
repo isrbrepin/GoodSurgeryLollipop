@@ -9,13 +9,39 @@ import android.view.WindowManager
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
+import com.us.goodsurgery.screens.patologias.proctologia.fistula.InfoFistulaActivity
+import com.us.goodsurgery.screens.patologias.proctologia.fistula.postoperatorio.PostoperatorioFistulaActivity
+import com.us.goodsurgery.screens.patologias.proctologia.fistula.preoperatorio.PreoperatorioFistulaActivity
 import com.us.goodsurgery.screens.patologias.proctologia.fisura.postoperatorio.PostoperatorioFisuraActivity
 import com.us.goodsurgery.screens.patologias.proctologia.fisura.preoperatorio.PreoperatorioFisuraActivity
 
 class FisuraActivity : AppCompatActivity() {
+
+    private lateinit var btnInformacion:Button
+    private lateinit var btnPreoperatorio:Button
+    private lateinit var btnPostoperatorio:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fisura)
+
+        btnInformacion = findViewById(R.id.btn_informacion_del_proceso)
+        btnInformacion.setOnClickListener{
+            intent = Intent(this, InfoFisuraActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnPreoperatorio = findViewById(R.id.btn_preoperatorio)
+        btnPreoperatorio.setOnClickListener{
+            intent = Intent(this, PreoperatorioFisuraActivity::class.java)
+            startActivity(intent)
+        }
+        btnPostoperatorio = findViewById(R.id.btn_postoperatorio)
+        btnPostoperatorio.setOnClickListener{
+            intent = Intent(this, PostoperatorioFisuraActivity::class.java)
+            startActivity(intent)
+        }
+
 
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 

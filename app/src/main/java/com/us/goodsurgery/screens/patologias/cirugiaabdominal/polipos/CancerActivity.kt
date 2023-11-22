@@ -18,14 +18,34 @@ import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.PatologiaActivity
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.AbdomenActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.estoma.EstomaActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.reseccion.ReseccionActivity
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.colon.ColonActivity
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.recto.RectoActivity
 
 class CancerActivity : AppCompatActivity() {
+
+    private lateinit var btnColon:Button
+    private lateinit var btnRecto:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cancer)
 
+        //Lógica del boton
+        btnColon = findViewById(R.id.btn_polipo_colon)
+        btnColon.setOnClickListener{
+            intent = Intent(this, ColonActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnRecto = findViewById(R.id.btn_polipo_recto)
+        btnRecto.setOnClickListener{
+            intent = Intent(this, RectoActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Lógica del header
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 
         btnOpenOverlay.setOnClickListener {
