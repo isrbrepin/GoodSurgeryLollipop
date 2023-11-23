@@ -7,6 +7,7 @@ import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.estoma.postoperatorio.AltaEstomaActivity
@@ -18,33 +19,20 @@ class PreoperatorioEstomaActivity : AppCompatActivity() {
     private lateinit var btnHospital:Button
     private lateinit var btnIngreso:Button
     private lateinit var btnPreparacion:Button
+    private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_preoperatorio_estoma)
 
-        btnHospital = findViewById(R.id.btn_hospital)
-        btnHospital.setOnClickListener{
-            intent = Intent(this, HospitalEstomaActivity::class.java)
-            startActivity(intent)
-        }
+        // Lógica de la Header
 
-        btnAnestesia = findViewById(R.id.btn_anestesia)
-        btnAnestesia.setOnClickListener{
-            intent = Intent(this, AnestesiaEstomaActivity::class.java)
-            startActivity(intent)
-        }
-
-        btnIngreso = findViewById(R.id.btn_ingreso)
-        btnIngreso.setOnClickListener{
-            intent = Intent(this, IngresoEstomaActivity::class.java)
-            startActivity(intent)
-        }
-
-        btnPreparacion = findViewById(R.id.btn_preparacion)
-        btnPreparacion.setOnClickListener{
-            intent = Intent(this, PreparacionEstomaActivity::class.java)
-            startActivity(intent)
+        btnVolverAtras = findViewById(R.id.btn_back)
+        btnVolverAtras.setOnClickListener {
+            // Manejar el clic de la flecha para ir a la pantalla anterior
+            onBackPressedDispatcher.onBackPressed()
+            // O puedes usar la función finish() para cerrar la actividad si es lo que necesitas
+            // finish()
         }
 
 
@@ -72,22 +60,33 @@ class PreoperatorioEstomaActivity : AppCompatActivity() {
 
             dialog.show()
         }
-    }
 
-    fun openAnestesiaActivity(view: View) {
-        val intent = Intent(this, AnestesiaEstomaActivity::class.java)
-        startActivity(intent)
-    }
-    fun openIngresoActivity(view: View) {
-        val intent = Intent(this, IngresoEstomaActivity::class.java)
-        startActivity(intent)
-    }
-    fun openPreparacionActivity(view: View) {
-        val intent = Intent(this, PreparacionEstomaActivity::class.java)
-        startActivity(intent)
-    }
-    fun openHospitalActivity(view: View) {
-        val intent = Intent(this, HospitalEstomaActivity::class.java)
-        startActivity(intent)
+
+        // Lógica de la navegación
+
+        btnHospital = findViewById(R.id.btn_hospital)
+        btnHospital.setOnClickListener{
+            intent = Intent(this, HospitalEstomaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnAnestesia = findViewById(R.id.btn_anestesia)
+        btnAnestesia.setOnClickListener{
+            intent = Intent(this, AnestesiaEstomaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnIngreso = findViewById(R.id.btn_ingreso)
+        btnIngreso.setOnClickListener{
+            intent = Intent(this, IngresoEstomaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnPreparacion = findViewById(R.id.btn_preparacion)
+        btnPreparacion.setOnClickListener{
+            intent = Intent(this, PreparacionEstomaActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

@@ -12,6 +12,7 @@ import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
@@ -25,34 +26,23 @@ class AbdomenActivity : AppCompatActivity() {
     private lateinit var btnInflamatoria:Button
     private lateinit var btnPolipos:Button
     private lateinit var btnReconstruccion:Button
+    private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_abdomen)
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 
-        // Lógica de los botones
+        // Lógica de la Header
 
-        btnInflamatoria = findViewById(R.id.btn_inflamatoria)
-        btnInflamatoria.setOnClickListener{
-            intent = Intent(this, InflamatoriaActivity::class.java)
-            startActivity(intent)
+        btnVolverAtras = findViewById(R.id.btn_back)
+        btnVolverAtras.setOnClickListener {
+            // Manejar el clic de la flecha para ir a la pantalla anterior
+            onBackPressedDispatcher.onBackPressed()
+            // O puedes usar la función finish() para cerrar la actividad si es lo que necesitas
+            // finish()
         }
 
-        btnPolipos = findViewById(R.id.btn_polipos_colorrectales)
-        btnPolipos.setOnClickListener{
-            intent = Intent(this, CancerActivity::class.java)
-            startActivity(intent)
-        }
-
-        btnReconstruccion = findViewById(R.id.btn_reconstruccion_del_transito)
-        btnReconstruccion.setOnClickListener{
-            intent = Intent(this, TransitoActivity::class.java)
-            startActivity(intent)
-        }
-
-
-        //Lógica del header
 
         btnOpenOverlay.setOnClickListener {
             val dialogView = layoutInflater.inflate(R.layout.custom_dialog, null)
@@ -78,6 +68,28 @@ class AbdomenActivity : AppCompatActivity() {
         }
 
 
+        // Lógica de navegación
+
+        btnInflamatoria = findViewById(R.id.btn_inflamatoria)
+        btnInflamatoria.setOnClickListener{
+            intent = Intent(this, InflamatoriaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnPolipos = findViewById(R.id.btn_polipos_colorrectales)
+        btnPolipos.setOnClickListener{
+            intent = Intent(this, CancerActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnReconstruccion = findViewById(R.id.btn_reconstruccion_del_transito)
+        btnReconstruccion.setOnClickListener{
+            intent = Intent(this, TransitoActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        // Lógica de los subtitulos
 
         val textInfo = findViewById<TextView>(R.id.text_abdomen)
         val fullText = getString(R.string.text_abdominal)
@@ -108,18 +120,5 @@ class AbdomenActivity : AppCompatActivity() {
         textInfo.text = spannableString
         textInfo.movementMethod = LinkMovementMethod.getInstance()
 
-
-    }
-    fun openCancerActivity(view: View) {
-        val intent = Intent(this, CancerActivity::class.java)
-        startActivity(intent)
-    }
-    fun openTransitoActivity(view: View) {
-        val intent = Intent(this, TransitoActivity::class.java)
-        startActivity(intent)
-    }
-    fun openInflamatoriaActivity(view: View) {
-        val intent = Intent(this, InflamatoriaActivity::class.java)
-        startActivity(intent)
     }
 }

@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <!-- Incluir el header reutilizable -->
-    <include layout="@layout/activity_header" />
+    <include layout="@layout/activity_header_con_atras" />
 
 
     <TextView

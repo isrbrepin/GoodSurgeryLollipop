@@ -12,6 +12,7 @@ import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -27,25 +28,23 @@ class TransitoActivity : AppCompatActivity() {
 
     private lateinit var btnColostomia:Button
     private lateinit var btnIleostomia:Button
+    private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_transito)
 
-        //Lógica del boton
-        btnColostomia = findViewById(R.id.btn_colostomia_terminal)
-        btnColostomia.setOnClickListener{
-            intent = Intent(this, ColostomiaActivity::class.java)
-            startActivity(intent)
+        // Lógica de la Header
+
+        btnVolverAtras = findViewById(R.id.btn_back)
+        btnVolverAtras.setOnClickListener {
+            // Manejar el clic de la flecha para ir a la pantalla anterior
+            onBackPressedDispatcher.onBackPressed()
+            // O puedes usar la función finish() para cerrar la actividad si es lo que necesitas
+            // finish()
         }
 
-        btnIleostomia = findViewById(R.id.btn_ileostomia_lateral)
-        btnIleostomia.setOnClickListener{
-            intent = Intent(this, IleostomiaActivity::class.java)
-            startActivity(intent)
-        }
 
-        // Lógica del header
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 
         btnOpenOverlay.setOnClickListener {
@@ -71,6 +70,21 @@ class TransitoActivity : AppCompatActivity() {
             dialog.show()
         }
 
+        //Lógica de la navegación
+        btnColostomia = findViewById(R.id.btn_colostomia_terminal)
+        btnColostomia.setOnClickListener{
+            intent = Intent(this, ColostomiaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnIleostomia = findViewById(R.id.btn_ileostomia_lateral)
+        btnIleostomia.setOnClickListener{
+            intent = Intent(this, IleostomiaActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        // Lógica de los subtitulos
 
         val textInfo = findViewById<TextView>(R.id.text_info)
         val fullText = getString(R.string.reconstrucci_n_del_tr_nsito)
@@ -114,19 +128,5 @@ class TransitoActivity : AppCompatActivity() {
         textInfo.text = spannableString
         textInfo.movementMethod = LinkMovementMethod.getInstance()
 
-    }
-
-    fun openColostomiaActivity(view: View) {
-        val intent = Intent(this, ColostomiaActivity::class.java)
-        startActivity(intent)
-        showToast("Patología escogida correctamente")
-    }
-    fun openIleostomiaActivity(view: View) {
-        val intent = Intent(this, IleostomiaActivity::class.java)
-        startActivity(intent)
-        showToast("Patología escogida correctamente")
-    }
-    private fun showToast(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }

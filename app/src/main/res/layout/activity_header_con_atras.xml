@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/HeaderLayout"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@drawable/header_drawable"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginStart="10dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/volver_atras"
+        android:scaleType="fitCenter"
+        android:src="@drawable/flecha_pequena_izquierda"
+        app:tint="#DCDCDC" />
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/logo_app"
+        android:contentDescription="@string/text_logo_app" />
+
+    <Button
+        android:id="@+id/btn_open_overlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|end|center"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#37F8E1"
+        android:text="@string/text_help"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:cornerRadius="10dp"
+        app:strokeColor="#108691"
+        android:clickable="true"
+        app:strokeWidth="2dp"
+        android:focusable="true" />
+</FrameLayout>

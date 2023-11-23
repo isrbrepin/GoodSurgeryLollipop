@@ -12,6 +12,7 @@ import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -27,25 +28,23 @@ class CancerActivity : AppCompatActivity() {
 
     private lateinit var btnColon:Button
     private lateinit var btnRecto:Button
+    private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cancer)
 
-        //Lógica del boton
-        btnColon = findViewById(R.id.btn_polipo_colon)
-        btnColon.setOnClickListener{
-            intent = Intent(this, ColonActivity::class.java)
-            startActivity(intent)
+        // Lógica de la Header
+
+        btnVolverAtras = findViewById(R.id.btn_back)
+        btnVolverAtras.setOnClickListener {
+            // Manejar el clic de la flecha para ir a la pantalla anterior
+            onBackPressedDispatcher.onBackPressed()
+            // O puedes usar la función finish() para cerrar la actividad si es lo que necesitas
+            // finish()
         }
 
-        btnRecto = findViewById(R.id.btn_polipo_recto)
-        btnRecto.setOnClickListener{
-            intent = Intent(this, RectoActivity::class.java)
-            startActivity(intent)
-        }
 
-        // Lógica del header
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 
         btnOpenOverlay.setOnClickListener {
@@ -70,6 +69,24 @@ class CancerActivity : AppCompatActivity() {
 
             dialog.show()
         }
+
+
+        //Lógica de navegación
+
+        btnColon = findViewById(R.id.btn_polipo_colon)
+        btnColon.setOnClickListener{
+            intent = Intent(this, ColonActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnRecto = findViewById(R.id.btn_polipo_recto)
+        btnRecto.setOnClickListener{
+            intent = Intent(this, RectoActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        // Lógica de los subtitulos
 
         val textInfo = findViewById<TextView>(R.id.text_info)
         val fullText = getString(R.string.polipos)
@@ -113,20 +130,5 @@ class CancerActivity : AppCompatActivity() {
         textInfo.text = spannableString
         textInfo.movementMethod = LinkMovementMethod.getInstance()
 
-    }
-
-    fun openColonActivity(view: View) {
-        val intent = Intent(this, ColonActivity::class.java)
-        startActivity(intent)
-        showToast("Patología escogida correctamente")
-    }
-
-    fun openRectoActivity(view: View) {
-        val intent = Intent(this, RectoActivity::class.java)
-        startActivity(intent)
-        showToast("Patología escogida correctamente")
-    }
-    private fun showToast(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }

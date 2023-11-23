@@ -5,13 +5,29 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 
 class AltaColostomiaActivity : AppCompatActivity() {
+
+    private lateinit var btnVolverAtras: ImageButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_alta_colostomia)
+
+        // Lógica de la Header
+
+        btnVolverAtras = findViewById(R.id.btn_back)
+        btnVolverAtras.setOnClickListener {
+            // Manejar el clic de la flecha para ir a la pantalla anterior
+            onBackPressedDispatcher.onBackPressed()
+            // O puedes usar la función finish() para cerrar la actividad si es lo que necesitas
+            // finish()
+        }
+
+
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 
         btnOpenOverlay.setOnClickListener {

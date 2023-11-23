@@ -7,6 +7,7 @@ import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.patologias.suelopelvico.incontinencia.postoperatorio.AltaIncontinenciaActivity
@@ -16,21 +17,20 @@ class PostoperatorioProlapsoActivity : AppCompatActivity() {
 
     private lateinit var btnAlta:Button
     private lateinit var btnOstomia:Button
+    private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_postoperatorio_prolapso)
 
-        btnAlta = findViewById(R.id.btn_al_alta)
-        btnAlta.setOnClickListener{
-            intent = Intent(this, AltaProlapsoActivity::class.java)
-            startActivity(intent)
-        }
+        // Lógica de la Header
 
-        btnOstomia = findViewById(R.id.btn_ostomia)
-        btnOstomia.setOnClickListener{
-            intent = Intent(this, OstomiaProlapsoActivity::class.java)
-            startActivity(intent)
+        btnVolverAtras = findViewById(R.id.btn_back)
+        btnVolverAtras.setOnClickListener {
+            // Manejar el clic de la flecha para ir a la pantalla anterior
+            onBackPressedDispatcher.onBackPressed()
+            // O puedes usar la función finish() para cerrar la actividad si es lo que necesitas
+            // finish()
         }
 
 
@@ -58,14 +58,20 @@ class PostoperatorioProlapsoActivity : AppCompatActivity() {
 
             dialog.show()
         }
-    }
 
-    fun openAltaActivity(view: View) {
-        val intent = Intent(this, AltaProlapsoActivity::class.java)
-        startActivity(intent)
-    }
-    fun openOstomiaActivity(view: View) {
-        val intent = Intent(this, OstomiaProlapsoActivity::class.java)
-        startActivity(intent)
+
+        // Lógica de navegación
+
+        btnAlta = findViewById(R.id.btn_al_alta)
+        btnAlta.setOnClickListener{
+            intent = Intent(this, AltaProlapsoActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnOstomia = findViewById(R.id.btn_ostomia)
+        btnOstomia.setOnClickListener{
+            intent = Intent(this, OstomiaProlapsoActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

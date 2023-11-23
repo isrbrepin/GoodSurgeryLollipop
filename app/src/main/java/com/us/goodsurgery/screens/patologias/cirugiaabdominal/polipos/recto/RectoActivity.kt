@@ -7,6 +7,7 @@ import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.estoma.InfoEstomaActivity
@@ -20,10 +21,50 @@ class RectoActivity : AppCompatActivity() {
     private lateinit var btnInformacion:Button
     private lateinit var btnPreoperatorio:Button
     private lateinit var btnPostoperatorio:Button
+    private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recto)
+
+        // Lógica de la Header
+
+        btnVolverAtras = findViewById(R.id.btn_back)
+        btnVolverAtras.setOnClickListener {
+            // Manejar el clic de la flecha para ir a la pantalla anterior
+            onBackPressedDispatcher.onBackPressed()
+            // O puedes usar la función finish() para cerrar la actividad si es lo que necesitas
+            // finish()
+        }
+
+
+        val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
+
+        btnOpenOverlay.setOnClickListener {
+            val dialogView = layoutInflater.inflate(R.layout.custom_dialog, null)
+            val builder = AlertDialog.Builder(this, R.style.CustomAlertDialog)
+            builder.setView(dialogView)
+
+            val dialog = builder.create()
+
+            val layoutParams = WindowManager.LayoutParams().apply {
+                copyFrom(dialog.window?.attributes)
+                gravity = Gravity.CENTER // Cambiar a la posición que desees
+            }
+            dialog.window?.attributes = layoutParams
+
+            val dismissButton: Button = dialogView.findViewById(R.id.dismiss_button)
+
+            dismissButton.setOnClickListener {
+                // Cierra el AlertDialog
+                dialog.dismiss()
+            }
+
+            dialog.show()
+        }
+
+
+        // Lógica de navegación
 
         btnInformacion = findViewById(R.id.btn_informacion_del_proceso)
         btnInformacion.setOnClickListener{
@@ -41,45 +82,5 @@ class RectoActivity : AppCompatActivity() {
             intent = Intent(this, PostoperatorioRectoActivity::class.java)
             startActivity(intent)
         }
-
-
-        val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
-
-        btnOpenOverlay.setOnClickListener {
-            val dialogView = layoutInflater.inflate(R.layout.custom_dialog, null)
-            val builder = AlertDialog.Builder(this, R.style.CustomAlertDialog)
-            builder.setView(dialogView)
-
-            val dialog = builder.create()
-
-            val layoutParams = WindowManager.LayoutParams().apply {
-                copyFrom(dialog.window?.attributes)
-                gravity = Gravity.TOP // Cambiar a la posición que desees
-                y = 60.dpToPx()
-            }
-            dialog.window?.attributes = layoutParams
-
-            dialog.show()
-
-        }
-
-    }
-
-    private fun Int.dpToPx(): Int {
-        val scale = resources.displayMetrics.density
-        return (this * scale + 0.5f).toInt()
-    }
-
-    fun openInfoActivity(view: View) {
-        val intent = Intent(this, InfoRectoActivity::class.java)
-        startActivity(intent)
-    }
-    fun openPreoperatorioRectoActivity(view: View) {
-        val intent = Intent(this, PreoperatorioRectoActivity::class.java)
-        startActivity(intent)
-    }
-    fun openPostoperatorioRectoActivity(view: View) {
-        val intent = Intent(this, PostoperatorioRectoActivity::class.java)
-        startActivity(intent)
     }
 }

@@ -7,6 +7,7 @@ import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.patologias.proctologia.hemorroides.InfoHemorroidesActivity
@@ -20,26 +21,20 @@ class IncontinenciaActivity : AppCompatActivity() {
     private lateinit var btnInformacion:Button
     private lateinit var btnPreoperatorio:Button
     private lateinit var btnPostoperatorio:Button
+    private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_incontinencia)
 
-        btnInformacion = findViewById(R.id.btn_informacion_del_proceso)
-        btnInformacion.setOnClickListener{
-            intent = Intent(this, InfoIncontinenciaActivity::class.java)
-            startActivity(intent)
-        }
+        // Lógica de la Header
 
-        btnPreoperatorio = findViewById(R.id.btn_preoperatorio)
-        btnPreoperatorio.setOnClickListener{
-            intent = Intent(this, PreoperatorioIncontinenciaActivity::class.java)
-            startActivity(intent)
-        }
-        btnPostoperatorio = findViewById(R.id.btn_postoperatorio)
-        btnPostoperatorio.setOnClickListener{
-            intent = Intent(this, PostoperatorioIncontinenciaActivity::class.java)
-            startActivity(intent)
+        btnVolverAtras = findViewById(R.id.btn_back)
+        btnVolverAtras.setOnClickListener {
+            // Manejar el clic de la flecha para ir a la pantalla anterior
+            onBackPressedDispatcher.onBackPressed()
+            // O puedes usar la función finish() para cerrar la actividad si es lo que necesitas
+            // finish()
         }
 
 
@@ -67,18 +62,25 @@ class IncontinenciaActivity : AppCompatActivity() {
 
             dialog.show()
         }
-    }
 
-    fun openInfoActivity(view: View) {
-        val intent = Intent(this, InfoIncontinenciaActivity::class.java)
-        startActivity(intent)
-    }
-    fun openPreoperatorioIncontinenciaActivity(view: View) {
-        val intent = Intent(this, PreoperatorioIncontinenciaActivity::class.java)
-        startActivity(intent)
-    }
-    fun openPostoperatorioIncontinenciaActivity(view: View) {
-        val intent = Intent(this, PostoperatorioIncontinenciaActivity::class.java)
-        startActivity(intent)
+
+        // Lógica de navegación
+
+        btnInformacion = findViewById(R.id.btn_informacion_del_proceso)
+        btnInformacion.setOnClickListener{
+            intent = Intent(this, InfoIncontinenciaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnPreoperatorio = findViewById(R.id.btn_preoperatorio)
+        btnPreoperatorio.setOnClickListener{
+            intent = Intent(this, PreoperatorioIncontinenciaActivity::class.java)
+            startActivity(intent)
+        }
+        btnPostoperatorio = findViewById(R.id.btn_postoperatorio)
+        btnPostoperatorio.setOnClickListener{
+            intent = Intent(this, PostoperatorioIncontinenciaActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

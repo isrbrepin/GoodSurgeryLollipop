@@ -7,6 +7,7 @@ import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.colon.postoperatorio.PostoperatorioColonActivity
@@ -21,26 +22,20 @@ class ColonActivity : AppCompatActivity() {
     private lateinit var btnInformacion:Button
     private lateinit var btnPreoperatorio:Button
     private lateinit var btnPostoperatorio:Button
+    private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_colon)
 
-        btnInformacion = findViewById(R.id.btn_informacion_del_proceso)
-        btnInformacion.setOnClickListener{
-            intent = Intent(this, InfoColonActivity::class.java)
-            startActivity(intent)
-        }
+        // Lógica de la Header
 
-        btnPreoperatorio = findViewById(R.id.btn_preoperatorio)
-        btnPreoperatorio.setOnClickListener{
-            intent = Intent(this, PreoperatorioColonActivity::class.java)
-            startActivity(intent)
-        }
-        btnPostoperatorio = findViewById(R.id.btn_postoperatorio)
-        btnPostoperatorio.setOnClickListener{
-            intent = Intent(this, PostoperatorioColonActivity::class.java)
-            startActivity(intent)
+        btnVolverAtras = findViewById(R.id.btn_back)
+        btnVolverAtras.setOnClickListener {
+            // Manejar el clic de la flecha para ir a la pantalla anterior
+            onBackPressedDispatcher.onBackPressed()
+            // O puedes usar la función finish() para cerrar la actividad si es lo que necesitas
+            // finish()
         }
 
 
@@ -68,20 +63,25 @@ class ColonActivity : AppCompatActivity() {
 
             dialog.show()
         }
-    }
 
 
-    fun openInfoActivity(view: View) {
-        val intent = Intent(this, InfoColonActivity::class.java)
-        startActivity(intent)
-    }
+        // Lógica de la navegación
 
-    fun openPreoperatorioColonActivity(view: View) {
-        val intent = Intent(this, PreoperatorioColonActivity::class.java)
-        startActivity(intent)
-    }
-    fun openPostoperatorioColonActivity(view: View) {
-        val intent = Intent(this, PostoperatorioColonActivity::class.java)
-        startActivity(intent)
+        btnInformacion = findViewById(R.id.btn_informacion_del_proceso)
+        btnInformacion.setOnClickListener{
+            intent = Intent(this, InfoColonActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnPreoperatorio = findViewById(R.id.btn_preoperatorio)
+        btnPreoperatorio.setOnClickListener{
+            intent = Intent(this, PreoperatorioColonActivity::class.java)
+            startActivity(intent)
+        }
+        btnPostoperatorio = findViewById(R.id.btn_postoperatorio)
+        btnPostoperatorio.setOnClickListener{
+            intent = Intent(this, PostoperatorioColonActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

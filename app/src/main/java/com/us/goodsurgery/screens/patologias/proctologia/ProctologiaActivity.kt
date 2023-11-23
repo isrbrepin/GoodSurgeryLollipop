@@ -12,6 +12,7 @@ import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -29,30 +30,23 @@ class ProctologiaActivity : AppCompatActivity() {
     private lateinit var btnHemorroides:Button
     private lateinit var btnFistula:Button
     private lateinit var btnFisura:Button
+    private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_proctologia)
 
-        btnHemorroides = findViewById(R.id.btn_hemorroides)
-        btnHemorroides.setOnClickListener{
-            intent = Intent(this, HemorroidesActivity::class.java)
-            startActivity(intent)
+        // Lógica de la Header
+
+        btnVolverAtras = findViewById(R.id.btn_back)
+        btnVolverAtras.setOnClickListener {
+            // Manejar el clic de la flecha para ir a la pantalla anterior
+            onBackPressedDispatcher.onBackPressed()
+            // O puedes usar la función finish() para cerrar la actividad si es lo que necesitas
+            // finish()
         }
 
-        btnFistula = findViewById(R.id.btn_fistula_anal)
-        btnFistula.setOnClickListener{
-            intent = Intent(this, FistulaActivity::class.java)
-            startActivity(intent)
-        }
 
-        btnFisura = findViewById(R.id.btn_fisura_anal)
-        btnFisura.setOnClickListener{
-            intent = Intent(this, FisuraActivity::class.java)
-            startActivity(intent)
-        }
-
-        // Lógica del header
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 
         btnOpenOverlay.setOnClickListener {
@@ -78,6 +72,28 @@ class ProctologiaActivity : AppCompatActivity() {
             dialog.show()
         }
 
+        // Lógica de navegación
+
+        btnHemorroides = findViewById(R.id.btn_hemorroides)
+        btnHemorroides.setOnClickListener{
+            intent = Intent(this, HemorroidesActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnFistula = findViewById(R.id.btn_fistula_anal)
+        btnFistula.setOnClickListener{
+            intent = Intent(this, FistulaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnFisura = findViewById(R.id.btn_fisura_anal)
+        btnFisura.setOnClickListener{
+            intent = Intent(this, FisuraActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        // Lógica de los subtítulos
 
         val textInfo = findViewById<TextView>(R.id.text_proctologia)
         val fullText = getString(R.string.text_proctologia)
@@ -108,24 +124,5 @@ class ProctologiaActivity : AppCompatActivity() {
         textInfo.text = spannableString
         textInfo.movementMethod = LinkMovementMethod.getInstance()
 
-    }
-
-    fun openHemorroidesActivity(view: View) {
-        val intent = Intent(this, HemorroidesActivity::class.java)
-        startActivity(intent)
-        showToast("Patología escogida correctamente")
-    }
-    fun openFisuraActivity(view: View) {
-        val intent = Intent(this, FisuraActivity::class.java)
-        startActivity(intent)
-        showToast("Patología escogida correctamente")
-    }
-    fun openFistulaActivity(view: View) {
-        val intent = Intent(this, FistulaActivity::class.java)
-        startActivity(intent)
-        showToast("Patología escogida correctamente")
-    }
-    private fun showToast(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }

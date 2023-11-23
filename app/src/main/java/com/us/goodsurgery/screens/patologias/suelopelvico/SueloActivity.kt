@@ -12,6 +12,7 @@ import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -29,31 +30,23 @@ class SueloActivity : AppCompatActivity() {
     private lateinit var btnIncontinencia:Button
     private lateinit var btnRectocele:Button
     private lateinit var btnProlapso:Button
+    private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_suelo)
 
-        //Lógica de los botones
-        btnIncontinencia = findViewById(R.id.btn_incontinencia_fecal)
-        btnIncontinencia.setOnClickListener{
-            intent = Intent(this, IncontinenciaActivity::class.java)
-            startActivity(intent)
+        // Lógica de la Header
+
+        btnVolverAtras = findViewById(R.id.btn_back)
+        btnVolverAtras.setOnClickListener {
+            // Manejar el clic de la flecha para ir a la pantalla anterior
+            onBackPressedDispatcher.onBackPressed()
+            // O puedes usar la función finish() para cerrar la actividad si es lo que necesitas
+            // finish()
         }
 
-        btnRectocele = findViewById(R.id.btn_rectocele)
-        btnRectocele.setOnClickListener{
-            intent = Intent(this, RectoceleActivity::class.java)
-            startActivity(intent)
-        }
 
-        btnProlapso = findViewById(R.id.btn_prolapso)
-        btnProlapso.setOnClickListener{
-            intent = Intent(this, ProlapsoActivity::class.java)
-            startActivity(intent)
-        }
-
-        // Lógica del header
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 
         btnOpenOverlay.setOnClickListener {
@@ -79,6 +72,29 @@ class SueloActivity : AppCompatActivity() {
             dialog.show()
         }
 
+
+        //Lógica de navegación
+
+        btnIncontinencia = findViewById(R.id.btn_incontinencia_fecal)
+        btnIncontinencia.setOnClickListener{
+            intent = Intent(this, IncontinenciaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnRectocele = findViewById(R.id.btn_rectocele)
+        btnRectocele.setOnClickListener{
+            intent = Intent(this, RectoceleActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnProlapso = findViewById(R.id.btn_prolapso)
+        btnProlapso.setOnClickListener{
+            intent = Intent(this, ProlapsoActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        // Lógica de los subtítulos
 
         val textInfo = findViewById<TextView>(R.id.text_suelo)
         val fullText = getString(R.string.text_suelo)
@@ -110,25 +126,4 @@ class SueloActivity : AppCompatActivity() {
         textInfo.movementMethod = LinkMovementMethod.getInstance()
 
     }
-
-    fun openIncontinenciaActivity(view: View) {
-        val intent = Intent(this, IncontinenciaActivity::class.java)
-        startActivity(intent)
-        showToast("Patología escogida correctamente")
-    }
-    fun openRectoceleActivity(view: View) {
-        val intent = Intent(this, RectoceleActivity::class.java)
-        startActivity(intent)
-        showToast("Patología escogida correctamente")
-    }
-    fun openProlapsoActivity(view: View) {
-        val intent = Intent(this, ProlapsoActivity::class.java)
-        startActivity(intent)
-        showToast("Patología escogida correctamente")
-    }
-
-    private fun showToast(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-    }
-
 }
