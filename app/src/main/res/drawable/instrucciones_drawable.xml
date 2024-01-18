@@ -1,8 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:radius="2dp" />
-    <solid android:color="#37F8E1" />
-    <stroke
-        android:width="0.5dp"
-        android:color="#108691" />
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
+    <solid android:color="@color/color_botones"/> <!-- El mismo color de fondo que tu TextView actual -->
+    <stroke android:width="1dp" android:color="#CDCDCD"/> <!-- Define tu color de borde aquí -->
+    <corners android:topLeftRadius="16dp" android:topRightRadius="16dp"/>
 </shape>

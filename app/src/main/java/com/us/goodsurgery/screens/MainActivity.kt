@@ -1,6 +1,7 @@
 package com.us.goodsurgery.screens
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.us.goodsurgery.R
@@ -14,6 +15,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Set the status bar color
+        window.statusBarColor = Color.parseColor("#11111F")
+
+        // Set the navigation bar color
+        window.navigationBarColor = Color.parseColor("#11111F")
 
             val tarea = object : TimerTask() {
                 override fun run() {

@@ -8,8 +8,8 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#00655C"
-        app:srcCompat="@drawable/logo_app"
+        android:background="#11111F"
+        app:srcCompat="@drawable/logo_completo_oficial"
         android:contentDescription="@string/portada" />
 
 
