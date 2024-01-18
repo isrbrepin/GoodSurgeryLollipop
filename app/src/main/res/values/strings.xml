@@ -33,11 +33,11 @@
     </string>
     <string name="text_patologia">Elija su patología</string>
     <string name="text_abdominal">Elija su patología > Cirugía abdominal</string>
-    <string name="polipos_colorrectales">Polipos colorrectales</string>
+    <string name="polipos_colorrectales">Tumores colorrectales</string>
     <string name="reconstrucci_n_del_tr_nsito">Elija su patología > Cirugía de abdomen > Reconstrucción del tránsito</string>
     <string name="enfermedad_inflamatoria_intestinal">Elija su patología > Cirugía abdominal > Enfermedad inflamatoria intestinal</string>
-    <string name="polipo_colon">Polipo colon</string>
-    <string name="polipo_recto">Polipo recto</string>
+    <string name="polipo_colon">Tumor de colon</string>
+    <string name="polipo_recto">Tumor de recto</string>
     <string name="ilestomia_lateral">Cierre de ileostomia lateral</string>
     <string name="cierre_de_colostomia_terminal">Cierre de colostomia terminal</string>
     <string name="text_reseccion">Resección intestinal</string>
@@ -48,7 +48,7 @@
     <string name="incontinencia">Incontinencia fecal</string>
     <string name="rectocele">Rectocele</string>
     <string name="prolapso">Prolapso</string>
-    <string name="polipos"><![CDATA[Elija su patología > Cirugía abdominal > Polipos colorrectales]]></string>
+    <string name="polipos"><![CDATA[Elija su patología > Cirugía abdominal > Tumores colorrectales]]></string>
     <string name="transito">Reconstrucción del tránsito</string>
     <string name="inflamatoria">Enfermedad inflamatoria intestinal</string>
     <string name="procto">Proctología</string>
@@ -66,5 +66,16 @@
     <string name="telefono">Teléfono: XXX XXX XXX</string>
     <string name="email">Email: xxxxxxxxxxx@gmail.com</string>
     <string name="volver_atras">Volver atrás</string>
+    <string name="example_list">
+        <![CDATA[
+        <b>Lista de compras:</b><br/>
+        <ul>
+            <li>Leche</li>
+            <li>Pan</li>
+            <li>Huevos</li>
+        </ul>
+    ]]>
+    </string>
+    <string name="descargar_en_pdf">DESCARGAR PDF</string>
 
 </resources>

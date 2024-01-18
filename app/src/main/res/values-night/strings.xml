@@ -11,4 +11,5 @@
     <string name="telefono">Teléfono: XXX XXX XXX</string>
     <string name="email">Email: xxxxxxxxxxx@gmail.com</string>
     <string name="volver_atras">Volver atrás</string>
+    <string name="descargar_en_pdf">DESCARGAR PDF</string>
 </resources>

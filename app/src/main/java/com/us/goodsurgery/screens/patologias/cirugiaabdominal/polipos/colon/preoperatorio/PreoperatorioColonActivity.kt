@@ -13,7 +13,6 @@ import com.us.goodsurgery.R
 class PreoperatorioColonActivity : AppCompatActivity() {
 
     private lateinit var btnAnestesia:Button
-    private lateinit var btnHospital:Button
     private lateinit var btnIngreso:Button
     private lateinit var btnPreparacion:Button
     private lateinit var btnVolverAtras: ImageButton
@@ -60,12 +59,6 @@ class PreoperatorioColonActivity : AppCompatActivity() {
 
 
         // Lógica de la navegación
-
-        btnHospital = findViewById(R.id.btn_hospital)
-        btnHospital.setOnClickListener{
-            intent = Intent(this, HospitalColonActivity::class.java)
-            startActivity(intent)
-        }
 
         btnAnestesia = findViewById(R.id.btn_anestesia)
         btnAnestesia.setOnClickListener{

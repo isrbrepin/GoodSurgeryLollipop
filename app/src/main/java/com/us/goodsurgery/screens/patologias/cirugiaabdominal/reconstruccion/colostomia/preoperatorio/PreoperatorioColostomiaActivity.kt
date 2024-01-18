@@ -4,21 +4,15 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
-import android.view.View
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
-import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.recto.preoperatorio.AnestesiaRectoActivity
-import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.recto.preoperatorio.HospitalRectoActivity
-import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.recto.preoperatorio.IngresoRectoActivity
-import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.recto.preoperatorio.PreparacionRectoActivity
 
 class PreoperatorioColostomiaActivity : AppCompatActivity() {
 
     private lateinit var btnAnestesia:Button
-    private lateinit var btnHospital:Button
     private lateinit var btnIngreso:Button
     private lateinit var btnPreparacion:Button
     private lateinit var btnVolverAtras: ImageButton
@@ -65,12 +59,6 @@ class PreoperatorioColostomiaActivity : AppCompatActivity() {
 
 
         // Lógica de navegación
-
-        btnHospital = findViewById(R.id.btn_hospital)
-        btnHospital.setOnClickListener{
-            intent = Intent(this, HospitalColostomiaActivity::class.java)
-            startActivity(intent)
-        }
 
         btnAnestesia = findViewById(R.id.btn_anestesia)
         btnAnestesia.setOnClickListener{

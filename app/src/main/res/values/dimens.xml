@@ -8,4 +8,6 @@
     <dimen name="dimen_titulo">50dp</dimen>
     <dimen name="dimen_subtitulo">50dp</dimen>
     <dimen name="dimen_radius_body">100dp</dimen>
+    <dimen name="margen_texto_contenido">16dp</dimen>
+    <dimen name="stroke_body_drawable">1dp</dimen>
 </resources>

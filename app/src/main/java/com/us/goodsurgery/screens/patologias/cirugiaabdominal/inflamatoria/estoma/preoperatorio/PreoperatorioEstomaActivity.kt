@@ -16,7 +16,6 @@ import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.estom
 class PreoperatorioEstomaActivity : AppCompatActivity() {
 
     private lateinit var btnAnestesia:Button
-    private lateinit var btnHospital:Button
     private lateinit var btnIngreso:Button
     private lateinit var btnPreparacion:Button
     private lateinit var btnVolverAtras: ImageButton
@@ -63,12 +62,6 @@ class PreoperatorioEstomaActivity : AppCompatActivity() {
 
 
         // Lógica de la navegación
-
-        btnHospital = findViewById(R.id.btn_hospital)
-        btnHospital.setOnClickListener{
-            intent = Intent(this, HospitalEstomaActivity::class.java)
-            startActivity(intent)
-        }
 
         btnAnestesia = findViewById(R.id.btn_anestesia)
         btnAnestesia.setOnClickListener{

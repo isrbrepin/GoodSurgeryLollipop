@@ -35,4 +35,38 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
 
+    <!-- Envuelve solo el último TextView en un ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Contenedor para los TextViews -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen_texto_contenido"
+                android:layout_marginStart="@dimen/margen_texto_contenido"
+                android:layout_marginEnd="@dimen/margen_texto_contenido"
+                android:text="Texto largo que se puede desplazar hacia arriba en el ScrollView. Añade más contenido aquí.\n\n\n\n\n\n\n\n\nEsto es una prueba\n\n\n\n\n\n\n\n\n\nTodo bien jeje"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="@dimen/margen_texto_contenido"
+                android:text="• Hola\n  ◦ Subelemento 1\n  ◦ Subelemento 2\n• Que tal\n• Como estas"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

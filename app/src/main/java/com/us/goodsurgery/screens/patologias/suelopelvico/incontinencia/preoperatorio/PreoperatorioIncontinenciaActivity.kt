@@ -4,21 +4,15 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
-import android.view.View
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
-import com.us.goodsurgery.screens.patologias.proctologia.hemorroides.preoperatorio.AnestesiaHemorroidesActivity
-import com.us.goodsurgery.screens.patologias.proctologia.hemorroides.preoperatorio.HospitalHemorroidesActivity
-import com.us.goodsurgery.screens.patologias.proctologia.hemorroides.preoperatorio.IngresoHemorroidesActivity
-import com.us.goodsurgery.screens.patologias.proctologia.hemorroides.preoperatorio.PreparacionHemorroidesActivity
 
 class PreoperatorioIncontinenciaActivity : AppCompatActivity() {
 
     private lateinit var btnAnestesia:Button
-    private lateinit var btnHospital:Button
     private lateinit var btnIngreso:Button
     private lateinit var btnPreparacion:Button
     private lateinit var btnVolverAtras: ImageButton
@@ -65,12 +59,6 @@ class PreoperatorioIncontinenciaActivity : AppCompatActivity() {
 
 
         // Lógica de navegación
-
-        btnHospital = findViewById(R.id.btn_hospital)
-        btnHospital.setOnClickListener{
-            intent = Intent(this, HospitalIncontinenciaActivity::class.java)
-            startActivity(intent)
-        }
 
         btnAnestesia = findViewById(R.id.btn_anestesia)
         btnAnestesia.setOnClickListener{
