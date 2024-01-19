@@ -8,8 +8,8 @@
 
     <ImageButton
         android:id="@+id/btn_back"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_gravity="start|center_vertical"
         android:layout_marginStart="15dp"
         android:background="?android:attr/selectableItemBackgroundBorderless"
@@ -21,20 +21,44 @@
     <ImageView
         android:id="@+id/imageViewLogo"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_gravity="center"
         android:adjustViewBounds="true"
         android:scaleType="centerInside"
         app:srcCompat="@drawable/letras_logo_oficial"
         android:contentDescription="@string/text_logo_app" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal|end|center">
+    <ImageButton
+        android:id="@+id/btn_home"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_gravity="center_vertical"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/volver_atras"
+        android:scaleType="fitCenter"
+        android:src="@drawable/casa"
+        app:tint="@color/white" />
+
     <Button
         android:id="@+id/btn_open_overlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|end|center"
         android:layout_marginEnd="10dp"
-        android:backgroundTint="#96e6db"
+        android:layout_gravity="center_vertical"
+        android:backgroundTint="@color/color_boton_ayuda"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:paddingStart="11dp"
+        android:paddingEnd="11dp"
+        android:paddingBottom="9dp"
+        android:paddingTop="8dp"
         android:text="@string/text_help"
         android:textStyle="bold"
         android:textColor="#000000"
@@ -46,4 +70,5 @@
         android:clickable="true"
         app:strokeWidth="2dp"
         android:focusable="true" />
+    </LinearLayout>
 </FrameLayout>

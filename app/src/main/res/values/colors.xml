@@ -11,4 +11,6 @@
     <color name="background">#2CD5C4</color>
     <color name="color_fondo_subtitulos">#00B197</color>
     <color name="color_fondo_titulo">#2CD5C4</color>
+    <color name="color_boton_ayuda">#96e6db</color>
+    <color name="gris_muy_claro">#F5F5F5</color>
 </resources>

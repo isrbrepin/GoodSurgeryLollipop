@@ -23,7 +23,7 @@
         style="@style/CustomCardViewStyle"
         app:strokeWidth="0dp"
         app:cardElevation="20dp"
-        app:cardBackgroundColor="#F5F5F5">
+        app:cardBackgroundColor="@color/gris_muy_claro">
 
         <LinearLayout
             android:layout_width="match_parent"

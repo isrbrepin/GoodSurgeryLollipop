@@ -78,5 +78,11 @@ class PatologiaActivity : AppCompatActivity() {
             intent = Intent(this, SueloActivity::class.java)
             startActivity(intent)
         }
+
+        val btnHome: ImageButton = findViewById(R.id.btn_home)
+        btnHome.setOnClickListener{
+            intent = Intent(this, PrincipalActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

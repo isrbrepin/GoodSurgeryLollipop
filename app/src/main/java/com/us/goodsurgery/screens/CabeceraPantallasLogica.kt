@@ -1,40 +1,25 @@
-package com.us.goodsurgery.screens.patologias.cirugiaabdominal.reconstruccion.colostomia.preoperatorio
+package com.us.goodsurgery.screens
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
+import android.view.MenuInflater
+import android.view.View
 import android.view.WindowManager
 import android.widget.Button
-import android.widget.ImageButton
+import android.widget.PopupMenu
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import com.us.goodsurgery.R
-import com.us.goodsurgery.screens.PrincipalActivity
 
-class PreparacionColostomiaActivity : AppCompatActivity() {
 
-    private lateinit var btnVolverAtras: ImageButton
+open class CabeceraPantallasLogica : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_preparacion_colostomia)
-
-        // Lógica de la Header
-
-        val btnHome: ImageButton = findViewById(R.id.btn_home)
-        btnHome.setOnClickListener{
-            intent = Intent(this, PrincipalActivity::class.java)
-            startActivity(intent)
-        }
-
-        btnVolverAtras = findViewById(R.id.btn_back)
-        btnVolverAtras.setOnClickListener {
-            // Manejar el clic de la flecha para ir a la pantalla anterior
-            onBackPressedDispatcher.onBackPressed()
-            // O puedes usar la función finish() para cerrar la actividad si es lo que necesitas
-            // finish()
-        }
-
 
         val btnOpenOverlay: Button = findViewById(R.id.btn_open_overlay)
 

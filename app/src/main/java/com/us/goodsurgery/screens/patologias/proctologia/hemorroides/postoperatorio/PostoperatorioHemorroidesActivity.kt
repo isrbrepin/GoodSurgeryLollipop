@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
+import com.us.goodsurgery.screens.PrincipalActivity
 import com.us.goodsurgery.screens.patologias.proctologia.fisura.postoperatorio.AltaFisuraActivity
 import com.us.goodsurgery.screens.patologias.proctologia.fisura.postoperatorio.OstomiaFisuraActivity
 
@@ -24,6 +25,12 @@ class PostoperatorioHemorroidesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_postoperatorio_hemorroides)
 
         // Lógica de la Header
+
+        val btnHome: ImageButton = findViewById(R.id.btn_home)
+        btnHome.setOnClickListener{
+            intent = Intent(this, PrincipalActivity::class.java)
+            startActivity(intent)
+        }
 
         btnVolverAtras = findViewById(R.id.btn_back)
         btnVolverAtras.setOnClickListener {

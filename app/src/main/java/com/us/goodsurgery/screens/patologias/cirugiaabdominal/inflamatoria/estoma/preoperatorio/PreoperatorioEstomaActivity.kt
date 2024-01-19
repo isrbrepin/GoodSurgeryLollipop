@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
+import com.us.goodsurgery.screens.PrincipalActivity
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.estoma.postoperatorio.AltaEstomaActivity
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.estoma.postoperatorio.OstomiaEstomaActivity
 
@@ -25,6 +26,12 @@ class PreoperatorioEstomaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_preoperatorio_estoma)
 
         // Lógica de la Header
+
+        val btnHome: ImageButton = findViewById(R.id.btn_home)
+        btnHome.setOnClickListener{
+            intent = Intent(this, PrincipalActivity::class.java)
+            startActivity(intent)
+        }
 
         btnVolverAtras = findViewById(R.id.btn_back)
         btnVolverAtras.setOnClickListener {

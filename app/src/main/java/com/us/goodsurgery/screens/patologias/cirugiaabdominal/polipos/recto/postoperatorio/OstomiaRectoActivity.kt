@@ -1,5 +1,6 @@
 package com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.recto.postoperatorio
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
@@ -8,6 +9,7 @@ import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
+import com.us.goodsurgery.screens.PrincipalActivity
 
 class OstomiaRectoActivity : AppCompatActivity() {
 
@@ -18,6 +20,12 @@ class OstomiaRectoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_ostomia_recto)
 
         // Lógica de la Header
+
+        val btnHome: ImageButton = findViewById(R.id.btn_home)
+        btnHome.setOnClickListener{
+            intent = Intent(this, PrincipalActivity::class.java)
+            startActivity(intent)
+        }
 
         btnVolverAtras = findViewById(R.id.btn_back)
         btnVolverAtras.setOnClickListener {
