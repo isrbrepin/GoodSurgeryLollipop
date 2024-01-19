@@ -15,4 +15,6 @@
     <color name="gris_muy_claro">#F5F5F5</color>
     <color name="gris_claro">#B1B1B1</color>
     <color name="letras_oscuras">#11111F</color>
+    <color name="borde_rojo">#9E1525</color>
+    <color name="rojo">#FA6E6E</color>
 </resources>

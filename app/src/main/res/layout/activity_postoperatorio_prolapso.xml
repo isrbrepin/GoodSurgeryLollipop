@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:layout_marginHorizontal="0dp"
     android:layout_marginVertical="0dp"
-    android:background="@color/background"
+    android:background="@drawable/fondo"
     android:orientation="vertical">
 
     <!-- Incluir el header reutilizable -->
@@ -14,11 +14,11 @@
         android:id="@+id/text_prolapso"
         android:layout_width="match_parent"
         android:gravity="center"
-        android:background="@drawable/pagactual2_drawable"
+        android:background="@drawable/pagactual2_sin_curvas_drawable"
         android:layout_height="@dimen/dimen_titulo"
         android:text="@string/prolapso"
         android:textSize="22sp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/letras_oscuras"
         android:textStyle="bold" />
     <TextView
         android:id="@+id/text_info"
@@ -48,9 +48,12 @@
         android:textStyle="bold"
         android:textSize="@dimen/body_buttons_dimens"
         android:text="@string/text_alta"
-        android:textColor="@color/black"
+        android:textColor="@color/letras_oscuras"
         app:strokeColor="@color/primary"
         app:strokeWidth="@dimen/stroke_body_drawable"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:translationZ="1dp"
         />
 
     <Button
@@ -65,9 +68,12 @@
         android:textStyle="bold"
         android:textSize="@dimen/body_buttons_dimens"
         android:text="@string/text_ostomia"
-        android:textColor="@color/black"
+        android:textColor="@color/letras_oscuras"
         app:strokeColor="@color/primary"
         app:strokeWidth="@dimen/stroke_body_drawable"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:translationZ="1dp"
         />
 
 </LinearLayout>

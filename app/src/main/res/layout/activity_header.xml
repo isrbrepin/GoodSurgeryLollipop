@@ -1,5 +1,3 @@
-<!-- activity_header.xml -->
-
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/HeaderLayout"
@@ -8,6 +6,19 @@
     android:background="@drawable/header_drawable"
     android:orientation="horizontal">
 
+
+    <ImageButton
+        android:id="@+id/menu_drawer"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_gravity="start|center_vertical"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        app:tint="@color/white"
+        android:backgroundTint="@color/primary"
+        app:srcCompat="@drawable/menu_hamburguesa"
+        android:contentDescription="@string/text_logo_app" />
 
     <ImageView
         android:id="@+id/imageViewLogo"
@@ -43,4 +54,6 @@
         android:clickable="true"
         app:strokeWidth="2dp"
         android:focusable="true" />
+
 </FrameLayout>
+

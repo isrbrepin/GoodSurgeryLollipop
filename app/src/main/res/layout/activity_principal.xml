@@ -14,7 +14,7 @@
     <!-- Resto del contenido -->
 
 
-    <include layout="@layout/activity_header" />
+    <include layout="@layout/header_con_menu" />
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"

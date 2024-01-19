@@ -62,6 +62,8 @@
     <string name="txt_ins5">5. .............................................</string>
     <string name="txt_ins6">6. ..............................................</string>
     <string name="salir">Salir</string>
+    <string name="abrir">Abrir</string>
+    <string name="cerrar">Cerrar</string>
     <string name="portada">Portada</string>
     <string name="telefono">Teléfono: XXX XXX XXX</string>
     <string name="email">Email: xxxxxxxxxxx@gmail.com</string>

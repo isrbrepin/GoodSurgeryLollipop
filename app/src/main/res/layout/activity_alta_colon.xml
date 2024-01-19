@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_marginHorizontal="0dp"
     android:layout_marginVertical="0dp"
-    android:background="@color/white"
+    android:background="@drawable/fondo"
     android:orientation="vertical">
 
     <!-- Incluir el header reutilizable -->
@@ -16,11 +16,11 @@
         android:id="@+id/text_colon"
         android:layout_width="match_parent"
         android:gravity="center"
-        android:background="@drawable/pagactual2_drawable"
+        android:background="@drawable/pagactual2_sin_curvas_drawable"
         android:layout_height="@dimen/dimen_titulo"
         android:text="@string/polipo_colon"
         android:textSize="22sp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/letras_oscuras"
         android:textStyle="bold" />
 
     <TextView
@@ -110,14 +110,16 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:layout_gravity="center"
-        android:backgroundTint="#FA6E6E"
+        android:backgroundTint="@color/rojo"
         android:text="@string/descargar_en_pdf"
         android:textColor="#000000"
         android:textSize="14sp"
         android:textStyle="bold"
         app:cornerRadius="10dp"
-        app:strokeColor="#9E1525"
-        android:elevation="10dp"
-        app:strokeWidth="1dp" />
+        app:strokeColor="@color/borde_rojo"
+        app:strokeWidth="1dp"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:translationZ="1dp"/>
 
 </LinearLayout>

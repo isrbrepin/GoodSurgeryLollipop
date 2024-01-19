@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/casa"
+            android:title="Inicio" />
+
+        <item
+            android:id="@+id/nav_desplegable"
+            android:icon="@drawable/estetoscopio"
+            android:title="Patologías"
+            android:visible="true"/>
+
+        <item
+            android:id="@+id/nav_acerca_de"
+            android:icon="@drawable/ic_informacion"
+            android:title="Acerca de" />
+
+
+
+    </group>
+</menu>
