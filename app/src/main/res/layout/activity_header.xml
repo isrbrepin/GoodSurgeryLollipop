@@ -12,7 +12,7 @@
     <ImageView
         android:id="@+id/imageViewLogo"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:layout_gravity="center"
         android:adjustViewBounds="true"
         android:scaleType="centerInside"
@@ -34,7 +34,7 @@
         android:paddingTop="10dp"
         android:text="@string/text_help"
         android:textStyle="bold"
-        android:textColor="#000000"
+        android:textColor="@color/letras_oscuras"
         android:elevation="8dp"
         android:stateListAnimator="@null"
         android:translationZ="1dp"

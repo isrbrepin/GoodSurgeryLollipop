@@ -31,7 +31,7 @@
     <string name="text_tittle_instrucciones">Instrucciones de uso de la aplicación</string>
     <string name="text_instrucciones">\n1. Pulse en “pulse aquí para comenzar”\n\n2. Una vez presione, seleccione el tipo de intervención/proceso/patología que le hayan explicado en la consulta\n\n3. Una vez dentro encontrará la informacion necesaria para el proceso, preoperatorio y postoperatorio\n\n4. ----------\n\n5. ----------\n\n6. ------------
     </string>
-    <string name="text_patologia">Elija su patología</string>
+    <string name="text_patologia">¿Cuál es su patología?</string>
     <string name="text_abdominal">Elija su patología > Cirugía abdominal</string>
     <string name="polipos_colorrectales">Tumores colorrectales</string>
     <string name="reconstrucci_n_del_tr_nsito">Elija su patología > Cirugía de abdomen > Reconstrucción del tránsito</string>
