@@ -1,0 +1,18 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <inset android:insetLeft="12dp" android:insetRight="12dp">
+            <shape android:shape="rectangle">
+                <solid android:color="@color/primary_transparent"/>
+                <!-- Aquí puedes agregar otros atributos de forma como esquinas redondeadas si lo necesitas -->
+                <corners android:radius="25dp"/>
+            </shape>
+        </inset>
+    </item>
+    <item>
+        <inset android:insetLeft="16dp" android:insetRight="16dp">
+            <shape android:shape="rectangle">
+                <solid android:color="@android:color/transparent"/>
+            </shape>
+        </inset>
+    </item>
+</selector>

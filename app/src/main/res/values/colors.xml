@@ -17,4 +17,5 @@
     <color name="letras_oscuras">#11111F</color>
     <color name="borde_rojo">#9E1525</color>
     <color name="rojo">#FA6E6E</color>
+    <color name="primary_transparent">#3E2CD5C4</color>
 </resources>

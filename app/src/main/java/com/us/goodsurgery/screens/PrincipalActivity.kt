@@ -15,6 +15,18 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import com.us.goodsurgery.R
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.estoma.EstomaActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.reseccion.ReseccionActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.colon.ColonActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.recto.RectoActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.reconstruccion.colostomia.ColostomiaActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.IleostomiaActivity
+import com.us.goodsurgery.screens.patologias.proctologia.fistula.FistulaActivity
+import com.us.goodsurgery.screens.patologias.proctologia.fisura.FisuraActivity
+import com.us.goodsurgery.screens.patologias.proctologia.hemorroides.HemorroidesActivity
+import com.us.goodsurgery.screens.patologias.suelopelvico.incontinencia.IncontinenciaActivity
+import com.us.goodsurgery.screens.patologias.suelopelvico.prolapso.ProlapsoActivity
+import com.us.goodsurgery.screens.patologias.suelopelvico.rectocele.RectoceleActivity
 
 
 class PrincipalActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
@@ -25,6 +37,9 @@ class PrincipalActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal)
+
+        val navigationView = findViewById<NavigationView>(R.id.navigation_view)
+        navigationView.setNavigationItemSelectedListener(this)
 
         // Encuentra el ImageButton por su ID
         val drawerButton: ImageButton = findViewById(R.id.menu_drawer)
@@ -81,17 +96,100 @@ class PrincipalActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        val id = item.itemId
-        if (id == R.id.nav_inicio) {
-            // Maneja el click para "Inicio"
-        } else if (id == R.id.nav_desplegable) {
-            // Maneja el click para "Patologías"
-        } else if (id == R.id.nav_acerca_de) {
-            // Maneja el click para "Acerca de"
+        when (item.itemId) {
+            R.id.nav_desplegable -> {
+                val id = item.itemId
+                // Encuentra tu NavigationView
+                val navigationView = findViewById<NavigationView>(R.id.navigation_view)
+                // Encuentra el menú del NavigationView
+                val menu = navigationView.menu
+                // Aquí alternas la visibilidad de los elementos de submenú
+                val isVisible = menu.findItem(R.id.tumor_de_colon).isVisible
+                // Cambias la visibilidad de cada ítem
+                menu.findItem(R.id.tumor_de_colon).isVisible = !isVisible
+                menu.findItem(R.id.tumor_de_recto).isVisible = !isVisible
+                menu.findItem(R.id.ilestomia_lateral).isVisible = !isVisible
+                menu.findItem(R.id.cierre_de_colostomia_terminal).isVisible = !isVisible
+                menu.findItem(R.id.reseccion_instestinal).isVisible = !isVisible
+                menu.findItem(R.id.estoma).isVisible = !isVisible
+                menu.findItem(R.id.hemorroides).isVisible = !isVisible
+                menu.findItem(R.id.fisura_anal).isVisible = !isVisible
+                menu.findItem(R.id.fistula_anal).isVisible = !isVisible
+                menu.findItem(R.id.incontinencia).isVisible = !isVisible
+                menu.findItem(R.id.rectocele).isVisible = !isVisible
+                menu.findItem(R.id.prolapso).isVisible = !isVisible
+                // Agrega o remueve ítems según necesites
+                return true
+            }
+
+            R.id.nav_inicio -> {
+                drawerLayout.closeDrawer(GravityCompat.START)
+                return true
+            }
+
+            R.id.tumor_de_colon -> {
+                val intent = Intent(this, ColonActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.tumor_de_recto -> {
+                val intent = Intent(this, RectoActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.ilestomia_lateral -> {
+                val intent = Intent(this, IleostomiaActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.cierre_de_colostomia_terminal -> {
+                val intent = Intent(this, ColostomiaActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.reseccion_instestinal -> {
+                val intent = Intent(this, ReseccionActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.estoma -> {
+                val intent = Intent(this, EstomaActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.hemorroides -> {
+                val intent = Intent(this, HemorroidesActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.fisura_anal -> {
+                val intent = Intent(this, FisuraActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.fistula_anal -> {
+                val intent = Intent(this, FistulaActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.incontinencia -> {
+                val intent = Intent(this, IncontinenciaActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.rectocele -> {
+                val intent = Intent(this, RectoceleActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.prolapso -> {
+                val intent = Intent(this, ProlapsoActivity::class.java)
+                startActivity(intent)
+                return true
+            }
         }
-        // Cierra el drawer cuando se selecciona un item
-        val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
-        drawer.closeDrawer(GravityCompat.START)
-        return true
+
+        // No resaltar ningún elemento como seleccionado
+        return false
     }
 }

@@ -1,16 +1,81 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
+
+        <!-- Inicio -->
         <item
             android:id="@+id/nav_inicio"
             android:icon="@drawable/casa"
             android:title="Inicio" />
 
+        <!-- Patologias -->
         <item
             android:id="@+id/nav_desplegable"
             android:icon="@drawable/estetoscopio"
             android:title="Patologías"
             android:visible="true"/>
 
+        <item
+            android:id="@+id/tumor_de_colon"
+            android:title="@string/polipo_colon"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/tumor_de_recto"
+            android:title="@string/polipo_recto"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/ilestomia_lateral"
+            android:title="@string/ilestomia_lateral"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/cierre_de_colostomia_terminal"
+            android:title="@string/cierre_de_colostomia_terminal"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/reseccion_instestinal"
+            android:title="@string/text_reseccion"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/estoma"
+            android:title="@string/text_estoma"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/hemorroides"
+            android:title="@string/hemorroides"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/fisura_anal"
+            android:title="@string/fisura_anal"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/fistula_anal"
+            android:title="@string/fistula_anal"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/incontinencia"
+            android:title="@string/incontinencia"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/rectocele"
+            android:title="@string/rectocele"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/prolapso"
+            android:title="@string/prolapso"
+            android:visible="false"/>
+
+
+        <!-- Acerca de -->
         <item
             android:id="@+id/nav_acerca_de"
             android:icon="@drawable/ic_informacion"
