@@ -7,6 +7,10 @@ android {
     namespace 'com.us.goodsurgery'
     compileSdk 33
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     defaultConfig {
         applicationId "com.us.goodsurgery"
         minSdk 21

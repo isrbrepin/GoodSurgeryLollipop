@@ -38,17 +38,15 @@
         android:textStyle="bold" />
 
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:elevation="10dp"
         android:layout_gravity="center"
+
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
-        app:strokeColor="#919191"
-        app:strokeWidth="2dp"
         app:cardCornerRadius="20dp">
         <!-- Envuelve solo el último TextView en un ScrollView -->
         <ScrollView
@@ -63,48 +61,62 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <ImageView
+                    android:id="@+id/imageViewLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/logo_departamento_coloproctologia_sevilla"
+                    android:contentDescription="@string/text_logo_app" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margen_texto_contenido"
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
-                    android:text="Texto largo que se puede desplazar hacia arriba en el ScrollView. Añade más contenido aquí.\n\n\nEsto es una prueba\n\n\nTodo bien jeje"
+                    android:text="HOJA DE INDICACIONES AL ALTA PARA CÁNCER COLORRECTAL / POLIPOS"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/anestesia"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="@dimen/margen_texto_contenido"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="En el informe de alta que se le ha entregado en formato papel vienen especificadas todas
+las instrucciones que debe seguir. Salvo excepción que quedará convenientemente
+reflejada, son las siguientes:"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="12dp"
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
-                    android:text="• Hola\n  ◦ Subelemento 1\n  ◦ Subelemento 2\n• Que tal\n• Como estas"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/margen_texto_contenido"
-                    android:text="Texto largo que se puede desplazar hacia arriba en el ScrollView. Añade más contenido aquí.\n\n\nEsto es una prueba\n\n\nTodo bien jeje"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:text="1. Deberá seguir las instrucciones del tratamiento prescrito.\n2. Deberá retirarse los puntos/grapas de las heridas a los 8-10 de la intervención en su
+centro de salud, salvo indicación específica que le hayan dado.\n3. Salvo indicación específica según su tipo de intervención, sobre todo si es portador de
+ILEOSTOMIA, en líneas generales debe llevar una dieta mediterránea saludable, evitando ultraprocesados así como alcohol.\n4. Debe mantenerse activo evitando tiempos prolongados de inactividad, ya que hay
+riesgo de sufrir tromboembolismos. Es ideal que salga a pasear y aumente de forma
+progresiva su actividad física.\n5. Si presentase fiebre, dolor, mal estar general o cualquier signo de alarma, deberá
+acudir al servicio de urgencias del Hospital General. \n6. Se le entregará o le llegará por correo una cita de revisión en consultas de
+COLOPROCTOLOGÍA en aproximadamente 45 días\7. Deberá cursar la HOJA DE CONSULTA que se le ha entregado en ONCOLOGÍA, en
+la PLANTA BAJA DEL HOSPITAL GENERAL"
+                    android:textSize="16sp" />
 
             </LinearLayout>
         </ScrollView>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
     <Button
-        android:id="@+id/btn_comenzar"
+        android:id="@+id/btn_pdf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

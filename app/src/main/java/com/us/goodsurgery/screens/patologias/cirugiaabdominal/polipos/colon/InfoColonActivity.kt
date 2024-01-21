@@ -1,26 +1,81 @@
 package com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.colon
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Typeface
 import android.os.Bundle
+import android.text.Html
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.StyleSpan
 import android.view.Gravity
+import android.view.View
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.FileProvider
+import com.us.goodsurgery.BuildConfig
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.PrincipalActivity
+import java.io.File
+import java.io.FileOutputStream
+import java.io.IOException
+import java.io.OutputStream
+
 
 class InfoColonActivity : AppCompatActivity() {
 
     private lateinit var btnVolverAtras: ImageButton
+    private lateinit var btnPdf: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info_colon)
 
-        // Lógica de la Header
+        //Logica pdf
 
+        btnPdf = findViewById(R.id.btn_pdf)
+
+        btnPdf.setOnClickListener(View.OnClickListener {
+            // Nombre del PDF en la carpeta assets
+            val assetFileName = "Cancer colorrectal.pdf"
+            // Ruta de destino en el almacenamiento interno
+            val destinationPath =
+                getExternalFilesDir(null).toString() + File.separator + assetFileName
+            try {
+                // Copiar el archivo desde assets al almacenamiento interno
+                val `in` = assets.open(assetFileName)
+                val out: OutputStream = FileOutputStream(destinationPath)
+                val buffer = ByteArray(1024)
+                var read: Int
+                while (`in`.read(buffer).also { read = it } != -1) {
+                    out.write(buffer, 0, read)
+                }
+                out.flush()
+                out.close()
+                `in`.close()
+
+                // Abrir el PDF descargado
+                val file = File(destinationPath)
+                val uri = FileProvider.getUriForFile(
+                    this,
+                    BuildConfig.APPLICATION_ID + ".provider", file
+                )
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.setDataAndType(uri, "application/pdf")
+                intent.flags =
+                    Intent.FLAG_ACTIVITY_NO_HISTORY or Intent.FLAG_GRANT_READ_URI_PERMISSION
+                startActivity(intent)
+            } catch (e: IOException) {
+                e.printStackTrace()
+                // Manejar el error
+            }
+        })
+        //------------------------------------------------------------------------------------------
+
+        // Lógica de la Header
         val btnHome: ImageButton = findViewById(R.id.btn_home)
         btnHome.setOnClickListener{
             intent = Intent(this, PrincipalActivity::class.java)
