@@ -99,7 +99,7 @@ reflejada, son las siguientes:"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="12dp"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="26dp"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="1. Deberá seguir las instrucciones del tratamiento prescrito.\n2. Deberá retirarse los puntos/grapas de las heridas a los 8-10 de la intervención en su
 centro de salud, salvo indicación específica que le hayan dado.\n3. Salvo indicación específica según su tipo de intervención, sobre todo si es portador de
