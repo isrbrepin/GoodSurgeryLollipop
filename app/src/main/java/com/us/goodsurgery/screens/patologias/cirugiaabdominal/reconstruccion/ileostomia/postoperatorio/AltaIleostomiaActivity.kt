@@ -3,21 +3,85 @@ package com.us.goodsurgery.screens.patologias.cirugiaabdominal.reconstruccion.il
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Html
 import android.view.Gravity
+import android.view.View
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.FileProvider
+import com.us.goodsurgery.BuildConfig
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.PrincipalActivity
+import java.io.File
+import java.io.FileOutputStream
+import java.io.IOException
+import java.io.OutputStream
 
 class AltaIleostomiaActivity : AppCompatActivity() {
 
     private lateinit var btnVolverAtras: ImageButton
+    private lateinit var btnPdf: Button
+    private lateinit var alta_reconstruccion: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_alta_ileostomia)
+
+        //Logica pdf
+
+        btnPdf = findViewById(R.id.btn_pdf)
+
+        btnPdf.setOnClickListener(View.OnClickListener {
+            // Nombre del PDF en la carpeta assets
+            val assetFileName = "Indicaciones al ALTA Reconstruccion del transito.pdf"
+            // Ruta de destino en el almacenamiento interno
+            val destinationPath =
+                getExternalFilesDir(null).toString() + File.separator + assetFileName
+            try {
+                // Copiar el archivo desde assets al almacenamiento interno
+                val `in` = assets.open(assetFileName)
+                val out: OutputStream = FileOutputStream(destinationPath)
+                val buffer = ByteArray(1024)
+                var read: Int
+                while (`in`.read(buffer).also { read = it } != -1) {
+                    out.write(buffer, 0, read)
+                }
+                out.flush()
+                out.close()
+                `in`.close()
+
+                // Abrir el PDF descargado
+                val file = File(destinationPath)
+                val uri = FileProvider.getUriForFile(
+                    this,
+                    BuildConfig.APPLICATION_ID + ".provider", file
+                )
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.setDataAndType(uri, "application/pdf")
+                intent.flags =
+                    Intent.FLAG_ACTIVITY_NO_HISTORY or Intent.FLAG_GRANT_READ_URI_PERMISSION
+                startActivity(intent)
+            } catch (e: IOException) {
+                e.printStackTrace()
+                // Manejar el error
+            }
+        })
+
+        //------------------------------------------------------------------------------------------
+
+        alta_reconstruccion = findViewById(R.id.text_alta_reconstruccion)
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            alta_reconstruccion.setText(Html.fromHtml(getString(R.string.text_alta_reconstruccion), Html.FROM_HTML_MODE_LEGACY));
+        } else {
+            alta_reconstruccion.setText(Html.fromHtml(getString(R.string.text_alta_reconstruccion)));
+        }
+
+        //------------------------------------------------------------------------------------------
+
 
         // Lógica de la Header
 

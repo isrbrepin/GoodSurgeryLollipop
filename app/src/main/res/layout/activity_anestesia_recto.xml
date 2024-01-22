@@ -74,7 +74,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="26dp"
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="HOJA DE INSTRUCCIONES PARA EL ESTUDIO PREANESTÉSICO"
@@ -84,7 +84,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="26dp"
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="Le llegará la cita para la consulta de anestesia por correo ordinario o a través de llamada telefónica. "

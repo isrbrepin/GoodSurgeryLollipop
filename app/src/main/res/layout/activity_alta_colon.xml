@@ -66,7 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:adjustViewBounds="true"
                     android:scaleType="centerInside"
                     app:srcCompat="@drawable/logo_departamento_coloproctologia_sevilla"
@@ -75,7 +75,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="26dp"
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="HOJA DE INDICACIONES AL ALTA PARA CÁNCER COLORRECTAL / POLIPOS"
@@ -85,7 +85,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="26dp"
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="En el informe de alta que se le ha entregado en formato papel vienen especificadas todas
@@ -98,7 +98,7 @@ reflejada, son las siguientes:"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="16dp"
                     android:layout_marginStart="26dp"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="1. Deberá seguir las instrucciones del tratamiento prescrito.\n2. Deberá retirarse los puntos/grapas de las heridas a los 8-10 de la intervención en su

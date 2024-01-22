@@ -62,7 +62,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="¿Qué es el cáncer?"
@@ -545,7 +545,7 @@
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="@string/text_investigacion_ccr"
                     android:textSize="16sp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="16dp"
                     />
 
             </LinearLayout>

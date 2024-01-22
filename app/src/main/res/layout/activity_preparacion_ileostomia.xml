@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginHorizontal="0dp"
@@ -34,5 +35,154 @@
         android:textSize="20sp"
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        app:cardCornerRadius="20dp">
+        <!-- Envuelve solo el último TextView en un ScrollView -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="true"
+            android:scrollbarFadeDuration="500">
+
+            <!-- Contenedor para los TextViews -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageViewLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/logo_departamento_coloproctologia_sevilla"
+                    android:contentDescription="@string/text_logo_app" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="HOJA DE INDICACIONES PREOPERATORIAS PARA LA RECONSTRUCCIÓN DEL TRÁNSITO"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Se le ha entregado esta hoja porque va a ser intervenido de:"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="☐ Cierre de COLOSTOMIA\n☐ Cierre de ILEOSTOMIA"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_texto_preo_recons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_texto_preo_recons"
+                    android:textSize="16sp"
+                    />
+                <TextView
+                    android:id="@+id/text_texto_preo_recons_lista1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_texto_preo_recos_lista1"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/text_texto_preo_recons_lista2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_texto_preo_recons_lista2"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/text_texto_preo_recons_lista3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_texto_preo_recons_lista3"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/text_texto_preo_recons_lista4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_texto_preo_recons_lista4"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="66dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginBottom="16dp"
+                    android:text="•  Los antibióticos (Neomicina 1 gr y Metronidazol 1 gr) deberá tomarlos a las 13, 15 y 23 horas (las dos primeras dosis en domicilio, la última en el hospital).
+\n•  Deberá tomarse un bote de FOSFOSODA a las 9:00 de la mañana (en domcilio) y a las 20 horas (en el hospital).
+\n•  Deberá aplicarse un enema CASEN por vía rectal la noche antes de la intervención (en el hospital)"
+                    android:textSize="16sp"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btn_pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/rojo"
+        android:text="@string/descargar_en_pdf"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:strokeColor="@color/borde_rojo"
+        app:strokeWidth="1dp"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:translationZ="1dp"/>
 
 </LinearLayout>

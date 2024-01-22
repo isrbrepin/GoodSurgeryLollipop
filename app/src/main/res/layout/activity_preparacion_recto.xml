@@ -63,7 +63,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:adjustViewBounds="true"
                     android:scaleType="centerInside"
                     app:srcCompat="@drawable/logo_departamento_coloproctologia_sevilla"
@@ -72,7 +72,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="26dp"
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="HOJA DE INDICACIONES PREOPERATORIAS PARA CÁNCER COLORRECTAL / PÓLIPOS COLORRECTALES"
@@ -82,7 +82,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="26dp"
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="Se le ha entregado esta hoja porque va a ser intervenido de:"
@@ -116,7 +116,7 @@
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="@string/text_textp_preop_lista"
                     android:textSize="16sp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="16dp"
                     />
 
             </LinearLayout>
