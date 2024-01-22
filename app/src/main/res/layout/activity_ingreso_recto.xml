@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginHorizontal="0dp"
@@ -34,5 +35,114 @@
         android:textSize="20sp"
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        app:cardCornerRadius="20dp">
+        <!-- Envuelve solo el último TextView en un ScrollView -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="true"
+            android:scrollbarFadeDuration="500">
+
+            <!-- Contenedor para los TextViews -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageViewLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/logo_departamento_coloproctologia_sevilla"
+                    android:contentDescription="@string/text_logo_app" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margen_texto_contenido"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="HOJA DE INSTRUCCIONES PARA EL DÍA DEL INGRESO"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/text_ingreso3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margen_texto_contenido"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_ingreso3"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/text_ingreso1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_ingreso1"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="46dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="☐    Los antibióticos (Neomicina 1 gr y Metronidazol 1 gr) deberá tomarlos a las 13, 15 y 23 horas (las dos primeras dosis en domicilio, la última en el hospital).
+\n☐    Deberá tomar un bote de FOSFOSODA a las 9:00 de la mañana (en domcilio) y a las 20 horas (en el hospital)."
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_ingreso2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_ingreso2"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btn_pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/rojo"
+        android:text="@string/descargar_en_pdf"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:strokeColor="@color/borde_rojo"
+        app:strokeWidth="1dp"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:translationZ="1dp"/>
 
 </LinearLayout>
