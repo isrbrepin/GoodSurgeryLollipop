@@ -95,7 +95,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="16dp"
                     android:layout_marginStart="36dp"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="1.  La intervención de Hemorroides es una cirugía que provoca bastantes molestias y dolor. Deberá seguir las instrucciones del tratamiento detallado en el informe de alta. Es importante que tome los analgésicos prescritos y en el horario establecido para evitar los picos de dolor, que son de más difícil control. Es importante que tome los laxantes, el objetivo es conseguir heces blandas y evitar las duras y las líquidas, que pueden provocar más molestias durante la salida

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginHorizontal="0dp"
@@ -35,6 +36,425 @@
         android:textSize="20sp"
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        app:cardCornerRadius="20dp">
+        <!-- Envuelve solo el último TextView en un ScrollView -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="true"
+            android:scrollbarFadeDuration="500">
+
+            <!-- Contenedor para los TextViews -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margen_texto_contenido"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="INCONTINENCIA FECAL"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Definición"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Es la pérdida del control de las evacuaciones, que da como resultado el paso involuntario de las heces. La incontinencia fecal puede variar desde una pequeña fuga ocasional de heces con el paso de gases hasta una pérdida completa del control de las evacuaciones.
+\n\nLa incontinencia urinaria, un tema separado, es la incapacidad de controlar el paso de la orina."
+                    android:textSize="16sp"
+                    android:layout_marginBottom="12dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Consideraciones generales"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Entre las personas mayores de 65 años, las mujeres suelen ser las que con mayor frecuencia experimentan incontinencia intestinal. De cada 1.000 mujeres, 13 informan sobre pérdida de control de las evacuaciones.
+\n\nLa causa más común de la incontinencia intestinal, irónicamente, es el estreñimiento, el cual hace que los músculos del ano e intestinos se estiren y debiliten. Estos músculos debilitados evitan que el esfínter rectal pueda cerrarse adecuadamente, permitiendo fugas de heces. Asimismo, los músculos intestinales debilitados retrasan el tiempo de tránsito de las heces, dificultando el paso de éstas y empeorando aún más el estreñimiento.
+\n\nEl estiramiento crónico de los músculos anales e intestinales puede disminuir la respuesta de los nervios del ano y del recto a la presencia de heces en el recto.
+\n\nLa capacidad de retener las heces y mantener la continencia exige de una función normal del recto, ano y sistema nervioso. Además, la persona debe tener la capacidad física y sicológica de reconocer y responder en forma apropiada a la urgencia de defecar.
+\n\nLos problemas de incontinencia deben informarse al médico, pues ésta no es una situación irremediable. El tratamiento adecuado puede ayudar a la mayoría de las personas y, con frecuencia, el problema se puede erradicar por completo."
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="Causas comunes"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="•  Estreñimiento crónico o heces compactadas en el recto que conducen a diarrea y fuga de heces alrededor de las heces compactadas (ver también encopresis)
+\n•  Diarrea severa que supera la capacidad de controlar el paso de las heces
+\n•  Estrés por un ambiente desconocido
+\n•  Disminución de la capacidad de reconocer la sensación de llenura de los intestinos
+\n•  Daño nervioso o muscular (producto de un accidente cerebrovascular, trauma, tumor o radiación)
+\n•  Trastorno emocional (sicológico)
+\n•  Cirugía ginecológica, prostática o rectal
+\n•  Hemorroides severas o prolapso rectal
+\n•  Cirugías: colectomía o resección intestinal
+\n•  Abuso crónico de laxantes"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="Cuidados en el hogar"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="El tratamiento para la incontinencia intestinal debe comenzar con la identificación de la causa y con la aplicación de medidas para corregir la disfunción. Son muchas las medidas que pueden tomarse para promover una función intestinal normal y mejorar el tono del esfínter rectal."
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="Medicamentos"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="En las personas que sufren de incontinencia atribuida a la diarrea, se pueden utilizar medicamentos para controlar la diarrea y eliminar, potencialmente, la incontinencia intestinal. Se puede utilizar loperamida (Imodio) por sus propiedades antidiarréicas y porque su acción incrementa el tono del músculo rectal. Otros medicamentos antidiarréicos que pueden utilizarse son los medicamentos colinérgicos (belladona o atropina), los cuales disminuyen las secreciones intestinales y la motilidad intestinal; los derivados del opio (paregórico o codeína) que incrementan el tono muscular y disminuyen la motilidad intestinal y difenoxilato  que disminuye la motilidad intestinal y retrasa los movimientos de las heces en los intestinos.
+\nOtros de los medicamentos que se pueden utilizar para controlar la incontinencia intestinal son aquellos que reducen el contenido de agua en las heces (carbón activado), protegen el revestimiento de los intestinos de la irritación (o absorben los líquidos y añaden volumen a las heces (Metamucil)."
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="Evaluación De Los Medicamentos"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Es recomendable revisar con el médico todos los medicamentos que se estén tomando, pues existen algunos que pueden ocasionar o incrementar la frecuencia de la incontinencia intestinal, especialmente en las personas mayores. Estos medicamentos incluyen:
+\nSedantes e hipnóticos
+\nLaxantes
+\nNarcóticos
+\nAntiácidos
+\nRelajantes musculares"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="Cirugía"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Las personas que experimentan una incontinencia intestinal que no responde a los tratamientos médicos, pueden requerir una intervención quirúrgica para corregir la disfunción. Existen varias opciones quirúrgicas, dependiendo de la causa de la incontinencia y de la condición general de la persona."
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="REPARACIÓN DEL ESFÍNTER RECTAL"
+                    android:textSize="16sp"
+                    android:textStyle="italic"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="La reparación del esfínter se realiza en personas con un esfínter rectal incompetente, producto de una lesión o de la edad. Este procedimiento consiste en volver a unir los músculos rectales para apretar el esfínter e incrementar la capacidad del ano."
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/incontinencia1"
+                    android:contentDescription="@string/text_logo_app"
+                    android:layout_marginBottom="8dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="TRASPLANTE DEL MÚSCULO GRACILIS"
+                    android:textSize="16sp"
+                    android:textStyle="italic"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Los trasplantes del músculo gracilis se han realizado para restaurar la continencia (control) intestinal en personas que han perdido la función nerviosa del esfínter rectal. Este músculo se toma de la cara interna del muslo y se utiliza para rodear el esfínter, proporcionándole tono muscular."
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="ESFÍNTER INTESTINAL ARTIFICIAL"
+                    android:textSize="16sp"
+                    android:textStyle="italic"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="A algunos pacientes se les puede tratar la condición con un esfínter intestinal artificial, el cual consta de tres partes: un manguito de presión que se ajusta al canal anal, un balón regulador de presión y una bomba que infla el manguito de presión. Este esfínter artificial se implanta quirúrgicamente alrededor del esfínter anal y el manguito de presión permanece inflado para mantener la continencia. La persona evacúa al desinflar el manguito de presión, el cual se infla de forma automática a los 10 minutos."
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="DESVIACIÓN FECAL"
+                    android:textSize="16sp"
+                    android:textStyle="italic"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="En algunos casos, cuando la persona no reacciona ante las demás terapias, se realiza una desviación fecal. Para realizar este procedimiento se crea una colostomía y se desvían las heces hacia afuera a través de un estoma en la pared abdominal. La persona necesita usar, constantemente, un dispositivo de ostomía para contener las heces."
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="Dieta"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="La incontinencia intestinal suele ser el resultado de una disminución de la capacidad del esfínter rectal para manejar grandes cantidades de heces líquidas. Con frecuencia, con sólo modificar la dieta se puede prevenir la incontinencia intestinal. Se debe eliminar el consumo de alcohol y de cafeína, pues pueden causar diarrea y, por ende, incontinencia en algunas personas. Además, hay personas que no pueden digerir la lactosa, un azúcar que se encuentra en la mayoría de los productos lácteos, entonces desarrollan diarreas severas al consumir este tipo de alimentos. Se ha demostrado que ciertos aditivos alimenticios, como la nuez moscada y el sorbitol, ocasionan diarrea en personas susceptibles.
+\n\nAgregando volumen a la dieta se le puede dar más consistencia a las heces y disminuir su cantidad. Ciertos alimentos, como el arroz, el banano, el yogurt y los quesos ayudan a darle más consistencia a las heces. Un aumento en el consumo de fibra (30 gramos diarios), proveniente de granos integrales y del salvado, puede ayudar a agregar volumen a la dieta. Asimismo, los productos que contienen psilio, como el Metamucil, también pueden utilizarse para dar volumen a las heces.
+\n\nLos alimentos enterales (para la nutrición enteral con sonda) suelen causar diarrea e incontinencia intestinal, en cuyo caso se debe consultar con un médico o un dietista. Es posible que haya que modificar el ritmo de alimentación o agregar agentes de volumen a la fórmula."
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="Impactación Fecal"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="El estreñimiento o la impactación fecal pueden contribuir también a la incontinencia fecal. La pérdida del tono rectal puede resultar en una fuga de heces líquidas y aguadas alrededor de la impactación fecal. Por lo general, una vez generada una impactación fecal, es poco lo que se logra con el uso de laxantes y enemas. Es este caso, el médico inserta uno o dos dedos en el recto y rompe la masa en fragmentos que puedan ser expulsados. Se deben tomar medidas para evitar futuras impactaciones fecales. Se debe agregar fibra a la dieta para promover una consistencia normal de las heces. Igualmente, un consumo adecuado de líquidos y el ejercicio pueden ayudar a mejorar la consistencia normal de las heces."
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="Otras Terapias"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Cuando una persona sufre de incontinencia fecal frecuente, se pueden utilizar dispositivos para la recolección de materia fecal de uso externo, con el fin de contener las heces y proteger la piel de lesiones. Estos dispositivos constan de en un saco drenable que se adhiere a una oblea adhesiva, la cual tiene un orificio en el centro que se ajusta al orificio anal.
+\n\nLa mayoría de las personas que sufren de incontinencia intestinal ocasionada por falta de control del esfínter o por disminución de la capacidad de reconocer la urgencia de defecar pueden beneficiarse de un programa de reentrenamiento intestinal y de terapias de ejercicios cuyo objetivo es restaurar el tono muscular normal. Ver también programa de reentrenamiento intestinal.
+\n\nSe debe tener un cuidado especial en el mantenimiento del control de las evacuaciones en personas cuya capacidad para reconocer la necesidad de defecar se ha deteriorado o que tienen problemas de movilización, que no les permiten utilizar las instalaciones sanitarias de forma segura e independiente. A estas personas se les debe ayudar a usar el sanitario después de las comidas y cuando expresan su necesidad de ir al sanitario se debe reaccionar rápida y oportunamente, pues si sus necesidades no reciben respuesta, pueden desarrollar un patrón de refuerzo negativo. En este caso, la necesidad de defecar ya no está asociada con las acciones apropiadas. Ver también seguridad en el inodoro."
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="Se debe llamar al médico si"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Se presenta incontinencia fecal en un niño que ya había aprendido a ir al inodoro.
+\nSe presenta incontinencia fecal en un adulto.
+\nSe desarrolla una irritación o ulceración cutánea como resultado de la incontinencia fecal."
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="Lo que se puede esperar en el consultorio médico"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/text_incontinencia_esperar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_incontinencia_esperar"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"
+                    />
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btn_pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/rojo"
+        android:text="@string/descargar_en_pdf"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:strokeColor="@color/borde_rojo"
+        app:strokeWidth="1dp"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:translationZ="1dp"/>
 
 
 </LinearLayout>
