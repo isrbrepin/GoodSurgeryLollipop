@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginHorizontal="0dp"
@@ -35,6 +36,272 @@
         android:textSize="20sp"
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        app:cardCornerRadius="20dp">
+        <!-- Envuelve solo el último TextView en un ScrollView -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="true"
+            android:scrollbarFadeDuration="500">
+
+            <!-- Contenedor para los TextViews -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margen_texto_contenido"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Hemorroides"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Descripción:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Son unas dilataciones de las venas hemorroidales de margen de ano y el recto.
+\nSe distinguen dos tipos de hemorroides según su localización:
+\n\n·  Las hemorroides externas, visibles alrededor del ano y recubiertas de piel.
+\n\n·  Las hemorroides internas, no visibles al estar situadas por encima del ano, en el interior del recto y recubiertas de mucosa."
+                    android:textSize="16sp"
+                    android:layout_marginBottom="12dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Síntomas:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Tanto las hemorroides externas como las internas pueden producir  sangrado después de la defecación y algunas molestias. En ocasiones, con un esfuerzo, las hemorroides internas se salen fuera del ano (prolapso), desde donde pueden volver a su situación interior de forma espontánea o precisan su reintroducción manual para aliviar las molestias que esto produce. Contrariamente a lo que se piensa las hemorroides generalmente no duelen a no ser que esté trombosadas."
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/hemorroides1"
+                    android:contentDescription="@string/text_logo_app" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="La trombosis hemorroidal (obstrucción de la vena hemorroidal por un coágulo) es una complicación frecuente de toda hemorroide y es la que causa dolor agudo e intenso en el ano."
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/hemorroides2"
+                    android:contentDescription="@string/text_logo_app"
+                    android:layout_marginBottom="12dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Causas y frecuencia de la enfermedad:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Constituyen un trastorno muy frecuente en todas las poblaciones, afectando a la mayoría de adultos mayores de 30 años. Se producen por un aumento mantenido de presión en las venas hemorroidales, producido por diferentes motivos, entre los que destacan los siguientes:
+\n\n§  Estreñimiento y esfuerzos físicos continuos que aumentan la presión intraabdominal.
+\n§  Permanecer de pie mucho tiempo.
+\n§  Embarazo, por la presión ejercida por el útero sobre la zona.
+\n§  Hipertensión portal, una complicación de las enfermedades hepáticas crónicas.
+\n§  Insuficiencia cardiaca derecha."
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="Diagnóstico:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="En general, las hemorroides externas se diagnostican mediante un examen externo de la región anal, a simple vista. Para el diagnóstico de las hemorroides internas es necesario realizar una rectoscopia (visualizarlas con un sistema óptico introducido en el recto)."
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="Prevención:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="El mejor consejo respecto a las hemorroides, es evitar su aparición corrigiendo los malos hábitos alimentarios propios de la civilización occidental: debe evitarse el estreñimiento crónico, sobre todo con una dieta rica en fibra (pan integral, fruta, verdura) y bebiendo mucha agua (2 -3 litro/día)."
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="Tratamiento:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Cuando ya existen hemorroides, y producen molestias (dolor y prurito), se utilizan pomadas antihemorroidales, analgésicos, venotónicos, laxantes suaves y baños de asiento con agua tibia, varias veces al día.
+\n\nHay que saber que muchas de la pomadas que existen no se ha demostrado efecto terapéutico alguno.
+\n\nSi el dolor es muy intenso, conviene consultar al médico por la posibilidad de que se trate de una complicación tratable de forma eficaz (por ejemplo, la reintroducción de una hemorroide prolapsada, o la apertura de una hemorroide trombosada para extraer su coágulo, lo que puede realizarse de forma ambulatoria en la propia consulta del médico de cabecera).
+\n\nEl tratamiento definitivo de las hemorroides es su eliminación, para lo que existen varias modalidades de tratamiento:
+\n\n•  Escleroterapia (inyección de las hemorroides con un producto para disminuir su tamaño).
+\n•  Crioterapia (destruir las hemorroides mediante la aplicación local de frío muy intenso).
+\n•  Banding (utiliza bandas de goma, que estrangulan las hemorroides)"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/hemorroides3"
+                    android:contentDescription="@string/text_logo_app"
+                    android:layout_marginBottom="8dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="•  Hemorroidectomía (extirpación quirúrgica, sólo es necesaria en el 10% de los casos).
+\n\nEl especialista debe valorar la indicación más apropiada en cada caso."
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
+                    android:text="¿Cuándo debe de acudir al médico?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Todo sangrado rectal, sobre todo aquellos que se acompañan de cambios intestinales, deben ser comentados al médico para no retrasar el diagnóstico de cualquier otra enfermedad grave concomitante con las varices (cáncer, enfermedad inflamatoria intestinal, etc.). Es un grave error sanitario achacar estos síntomas sistemáticamente a las hemorroides y no prestarles atención (aunque afortunadamente, con frecuencia esa es la causa)."
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"
+                    />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btn_pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/rojo"
+        android:text="@string/descargar_en_pdf"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:strokeColor="@color/borde_rojo"
+        app:strokeWidth="1dp"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:translationZ="1dp"/>
 
 
 </LinearLayout>
