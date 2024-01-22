@@ -33,7 +33,7 @@ class AltaFistulaActivity : AppCompatActivity() {
 
         btnPdf.setOnClickListener(View.OnClickListener {
             // Nombre del PDF en la carpeta assets
-            val assetFileName = "Indicaciones al ALTA HEMORROIDES.pdf"
+            val assetFileName = "Indicaciones al ALTA FISTULAS.pdf"
             // Ruta de destino en el almacenamiento interno
             val destinationPath =
                 getExternalFilesDir(null).toString() + File.separator + assetFileName
