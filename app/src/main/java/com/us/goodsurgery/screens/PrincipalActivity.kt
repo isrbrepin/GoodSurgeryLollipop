@@ -187,6 +187,29 @@ class PrincipalActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                 startActivity(intent)
                 return true
             }
+            R.id.nav_acerca_de -> {
+                    val dialogView = layoutInflater.inflate(R.layout.activity_acerca_de, null)
+                    val builder = AlertDialog.Builder(this, R.style.CustomAlertDialog)
+                    builder.setView(dialogView)
+
+                    val dialog = builder.create()
+
+                    val layoutParams = WindowManager.LayoutParams().apply {
+                        copyFrom(dialog.window?.attributes)
+                        gravity = Gravity.CENTER // Cambiar a la posición que desees
+                    }
+                    dialog.window?.attributes = layoutParams
+
+                    val dismissButton: ImageButton = dialogView.findViewById(R.id.btn_cerrar_acerca_de)
+
+                    dismissButton.setOnClickListener {
+                        // Cierra el AlertDialog
+                        dialog.dismiss()
+                    }
+                    dialog.show()
+                return true
+            }
+
         }
 
         // No resaltar ningún elemento como seleccionado
