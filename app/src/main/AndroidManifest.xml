@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoodSurgery"
         tools:targetApi="31">
-        <activity
-            android:name=".screens.AcercaDeActivity"
-            android:exported="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
