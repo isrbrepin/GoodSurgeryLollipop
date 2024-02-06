@@ -5,8 +5,7 @@
     android:layout_height="match_parent">
 
     <!-- Main content layout -->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,13 +33,14 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView"
                     android:layout_width="match_parent"
-                    android:layout_height="450dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
                     app:cardCornerRadius="15dp"
@@ -60,20 +60,44 @@
                             android:gravity="center"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
+                            android:layout_marginBottom="12dp"
                             android:text="@string/text_tittle_instrucciones"
                             android:textColor="@color/letras_oscuras"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fadeScrollbars="true"
+                            android:layout_below="@id/textTitle"
+                            android:scrollbarFadeDuration="500">
+
+                        <!-- Contenedor para los TextViews -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
                         <TextView
-                            android:id="@+id/textInfo1"
+                            android:id="@+id/textInfo"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/textTitle"
                             android:layout_marginStart="16dp"
-                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="Se encuentra en la pantalla principal de la aplicación. Para acceder a la información de su patología deberá seguir los siguientes pasos:" />
+
+                        <TextView
+                            android:id="@+id/textInfo1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/textInfo"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
                             android:layout_marginEnd="16dp"
                             android:text="@string/txt_ins1" />
+
 
                         <TextView
                             android:id="@+id/textInfo2"
@@ -102,8 +126,19 @@
                             android:layout_below="@id/textInfo3"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
                             android:layout_marginEnd="16dp"
                             android:text="@string/txt_ins4" />
+
+                            <ImageView
+                                android:id="@+id/imageView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerInside"
+                                app:srcCompat="@drawable/cabecera_menu"
+                                android:contentDescription="@string/text_logo_app" />
 
                         <TextView
                             android:id="@+id/textInfo5"
@@ -112,8 +147,19 @@
                             android:layout_below="@id/textInfo4"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
                             android:layout_marginEnd="16dp"
                             android:text="@string/txt_ins5" />
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="200dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerInside"
+                                app:srcCompat="@drawable/menu"
+                                android:contentDescription="@string/text_logo_app" />
 
                         <TextView
                             android:id="@+id/textInfo6"
@@ -121,11 +167,45 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/textInfo5"
                             android:layout_marginStart="16dp"
+                            android:layout_marginBottom="8dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="16dp"
                             android:text="@string/txt_ins6" />
-                        <!-- Agrega más TextView según sea necesario -->
 
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="300dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerInside"
+                                app:srcCompat="@drawable/menu_patologias"
+                                android:contentDescription="@string/text_logo_app" />
+
+                            <TextView
+                                android:id="@+id/textInfo7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textInfo6"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:text="@string/textInfo7" />
+                            <!-- Agrega más TextView según sea necesario -->
+
+                            <ImageView
+                                android:id="@+id/imageView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="300dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerInside"
+                                app:srcCompat="@drawable/pantalla_tumordecolon"
+                                android:contentDescription="@string/text_logo_app" />
+
+                        </LinearLayout>
+                        </ScrollView>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -134,7 +214,7 @@
                     android:id="@+id/btn_comenzar"
                     android:layout_width="wrap_content"
                     android:layout_height="60dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="30dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="30dp"
                     android:backgroundTint="@color/color_botones"

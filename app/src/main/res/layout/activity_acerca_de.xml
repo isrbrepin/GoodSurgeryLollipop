@@ -121,7 +121,7 @@
                 android:layout_marginEnd="12dp"
                 android:gravity="center"
                 android:text="¡Hola! Mi nombre es Israel Brea, soy el creador de GoodSurgery.
-\n\nEsta aplicación se ha desarrollado para la ayuda y preparación del paciente quirúrgico previo a una operación. Sobretodo buscando una mejorar calidad de vida para ellos.
+\n\nEsta aplicación se ha desarrollado para la ayuda y preparación del paciente quirúrgico previo a una operación. Sobretodo buscando mejorar la calidad de vida de los pacientes que la usen.
 \n\nGoodSurgery ha sido diseñada y programada por Israel Brea Piñero para la asignatura Trabajo de Fin de Grado de la ETSII de la Universidad de Sevilla."
                 android:textSize="16dp"
                 app:layout_constraintEnd_toEndOf="parent"

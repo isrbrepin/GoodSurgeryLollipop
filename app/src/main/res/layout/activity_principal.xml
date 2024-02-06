@@ -59,6 +59,17 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/textInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textTitle"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:text="Se encuentra en la pantalla principal de la aplicación. Para acceder a la información de su patología deberá seguir los siguientes pasos:" />
+
+
+            <TextView
                 android:id="@+id/textInfo1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -117,6 +128,16 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/txt_ins6" />
+
+            <TextView
+                android:id="@+id/textInfo7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textInfo6"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/textInfo7" />
             <!-- Agrega más TextView según sea necesario -->
 
         </RelativeLayout>

@@ -55,12 +55,12 @@
     <string name="suelo">Suelo pélvico</string>
     <string name="abdominal">Cirugía abdominal</string>
     <string name="info_patologia">Información sobre la patología</string>
-    <string name="txt_ins1">1. Pulse en “pulse aquí para comenzar</string>
-    <string name="txt_ins2">2. Una vez presione, seleccione el tipo de intervención/proceso/patología que le hayan explicado en la consulta</string>
-    <string name="txt_ins3">3. Una vez dentro encontrará la informacion necesaria para el proceso, preoperatorio y postoperatorio</string>
-    <string name="txt_ins4">4. .............................................</string>
-    <string name="txt_ins5">5. .............................................</string>
-    <string name="txt_ins6">6. ..............................................</string>
+    <string name="txt_ins1">1. Pulse en “pulse aquí para comenzar"</string>
+    <string name="txt_ins2">2. Una vez pulsado, deberá buscar el tipo de intervención/proceso/patología que le hayan explicado en la consulta</string>
+    <string name="txt_ins3">3. Una vez encontrada dicha patología. Estará situado en una pantalla donde podrá encontrar la informacion relativa a la información del proceso, el preoperatorio y el postoperatorio de su patología</string>
+    <string name="txt_ins4">4. También podrá acceder a la información de su patología desde el menú de la pantalla principal</string>
+    <string name="txt_ins5">5. Pulse en "Patologías" y se abrirá un desplegable con todas las patologías</string>
+    <string name="txt_ins6">6. Busque y pulse su tipo de intervención/proceso/patología</string>
     <string name="salir">Salir</string>
     <string name="abrir">Abrir</string>
     <string name="cerrar">Cerrar</string>
@@ -120,5 +120,6 @@
     <string name="text_fistula_que_son"><![CDATA[El absceso y la fístula anal son dos situaciones motivadas por una causa común en diferentes momentos evolutivos. De esta forma, en la fase aguda se formaría un acúmulo de material purulento que se conoce como absceso anal. La evolución de este absceso mediante la formación de una comunicación entre el canal anal y la piel perianal, por la que emergería el pus, se conocería como <b>fístula anal</b> y representaría un paso más en la evolución de este proceso.]]></string>
     <string name="text_incontinencia_esperar"><![CDATA[El médico realizará un examen físico enfocándose en el abdomen y el recto. Se hará un examen digital del recto y ano. El médico insertará un dedo lubricado en el recto para evaluar el tono del esfínter, los reflejos anales y para buscar anormalidades del área rectal. <br><br>Las preguntas que documentan en detalle una <i>historia clínica</i> sobre una incontinencia intestinal pueden ser: <br>¿Ha sucedido algo que pueda haber causado un trastorno emocional? <br>¿Está el paciente confundido o desorientado? <br>En el caso de un niño, ¿ya había aprendido a ir al inodoro? ¿Tuvo problemas al aprenderlo? <br>¿Qué otros síntomas están también presentes? <br>¿Describa su problema? ¿Cuándo se presenta? <br>¿Durante cuánto tiempo ha sido la incontinencia un problema? <br>¿Cuántas veces al día se presenta? <br>¿Se está consciente de la necesidad de defecar antes de la fuga de heces? <br>¿Cómo es la consistencia de las heces? <br>¿Qué cantidad de heces se fuga (descarga, con gas, grandes cantidades de heces)? <br>¿A qué cirugías ha sido sometido el paciente? \n¿Qué lesiones ha sufrido el paciente? <br>¿Qué medicamentos está tomando? <br>¿Bebe café? ¿Cuánto? <br>¿Bebe alcohol? ¿Cuánto? <br>¿Cómo es la dieta regular? <br><br><i>Los exámenes de diagnóstico</i> pueden ser, entre otros: <br>Cultivo de heces si la persona tiene una diarrea crónica <br>Exámenes de sangre <br>Enema de bario <br>Defecografía (procedimiento radiográfico que se realiza utilizando material de contraste para visualizar los intestinos mientras la persona defeca) <br>Esfínterograma por balón (procedimiento radiográfico que se realiza utilizando material de contraste para evaluar el nivel de contracción del esfínter) <br>Manometría anal (medición del tono del esfínter anal) <br>Ultrasonido rectal o pélvico]]></string>
     <string name="text_prep_incontinencia"><![CDATA[1. Mantenerse en dieta absoluta, sin comer ni beber (agua tampoco) <br><br>2. Realizar la preparación del colon tal y como se indicó en consultas. También puede consultarlo en el apartado <u>“Instrucciones para el ingreso - HG/HMC”</u> en esta misma aplicación. <br><br>3. Tomar su medicación habitual salvo contraindicación por parte del anestesista. Deberá traer toda su medicación habitual para el ingreso. <br><br>4. Ducharse la mañana de la intervención y asear la zona a intervenir. <br><br>5. Seguir todas las instrucciones que haya recibido por teléfono.]]></string>
+    <string name="textInfo7">7. Una vez pulsado, se encontrará situado en una pantalla donde podrá encontrar la informacion relativa a la información del proceso, el preoperatorio y el postoperatorio de su patología</string>
 
 </resources>
