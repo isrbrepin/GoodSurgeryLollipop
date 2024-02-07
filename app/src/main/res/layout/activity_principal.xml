@@ -66,6 +66,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="16dp"
+                android:justificationMode="inter_word"
                 android:text="Se encuentra en la pantalla principal de la aplicación. Para acceder a la información de su patología deberá seguir los siguientes pasos:" />
 
 
@@ -77,6 +78,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="16dp"
+                android:justificationMode="inter_word"
                 android:text="@string/txt_ins1" />
 
             <TextView
@@ -87,6 +89,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
+                android:justificationMode="inter_word"
                 android:text="@string/txt_ins2" />
 
             <TextView
@@ -97,6 +100,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
+                android:justificationMode="inter_word"
                 android:text="@string/txt_ins3" />
 
             <TextView
@@ -107,6 +111,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
+                android:justificationMode="inter_word"
                 android:text="@string/txt_ins4" />
 
             <TextView
@@ -117,6 +122,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
+                android:justificationMode="inter_word"
                 android:text="@string/txt_ins5" />
 
             <TextView
@@ -127,6 +133,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
+                android:justificationMode="inter_word"
                 android:text="@string/txt_ins6" />
 
             <TextView
@@ -137,6 +144,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
+                android:justificationMode="inter_word"
                 android:text="@string/textInfo7" />
             <!-- Agrega más TextView según sea necesario -->
 

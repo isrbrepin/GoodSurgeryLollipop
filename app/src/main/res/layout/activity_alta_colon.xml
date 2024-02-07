@@ -80,7 +80,8 @@
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="HOJA DE INDICACIONES AL ALTA PARA CÁNCER COLORRECTAL / POLIPOS"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:justificationMode="inter_word"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -92,6 +93,7 @@
 las instrucciones que debe seguir. Salvo excepción que quedará convenientemente
 reflejada, son las siguientes:"
                     android:textSize="16sp"
+                    android:justificationMode="inter_word"
                     />
 
                 <TextView
@@ -109,7 +111,8 @@ progresiva su actividad física.\n5. Si presentase fiebre, dolor, mal estar gene
 acudir al servicio de urgencias del Hospital General. \n6. Se le entregará o le llegará por correo una cita de revisión en consultas de
 COLOPROCTOLOGÍA en aproximadamente 45 días\7. Deberá cursar la HOJA DE CONSULTA que se le ha entregado en ONCOLOGÍA, en
 la PLANTA BAJA DEL HOSPITAL GENERAL"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
 
             </LinearLayout>
         </ScrollView>
