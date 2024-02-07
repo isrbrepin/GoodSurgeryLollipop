@@ -351,6 +351,7 @@
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="@string/text_sintomas_ccr_lista"
                     android:textSize="16sp"
+                    android:justificationMode="inter_word"
                     />
 
                 <TextView
@@ -361,7 +362,8 @@
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="Después de las pruebas: clasificación por etapas"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:justificationMode="inter_word"/>
 
                 <TextView
                     android:id="@+id/text_despues_pruebas_ccr"

@@ -29,6 +29,7 @@ class PostoperatorioColonActivity : AppCompatActivity() {
         val btnHome: ImageButton = findViewById(R.id.btn_home)
         btnHome.setOnClickListener{
             intent = Intent(this, PrincipalActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
 
@@ -72,7 +73,6 @@ class PostoperatorioColonActivity : AppCompatActivity() {
         btnAlta = findViewById(R.id.btn_al_alta)
         btnAlta.setOnClickListener{
             intent = Intent(this, AltaColonActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
 
