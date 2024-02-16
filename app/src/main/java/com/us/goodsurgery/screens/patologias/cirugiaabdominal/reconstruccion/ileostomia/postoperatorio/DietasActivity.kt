@@ -4,27 +4,22 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
-import android.view.View
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.PrincipalActivity
-import com.us.goodsurgery.screens.patologias.cirugiaabdominal.reconstruccion.colostomia.postoperatorio.AltaColostomiaActivity
-import com.us.goodsurgery.screens.patologias.cirugiaabdominal.reconstruccion.colostomia.postoperatorio.OstomiaColostomiaActivity
 
-class PostoperatorioIleostomaActivity : AppCompatActivity() {
+class DietasActivity : AppCompatActivity() {
 
-    private lateinit var btnAlta:Button
-    private lateinit var btnDietasAlta:Button
-    private lateinit var btnOstomia:Button
+    private lateinit var btnDietaVerano: Button
+    private lateinit var btnDietaInvierno: Button
     private lateinit var btnVolverAtras: ImageButton
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_postoperatorio_ileostoma)
+        setContentView(R.layout.activity_dietas)
 
         // Lógica de la Header
 
@@ -71,21 +66,15 @@ class PostoperatorioIleostomaActivity : AppCompatActivity() {
 
         // Lógica de navegación
 
-        btnAlta = findViewById(R.id.btn_al_alta)
-        btnAlta.setOnClickListener{
-            intent = Intent(this, AltaIleostomiaActivity::class.java)
+        btnDietaVerano = findViewById(R.id.btn_dieta_verano)
+        btnDietaVerano.setOnClickListener{
+            intent = Intent(this, DietasAltaIleostomiaActivity::class.java)
             startActivity(intent)
         }
 
-        btnDietasAlta = findViewById(R.id.btn_dietas_al_alta)
-        btnDietasAlta.setOnClickListener{
-            intent = Intent(this, DietasActivity::class.java)
-            startActivity(intent)
-        }
-
-        btnOstomia = findViewById(R.id.btn_ostomia)
-        btnOstomia.setOnClickListener{
-            intent = Intent(this, OstomiaIleostomiaActivity::class.java)
+        btnDietaInvierno = findViewById(R.id.btn_dieta_invierno)
+        btnDietaInvierno.setOnClickListener{
+            intent = Intent(this, DietaInviernoIleostomiaActivity::class.java)
             startActivity(intent)
         }
     }

@@ -32,7 +32,7 @@
         android:elevation="20dp"
         android:background="@drawable/pagactual_drawable"
         android:layout_height="@dimen/dimen_subtitulo"
-        android:text="@string/text_ostomia"
+        android:text="Menú de Invierno"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textColor="#FFFFFF"

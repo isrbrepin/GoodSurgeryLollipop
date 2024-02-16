@@ -1,19 +1,26 @@
-package com.us.goodsurgery.screens.patologias.cirugiaabdominal.reconstruccion.colostomia.postoperatorio
+package com.us.goodsurgery.screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.postoperatorio
 
+import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
 import android.graphics.pdf.PdfRenderer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.ParcelFileDescriptor
 import android.view.Gravity
 import android.view.View
+import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.FileProvider
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import com.us.goodsurgery.BuildConfig
 import com.us.goodsurgery.R
 import com.us.goodsurgery.Utils.PdfPageAdapter
@@ -23,14 +30,14 @@ import java.io.FileOutputStream
 import java.io.IOException
 import java.io.OutputStream
 
-class OstomiaColostomiaActivity : AppCompatActivity() {
+class DietaInviernoIleostomiaActivity : AppCompatActivity() {
 
     private lateinit var btnVolverAtras: ImageButton
     private lateinit var btnPdf: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ostomia_colostomia)
+        setContentView(R.layout.activity_dieta_invierno_ileostomia)
 
         //Logica pdf
 
@@ -38,7 +45,7 @@ class OstomiaColostomiaActivity : AppCompatActivity() {
 
         btnPdf.setOnClickListener(View.OnClickListener {
             // Nombre del PDF en la carpeta assets
-            val assetFileName = "Indicaciones al alta paciente con COLOSTOMIA.pdf"
+            val assetFileName = "Dietas al alta Ileostomía - Menú INVIERNO _2_.pdf"
             // Ruta de destino en el almacenamiento interno
             val destinationPath =
                 getExternalFilesDir(null).toString() + File.separator + assetFileName
@@ -160,7 +167,7 @@ class OstomiaColostomiaActivity : AppCompatActivity() {
     }
 
     private fun showPdfPage() {
-        val assetFileName = "Indicaciones al alta paciente con COLOSTOMIA.pdf"
+        val assetFileName = "Dietas al alta Ileostomía - Menú INVIERNO _2_.pdf"
         val destinationPath = getExternalFilesDir(null).toString() + File.separator + assetFileName
         copyFileFromAssets(assetFileName, destinationPath)
 
@@ -197,3 +204,4 @@ class OstomiaColostomiaActivity : AppCompatActivity() {
         }
     }
 }
+
