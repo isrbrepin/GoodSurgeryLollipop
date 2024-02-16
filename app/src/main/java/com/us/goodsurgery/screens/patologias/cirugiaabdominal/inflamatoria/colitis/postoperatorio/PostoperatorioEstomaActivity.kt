@@ -1,4 +1,4 @@
-package com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.reseccion.preoperatorio
+package com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.colitis.postoperatorio
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,16 +11,15 @@ import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.PrincipalActivity
 
-class PreoperatorioReseccionActivity : AppCompatActivity() {
+class PostoperatorioEstomaActivity : AppCompatActivity() {
 
-    private lateinit var btnAnestesia:Button
-    private lateinit var btnIngreso:Button
-    private lateinit var btnPreparacion:Button
+    private lateinit var btnAlta:Button
+    private lateinit var btnOstomia:Button
     private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_preoperatorio_reseccion)
+        setContentView(R.layout.activity_postoperatorio_estoma)
 
         // Lógica de la Header
 
@@ -66,24 +65,20 @@ class PreoperatorioReseccionActivity : AppCompatActivity() {
         }
 
 
-        // Lógica de navegación
+        // Lógica de la navegación
 
-        btnAnestesia = findViewById(R.id.btn_anestesia)
-        btnAnestesia.setOnClickListener{
-            intent = Intent(this, AnestesiaReseccionActivity::class.java)
+        btnAlta = findViewById(R.id.btn_al_alta)
+        btnAlta.setOnClickListener {
+            intent = Intent(this, AltaEstomaActivity::class.java)
             startActivity(intent)
         }
 
-        btnIngreso = findViewById(R.id.btn_ingreso)
-        btnIngreso.setOnClickListener{
-            intent = Intent(this, IngresoReseccionActivity::class.java)
+        btnOstomia = findViewById(R.id.btn_ostomia)
+        btnOstomia.setOnClickListener {
+            intent = Intent(this, OstomiaEstomaActivity::class.java)
             startActivity(intent)
         }
 
-        btnPreparacion = findViewById(R.id.btn_preparacion)
-        btnPreparacion.setOnClickListener{
-            intent = Intent(this, PreparacionReseccionActivity::class.java)
-            startActivity(intent)
-        }
+
     }
 }

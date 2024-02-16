@@ -36,12 +36,12 @@
 
         <item
             android:id="@+id/reseccion_instestinal"
-            android:title="@string/text_reseccion"
+            android:title="@string/enfermedad_de_crohn"
             android:visible="false"/>
 
         <item
             android:id="@+id/estoma"
-            android:title="@string/text_estoma"
+            android:title="@string/colitis_ulcerosa"
             android:visible="false"/>
 
         <item

@@ -16,7 +16,7 @@
         android:gravity="center"
         android:background="@drawable/pagactual2_sin_curvas_drawable"
         android:layout_height="@dimen/dimen_titulo"
-        android:text="@string/text_reseccion"
+        android:text="@string/enfermedad_de_crohn"
         android:textSize="20sp"
         android:textColor="@color/letras_oscuras"
         android:textStyle="bold" />

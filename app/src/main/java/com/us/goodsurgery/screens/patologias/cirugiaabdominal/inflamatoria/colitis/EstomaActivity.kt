@@ -1,4 +1,4 @@
-package com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.estoma.preoperatorio
+package com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.colitis
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -10,14 +10,19 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.PrincipalActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.colitis.postoperatorio.PostoperatorioEstomaActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.colitis.preoperatorio.PreoperatorioEstomaActivity
 
-class IngresoEstomaActivity : AppCompatActivity() {
+class EstomaActivity : AppCompatActivity() {
 
+    private lateinit var btnInformacion:Button
+    private lateinit var btnPreoperatorio:Button
+    private lateinit var btnPostoperatorio:Button
     private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ingreso_estoma)
+        setContentView(R.layout.activity_estoma)
 
         // Lógica de la Header
 
@@ -61,5 +66,26 @@ class IngresoEstomaActivity : AppCompatActivity() {
 
             dialog.show()
         }
+
+
+        // Lógica de navegación
+
+        btnInformacion = findViewById(R.id.btn_informacion_del_proceso)
+        btnInformacion.setOnClickListener{
+            intent = Intent(this, InfoEstomaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnPreoperatorio = findViewById(R.id.btn_preoperatorio)
+        btnPreoperatorio.setOnClickListener{
+            intent = Intent(this, PreoperatorioEstomaActivity::class.java)
+            startActivity(intent)
+        }
+        btnPostoperatorio = findViewById(R.id.btn_postoperatorio)
+        btnPostoperatorio.setOnClickListener{
+            intent = Intent(this, PostoperatorioEstomaActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

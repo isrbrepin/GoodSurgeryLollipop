@@ -1,4 +1,4 @@
-package com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.reseccion
+package com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.crohn.preoperatorio
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,24 +9,63 @@ import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.FileProvider
+import com.us.goodsurgery.BuildConfig
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.PrincipalActivity
-import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.estoma.InfoEstomaActivity
-import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.estoma.postoperatorio.PostoperatorioEstomaActivity
-import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.estoma.preoperatorio.PreoperatorioEstomaActivity
-import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.reseccion.postoperatorio.PostoperatorioReseccionActivity
-import com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.reseccion.preoperatorio.PreoperatorioReseccionActivity
+import java.io.File
+import java.io.FileOutputStream
+import java.io.IOException
+import java.io.OutputStream
 
-class ReseccionActivity : AppCompatActivity() {
+class AnestesiaReseccionActivity : AppCompatActivity() {
 
-    private lateinit var btnInformacion:Button
-    private lateinit var btnPreoperatorio:Button
-    private lateinit var btnPostoperatorio:Button
     private lateinit var btnVolverAtras: ImageButton
+    private lateinit var btnPdf: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_reseccion)
+        setContentView(R.layout.activity_anestesia_reseccion)
+
+        //Logica pdf
+
+        btnPdf = findViewById(R.id.btn_pdf)
+
+        btnPdf.setOnClickListener(View.OnClickListener {
+            // Nombre del PDF en la carpeta assets
+            val assetFileName = "Instrucciones EPA general.pdf"
+            // Ruta de destino en el almacenamiento interno
+            val destinationPath =
+                getExternalFilesDir(null).toString() + File.separator + assetFileName
+            try {
+                // Copiar el archivo desde assets al almacenamiento interno
+                val `in` = assets.open(assetFileName)
+                val out: OutputStream = FileOutputStream(destinationPath)
+                val buffer = ByteArray(1024)
+                var read: Int
+                while (`in`.read(buffer).also { read = it } != -1) {
+                    out.write(buffer, 0, read)
+                }
+                out.flush()
+                out.close()
+                `in`.close()
+
+                // Abrir el PDF descargado
+                val file = File(destinationPath)
+                val uri = FileProvider.getUriForFile(
+                    this,
+                    BuildConfig.APPLICATION_ID + ".provider", file
+                )
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.setDataAndType(uri, "application/pdf")
+                intent.flags =
+                    Intent.FLAG_ACTIVITY_NO_HISTORY or Intent.FLAG_GRANT_READ_URI_PERMISSION
+                startActivity(intent)
+            } catch (e: IOException) {
+                e.printStackTrace()
+                // Manejar el error
+            }
+        })
 
         // Lógica de la Header
 
@@ -69,26 +108,6 @@ class ReseccionActivity : AppCompatActivity() {
             }
 
             dialog.show()
-        }
-
-
-        // Lógica de navegación
-
-        btnInformacion = findViewById(R.id.btn_informacion_del_proceso)
-        btnInformacion.setOnClickListener{
-            intent = Intent(this, InfoReseccionActivity::class.java)
-            startActivity(intent)
-        }
-
-        btnPreoperatorio = findViewById(R.id.btn_preoperatorio)
-        btnPreoperatorio.setOnClickListener{
-            intent = Intent(this, PreoperatorioReseccionActivity::class.java)
-            startActivity(intent)
-        }
-        btnPostoperatorio = findViewById(R.id.btn_postoperatorio)
-        btnPostoperatorio.setOnClickListener{
-            intent = Intent(this, PostoperatorioReseccionActivity::class.java)
-            startActivity(intent)
         }
     }
 }

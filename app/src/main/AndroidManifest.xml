@@ -78,10 +78,10 @@
             android:name=".screens.patologias.proctologia.fistula.preoperatorio.PreoperatorioFistulaActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.postoperatorio.PostoperatorioReseccionActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.crohn.postoperatorio.PostoperatorioReseccionActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.preoperatorio.PreoperatorioReseccionActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.crohn.preoperatorio.PreoperatorioReseccionActivity"
             android:exported="false" />
         <activity
             android:name=".screens.patologias.cirugiaabdominal.polipos.recto.postoperatorio.PostoperatorioRectoActivity"
@@ -96,10 +96,10 @@
             android:name=".screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.preoperatorio.PreoperatorioIleostomaActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.postoperatorio.PostoperatorioEstomaActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.colitis.postoperatorio.PostoperatorioEstomaActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.preoperatorio.PreoperatorioEstomaActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.colitis.preoperatorio.PreoperatorioEstomaActivity"
             android:exported="false" />
         <activity
             android:name=".screens.patologias.cirugiaabdominal.reconstruccion.colostomia.postoperatorio.PostoperatorioColostomiaActivity"
@@ -204,19 +204,19 @@
             android:name=".screens.patologias.proctologia.fistula.postoperatorio.AltaFistulaActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.preoperatorio.PreparacionReseccionActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.crohn.preoperatorio.PreparacionReseccionActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.postoperatorio.OstomiaReseccionActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.crohn.postoperatorio.OstomiaReseccionActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.preoperatorio.IngresoReseccionActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.crohn.preoperatorio.IngresoReseccionActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.preoperatorio.AnestesiaReseccionActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.crohn.preoperatorio.AnestesiaReseccionActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.postoperatorio.AltaReseccionActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.crohn.postoperatorio.AltaReseccionActivity"
             android:exported="false" />
         <activity
             android:name=".screens.patologias.cirugiaabdominal.polipos.recto.preoperatorio.PreparacionRectoActivity"
@@ -249,19 +249,19 @@
             android:name=".screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.postoperatorio.AltaIleostomiaActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.preoperatorio.PreparacionEstomaActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.colitis.preoperatorio.PreparacionEstomaActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.postoperatorio.OstomiaEstomaActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.colitis.postoperatorio.OstomiaEstomaActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.preoperatorio.IngresoEstomaActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.colitis.preoperatorio.IngresoEstomaActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.preoperatorio.AnestesiaEstomaActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.colitis.preoperatorio.AnestesiaEstomaActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.postoperatorio.AltaEstomaActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.colitis.postoperatorio.AltaEstomaActivity"
             android:exported="false" />
         <activity
             android:name=".screens.patologias.cirugiaabdominal.reconstruccion.colostomia.preoperatorio.PreparacionColostomiaActivity"
@@ -330,16 +330,16 @@
             android:name=".screens.patologias.proctologia.fistula.FistulaActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.InfoReseccionActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.crohn.InfoReseccionActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.reseccion.ReseccionActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.crohn.ReseccionActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.InfoEstomaActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.colitis.InfoEstomaActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.estoma.EstomaActivity"
+            android:name=".screens.patologias.cirugiaabdominal.inflamatoria.colitis.EstomaActivity"
             android:exported="false" />
         <activity
             android:name=".screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.InfoIleostomiaActivity"

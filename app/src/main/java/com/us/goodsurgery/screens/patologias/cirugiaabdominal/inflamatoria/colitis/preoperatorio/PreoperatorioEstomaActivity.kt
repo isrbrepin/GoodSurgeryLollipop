@@ -1,4 +1,4 @@
-package com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.reseccion.preoperatorio
+package com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.colitis.preoperatorio
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,14 +11,16 @@ import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.PrincipalActivity
 
+class PreoperatorioEstomaActivity : AppCompatActivity() {
 
-class PreparacionReseccionActivity : AppCompatActivity() {
-
+    private lateinit var btnAnestesia:Button
+    private lateinit var btnIngreso:Button
+    private lateinit var btnPreparacion:Button
     private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_preparacion_reseccion)
+        setContentView(R.layout.activity_preoperatorio_estoma)
 
         // Lógica de la Header
 
@@ -62,5 +64,27 @@ class PreparacionReseccionActivity : AppCompatActivity() {
 
             dialog.show()
         }
+
+
+        // Lógica de la navegación
+
+        btnAnestesia = findViewById(R.id.btn_anestesia)
+        btnAnestesia.setOnClickListener{
+            intent = Intent(this, AnestesiaEstomaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnIngreso = findViewById(R.id.btn_ingreso)
+        btnIngreso.setOnClickListener{
+            intent = Intent(this, IngresoEstomaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnPreparacion = findViewById(R.id.btn_preparacion)
+        btnPreparacion.setOnClickListener{
+            intent = Intent(this, PreparacionEstomaActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

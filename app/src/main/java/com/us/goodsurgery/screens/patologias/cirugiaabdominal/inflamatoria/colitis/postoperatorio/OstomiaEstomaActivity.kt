@@ -1,4 +1,4 @@
-package com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.estoma.preoperatorio
+package com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.colitis.postoperatorio
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,13 +11,13 @@ import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.PrincipalActivity
 
-class PreparacionEstomaActivity : AppCompatActivity() {
+class OstomiaEstomaActivity : AppCompatActivity() {
 
     private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_preparacion_estoma)
+        setContentView(R.layout.activity_ostomia_estoma)
 
         // Lógica de la Header
 
