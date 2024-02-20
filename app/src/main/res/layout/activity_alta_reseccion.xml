@@ -101,12 +101,12 @@
                     android:layout_marginStart="36dp"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="1. Deberá seguir las instrucciones del tratamiento prescrito
-\n2. Deberá retirarse los puntos/grapas de las heridas a los 8-10 de la intervención en su centro de salud, salvo indicación específica que le hayan dado.
-\n3. Salvo indicación específica según su tipo de intervención, sobre todo si es portador de una ILEOSTOMIA, en líneas generales debe llevar una dieta mediterránea saludable, evitando ultraprocesados así como alcohol.
-\n4. Debe mantenerse activo evitando tiempos prolongados de inactividad, ya que hay riesgo de sufrir tromboembolismos. Es ideal que salga a pasear y aumente de forma progresiva su actividad física.
-\n5. Si presentase fiebre, dolor, mal estar general o cualquier signo de alarma, deberá acudir al servicio de urgencias del Hospital General.
-\n6. Se le entregará o le llegará por correo una cita de revisión en consultas de COLOPROCTOLOGÍA.
-\n7. Deberá solicitar cita de revisión con su Digestivo de referencia.
+\n\n2. Deberá retirarse los puntos/grapas de las heridas a los 8-10 de la intervención en su centro de salud, salvo indicación específica que le hayan dado.
+\n\n3. Salvo indicación específica según su tipo de intervención, sobre todo si es portador de una ILEOSTOMIA, en líneas generales debe llevar una dieta mediterránea saludable, evitando ultraprocesados así como alcohol.
+\n\n4. Debe mantenerse activo evitando tiempos prolongados de inactividad, ya que hay riesgo de sufrir tromboembolismos. Es ideal que salga a pasear y aumente de forma progresiva su actividad física.
+\n\n5. Si presentase fiebre, dolor, mal estar general o cualquier signo de alarma, deberá acudir al servicio de urgencias del Hospital General.
+\n\n6. Se le entregará o le llegará por correo una cita de revisión en consultas de COLOPROCTOLOGÍA.
+\n\n7. Deberá solicitar cita de revisión con su Digestivo de referencia.
 "
                     android:textSize="16sp"
                     android:justificationMode="inter_word"/>

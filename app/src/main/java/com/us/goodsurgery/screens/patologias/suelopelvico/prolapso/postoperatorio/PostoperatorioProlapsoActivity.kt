@@ -17,7 +17,6 @@ import com.us.goodsurgery.screens.patologias.suelopelvico.incontinencia.postoper
 class PostoperatorioProlapsoActivity : AppCompatActivity() {
 
     private lateinit var btnAlta:Button
-    private lateinit var btnOstomia:Button
     private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,10 +75,5 @@ class PostoperatorioProlapsoActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btnOstomia = findViewById(R.id.btn_ostomia)
-        btnOstomia.setOnClickListener{
-            intent = Intent(this, OstomiaProlapsoActivity::class.java)
-            startActivity(intent)
-        }
     }
 }

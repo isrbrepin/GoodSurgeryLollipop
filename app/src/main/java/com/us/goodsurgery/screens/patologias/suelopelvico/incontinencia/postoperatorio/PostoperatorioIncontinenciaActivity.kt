@@ -17,7 +17,6 @@ import com.us.goodsurgery.screens.patologias.proctologia.hemorroides.postoperato
 class PostoperatorioIncontinenciaActivity : AppCompatActivity() {
 
     private lateinit var btnAlta:Button
-    private lateinit var btnOstomia:Button
     private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,12 +72,6 @@ class PostoperatorioIncontinenciaActivity : AppCompatActivity() {
         btnAlta = findViewById(R.id.btn_al_alta)
         btnAlta.setOnClickListener{
             intent = Intent(this, AltaIncontinenciaActivity::class.java)
-            startActivity(intent)
-        }
-
-        btnOstomia = findViewById(R.id.btn_ostomia)
-        btnOstomia.setOnClickListener{
-            intent = Intent(this, OstomiaIncontinenciaActivity::class.java)
             startActivity(intent)
         }
     }

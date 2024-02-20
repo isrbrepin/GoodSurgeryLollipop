@@ -49,32 +49,97 @@
         android:layout_marginStart="10dp"
         app:cardCornerRadius="20dp">
         <!-- Envuelve solo el último TextView en un ScrollView -->
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/pdfViewPager"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="true"
+            android:scrollbarFadeDuration="500">
 
-        <ImageView
-            android:id="@+id/left_arrow"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/flecha_pequena_izquierda"
-            android:layout_marginStart="8dp"
-            android:visibility="invisible"
-            android:layout_gravity="center_vertical|start"
-            app:tint="@color/gris_claro" />
-
-        <ImageView
-            android:id="@+id/right_arrow"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/flecha_pequena_derecha"
-            android:layout_marginEnd="8dp"
-            android:visibility="invisible"
-            android:layout_gravity="center_vertical|end"
-            app:tint="@color/gris_claro" />
+            <!-- Contenedor para los TextViews -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="RECOMENDACIONES AL ALTA DE LA UNIDAD DE OSTOMIAS PARA PACIENTES CON ILEOSTOMIA"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_titulo_azul" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Recomendaciones de salud:"
+                    android:textSize="16sp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/text_ostomia_ileo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_ostomia_ileo1"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_ostomia_ileo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_ostomia_ileo2"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:background="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/text_ostomia_ileo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_ostomia_ileo3"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:background="@android:color/black"/>
+
+            </LinearLayout>
+        </ScrollView>
     </com.google.android.material.card.MaterialCardView>
 
     <Button

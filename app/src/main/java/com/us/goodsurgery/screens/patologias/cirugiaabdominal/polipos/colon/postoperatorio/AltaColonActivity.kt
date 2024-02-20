@@ -27,14 +27,10 @@ class AltaColonActivity : AppCompatActivity() {
 
     private lateinit var btnVolverAtras: ImageButton
     private lateinit var btnPdf: Button
-    private lateinit var pdfPageImageView: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_alta_colon)
-
-        pdfPageImageView = findViewById(R.id.pdfPageImageView)
-        showPdfPage()
 
         //Logica pdf
 
@@ -118,50 +114,6 @@ class AltaColonActivity : AppCompatActivity() {
             }
 
             dialog.show()
-        }
-    }
-
-    private fun showPdfPage() {
-        val assetFileName = "Indicaciones al ALTA CCR_polipos.pdf"
-        val destinationPath = getExternalFilesDir(null).toString() + File.separator + assetFileName
-        copyFileFromAssets(assetFileName, destinationPath)
-
-        try {
-            val file = File(destinationPath)
-            val fileDescriptor = ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY)
-            val pdfRenderer = PdfRenderer(fileDescriptor)
-
-            // Mostrar la primera página del PDF
-            val currentPage = pdfRenderer.openPage(0)
-            val bitmap = Bitmap.createBitmap(currentPage.width, currentPage.height, Bitmap.Config.ARGB_8888)
-            currentPage.render(bitmap, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
-            pdfPageImageView.setImageBitmap(bitmap)
-
-            // Cerrar el renderer y la página cuando hayas terminado
-            currentPage.close()
-            pdfRenderer.close()
-        } catch (e: IOException) {
-            e.printStackTrace()
-            // Manejar el error
-        }
-    }
-
-    // Copia el archivo PDF de los assets al almacenamiento interno, si aún no se ha copiado
-    private fun copyFileFromAssets(assetFileName: String, destinationPath: String) {
-        try {
-            val `in` = assets.open(assetFileName)
-            val out: OutputStream = FileOutputStream(destinationPath)
-            val buffer = ByteArray(1024)
-            var read: Int
-            while (`in`.read(buffer).also { read = it } != -1) {
-                out.write(buffer, 0, read)
-            }
-            out.flush()
-            out.close()
-            `in`.close()
-        } catch (e: IOException) {
-            e.printStackTrace()
-            // Manejar el error
         }
     }
 }

@@ -17,7 +17,6 @@ import com.us.goodsurgery.screens.patologias.cirugiaabdominal.reconstruccion.ile
 class PostoperatorioFistulaActivity : AppCompatActivity() {
 
     private lateinit var btnAlta:Button
-    private lateinit var btnOstomia:Button
     private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +26,7 @@ class PostoperatorioFistulaActivity : AppCompatActivity() {
         // Lógica de la Header
 
         val btnHome: ImageButton = findViewById(R.id.btn_home)
-        btnHome.setOnClickListener{
+        btnHome.setOnClickListener {
             intent = Intent(this, PrincipalActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
@@ -71,14 +70,8 @@ class PostoperatorioFistulaActivity : AppCompatActivity() {
         // Lógica de navegación
 
         btnAlta = findViewById(R.id.btn_al_alta)
-        btnAlta.setOnClickListener{
+        btnAlta.setOnClickListener {
             intent = Intent(this, AltaFistulaActivity::class.java)
-            startActivity(intent)
-        }
-
-        btnOstomia = findViewById(R.id.btn_ostomia)
-        btnOstomia.setOnClickListener{
-            intent = Intent(this, OstomiaFistulaActivity::class.java)
             startActivity(intent)
         }
     }

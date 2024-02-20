@@ -5,12 +5,14 @@ import android.graphics.pdf.PdfRenderer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.ParcelFileDescriptor
+import android.text.Html
 import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.FileProvider
 import androidx.viewpager2.widget.ViewPager2
@@ -27,6 +29,8 @@ class InfoEstomaActivity : AppCompatActivity() {
 
     private lateinit var btnVolverAtras: ImageButton
     private lateinit var btnPdf: Button
+    private lateinit var txt_colitis1: TextView
+    private lateinit var txt_colitis2: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,13 +76,26 @@ class InfoEstomaActivity : AppCompatActivity() {
             }
         })
 
-        showPdfPage()
-
-        setupViewPager(findViewById(R.id.pdfViewPager))
 
         //------------------------------------------------------------------------------------------
 
+// Lógica para permitir que se use el texto en html para poner negritas y rayadas por ejemplo
 
+        txt_colitis1 = findViewById(R.id.text_colitis1)
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            txt_colitis1.setText(Html.fromHtml(getString(R.string.text_colitis1), Html.FROM_HTML_MODE_LEGACY));
+        } else {
+            txt_colitis1.setText(Html.fromHtml(getString(R.string.text_colitis1)));
+        }
+
+        txt_colitis2 = findViewById(R.id.text_colitis2)
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            txt_colitis2.setText(Html.fromHtml(getString(R.string.text_colitis2), Html.FROM_HTML_MODE_LEGACY));
+        } else {
+            txt_colitis2.setText(Html.fromHtml(getString(R.string.text_colitis2)));
+        }
         // Lógica de la Header
 
         val btnHome: ImageButton = findViewById(R.id.btn_home)
@@ -120,80 +137,6 @@ class InfoEstomaActivity : AppCompatActivity() {
             }
 
             dialog.show()
-        }
-    }
-
-    private fun setupViewPager(viewPager: ViewPager2) {
-        val leftArrow: ImageView = findViewById(R.id.left_arrow)
-        val rightArrow: ImageView = findViewById(R.id.right_arrow)
-
-        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-
-                // Mostrar la flecha izquierda si no estamos en la primera página
-                leftArrow.visibility = if (position > 0) View.VISIBLE else View.INVISIBLE
-
-                // Mostrar la flecha derecha si no estamos en la última página
-                rightArrow.visibility = if (position < viewPager.adapter!!.itemCount - 1) View.VISIBLE else View.INVISIBLE
-
-                leftArrow.setOnClickListener {
-                    val currentItem = viewPager.currentItem
-                    if (currentItem > 0) {
-                        viewPager.currentItem = currentItem - 1
-                    }
-                }
-
-                rightArrow.setOnClickListener {
-                    val currentItem = viewPager.currentItem
-                    if (currentItem < viewPager.adapter!!.itemCount - 1) {
-                        viewPager.currentItem = currentItem + 1
-                    }
-                }
-            }
-        })
-
-        // Inicialmente, solo mostramos la flecha derecha si hay más de una página
-        if (viewPager.adapter?.itemCount ?: 0 > 1) {
-            rightArrow.visibility = View.VISIBLE
-        }
-    }
-
-    private fun showPdfPage() {
-        val assetFileName = "COLITIS  ULCEROSA.pdf"
-        val destinationPath = getExternalFilesDir(null).toString() + File.separator + assetFileName
-        copyFileFromAssets(assetFileName, destinationPath)
-
-        try {
-            val file = File(destinationPath)
-            val fileDescriptor = ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY)
-            val pdfRenderer = PdfRenderer(fileDescriptor)
-
-            val viewPager: ViewPager2 = findViewById(R.id.pdfViewPager)
-            viewPager.adapter = PdfPageAdapter(this, pdfRenderer)
-        } catch (e: IOException) {
-            e.printStackTrace()
-            // Manejar el error
-        }
-    }
-
-
-    // Copia el archivo PDF de los assets al almacenamiento interno, si aún no se ha copiado
-    private fun copyFileFromAssets(assetFileName: String, destinationPath: String) {
-        try {
-            val `in` = assets.open(assetFileName)
-            val out: OutputStream = FileOutputStream(destinationPath)
-            val buffer = ByteArray(1024)
-            var read: Int
-            while (`in`.read(buffer).also { read = it } != -1) {
-                out.write(buffer, 0, read)
-            }
-            out.flush()
-            out.close()
-            `in`.close()
-        } catch (e: IOException) {
-            e.printStackTrace()
-            // Manejar el error
         }
     }
 }

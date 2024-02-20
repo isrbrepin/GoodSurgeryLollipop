@@ -119,6 +119,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="26dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="@string/text_texto_preo_recos_lista1"
                     android:textSize="16sp"

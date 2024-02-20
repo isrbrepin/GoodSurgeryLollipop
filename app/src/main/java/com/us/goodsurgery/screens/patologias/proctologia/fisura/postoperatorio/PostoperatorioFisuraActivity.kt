@@ -17,7 +17,6 @@ import com.us.goodsurgery.screens.patologias.proctologia.fistula.postoperatorio.
 class PostoperatorioFisuraActivity : AppCompatActivity() {
 
     private lateinit var btnAlta:Button
-    private lateinit var btnOstomia:Button
     private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,10 +75,5 @@ class PostoperatorioFisuraActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btnOstomia = findViewById(R.id.btn_ostomia)
-        btnOstomia.setOnClickListener{
-            intent = Intent(this, OstomiaFisuraActivity::class.java)
-            startActivity(intent)
-        }
     }
 }

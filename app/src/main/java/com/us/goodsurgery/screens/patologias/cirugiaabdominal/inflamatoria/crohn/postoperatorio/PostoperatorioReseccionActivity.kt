@@ -15,7 +15,6 @@ import com.us.goodsurgery.screens.PrincipalActivity
 class PostoperatorioReseccionActivity : AppCompatActivity() {
 
     private lateinit var btnAlta:Button
-    private lateinit var btnOstomia:Button
     private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -74,10 +73,5 @@ class PostoperatorioReseccionActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btnOstomia = findViewById(R.id.btn_ostomia)
-        btnOstomia.setOnClickListener{
-            intent = Intent(this, OstomiaReseccionActivity::class.java)
-            startActivity(intent)
-        }
     }
 }

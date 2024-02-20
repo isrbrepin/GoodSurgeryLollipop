@@ -109,7 +109,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    android:layout_marginStart="46dp"
+                    android:layout_marginStart="56dp"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="☐    Los antibióticos (Neomicina 1 gr y Metronidazol 1 gr) deberá tomarlos a las 13, 15 y 23 horas (las dos primeras dosis en domicilio, la última en el hospital).
 \n☐    Deberá tomar un bote de FOSFOSODA a las 9:00 de la mañana (en domcilio) y a las 20 horas (en el hospital)."

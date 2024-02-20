@@ -49,10 +49,72 @@
         android:layout_marginStart="10dp"
         app:cardCornerRadius="20dp">
         <!-- Envuelve solo el último TextView en un ScrollView -->
-        <ImageView
-            android:id="@+id/pdfPageImageView"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="true"
+            android:scrollbarFadeDuration="500">
+
+            <!-- Contenedor para los TextViews -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageViewLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/logo_departamento_coloproctologia_sevilla"
+                    android:contentDescription="@string/text_logo_app" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="HOJA DE INDICACIONES AL ALTA PARA CÁNCER COLORRECTAL / POLIPOS"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="En el informe de alta que se le ha entregado en formato papel vienen especificadas todas
+las instrucciones que debe seguir. Salvo excepción que quedará convenientemente
+reflejada, son las siguientes:"
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="1. Deberá seguir las instrucciones del tratamiento prescrito.
+\n\n2. Deberá retirarse los puntos/grapas de las heridas a los 8-10 de la intervención en sucentro de salud, salvo indicación específica que le hayan dado.
+\n\n3. Salvo indicación específica según su tipo de intervención, sobre todo si es portador de ILEOSTOMIA, en líneas generales debe llevar una dieta mediterránea saludable, evitando ultraprocesados así como alcohol.
+\n\n4. Debe mantenerse activo evitando tiempos prolongados de inactividad, ya que hay riesgo de sufrir tromboembolismos. Es ideal que salga a pasear y aumente de forma progresiva su actividad física.
+\n\n5. Si presentase fiebre, dolor, mal estar general o cualquier signo de alarma, deberá acudir al servicio de urgencias del Hospital General.
+\n\n6. Se le entregará o le llegará por correo una cita de revisión en consultas de COLOPROCTOLOGÍA en aproximadamente 45 días
+\n\n7. Deberá cursar la HOJA DE CONSULTA que se le ha entregado en ONCOLOGÍA, en la PLANTA BAJA DEL HOSPITAL GENERAL"
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+            </LinearLayout>
+        </ScrollView>
     </com.google.android.material.card.MaterialCardView>
 
     <Button
