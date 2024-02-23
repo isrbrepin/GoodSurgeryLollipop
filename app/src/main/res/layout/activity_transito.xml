@@ -20,9 +20,16 @@
         android:layout_height="@dimen/dimen_subtitulo"
         android:text="@string/reconstrucci_n_del_tr_nsito"
         android:textAlignment="center"
-        android:textSize="10sp"
+        android:textSize="11sp"
         android:textColor="#FFFFFF"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="8sp"
+        android:autoSizeMaxTextSize="22sp"
+        android:autoSizeStepGranularity="1sp"
+        android:maxLines="1"/>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"

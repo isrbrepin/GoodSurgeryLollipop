@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="0dp"
+    android:layout_marginVertical="0dp"
+    android:background="@drawable/fondo"
+    android:orientation="vertical">
+
+    <!-- Incluir el header reutilizable -->
+    <include layout="@layout/activity_header_con_atras" />
+
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:elevation="20dp"
+        android:background="@drawable/pagactual_drawable"
+        android:layout_height="@dimen/dimen_subtitulo"
+        android:text="@string/reconstrucci_n_del_tr_nsito"
+        android:textAlignment="center"
+        android:textSize="11sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="8sp"
+        android:autoSizeMaxTextSize="22sp"
+        android:autoSizeStepGranularity="1sp"
+        android:maxLines="1"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        style="@style/CustomCardViewStyle"
+        app:strokeWidth="0dp"
+        app:strokeColor="@color/gris_muy_claro"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="@color/gris_muy_claro">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/patologia"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@drawable/pagactual2_drawable"
+        android:layout_height="@dimen/dimen_titulo"
+        android:text="@string/text_patologia"
+        android:textSize="22sp"
+        android:textColor="@color/letras_oscuras"
+        android:textStyle="bold" />
+
+    <!-- Resto del contenido -->
+
+    <Button
+        android:id="@+id/btn_ileostomia_lateral"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_body_buttons_dimen"
+        android:layout_marginTop="@dimen/margin_top_body"
+        android:layout_marginEnd="@dimen/margin_laterales_body"
+        android:layout_marginStart="@dimen/margin_laterales_body"
+        android:backgroundTint="@color/white"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/body_buttons_dimens"
+        android:text="@string/ilestomia_lateral"
+        android:textColor="@color/letras_oscuras"
+        app:strokeColor="@color/gris_claro"
+        app:strokeWidth="@dimen/stroke_body_drawable"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:translationZ="1dp"
+        />
+
+    <Button
+        android:id="@+id/btn_colostomia_terminal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_body_buttons_dimen"
+        android:layout_marginTop="@dimen/margin_top_body"
+        android:layout_marginEnd="@dimen/margin_laterales_body"
+        android:layout_marginStart="@dimen/margin_laterales_body"
+        android:backgroundTint="@color/white"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/body_buttons_dimens"
+        android:text="@string/cierre_de_colostomia_terminal"
+        android:textColor="@color/letras_oscuras"
+        app:strokeColor="@color/gris_claro"
+        app:strokeWidth="@dimen/stroke_body_drawable"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:translationZ="1dp"
+        />
+</LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
+

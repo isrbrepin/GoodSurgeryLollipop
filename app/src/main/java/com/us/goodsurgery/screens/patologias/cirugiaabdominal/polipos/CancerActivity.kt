@@ -89,51 +89,5 @@ class CancerActivity : AppCompatActivity() {
             intent = Intent(this, RectoActivity::class.java)
             startActivity(intent)
         }
-
-
-        // Lógica de los subtitulos
-
-        val textInfo = findViewById<TextView>(R.id.text_info)
-        val fullText = getString(R.string.polipos)
-
-        // Crear el texto con diferentes partes clicables
-        val spannableString = SpannableString(fullText)
-
-        // Definir los clics y sus comportamientos
-        val patologiaClick = object : ClickableSpan() {
-            override fun onClick(widget: View) {
-                val intent = Intent(this@CancerActivity, PatologiaActivity::class.java)
-                startActivity(intent)
-            }
-
-            override fun updateDrawState(ds: TextPaint) {
-                super.updateDrawState(ds)
-                ds.isUnderlineText = false
-                ds.color = Color.parseColor("#FFFFFF")
-            }
-        }
-
-        val cirugiaClick = object : ClickableSpan() {
-            override fun onClick(widget: View) {
-                val intent = Intent(this@CancerActivity, AbdomenActivity::class.java)
-                startActivity(intent)
-            }
-
-            override fun updateDrawState(ds: TextPaint) {
-                super.updateDrawState(ds)
-                ds.isUnderlineText = false
-                ds.color = Color.parseColor("#FFFFFF")
-            }
-        }
-
-
-        // Asignar los clics a las partes correspondientes del texto
-        spannableString.setSpan(patologiaClick, 0, 18, 0)
-        spannableString.setSpan(cirugiaClick, 21, 38, 0)
-
-        // Asignar el SpannableString al TextView
-        textInfo.text = spannableString
-        textInfo.movementMethod = LinkMovementMethod.getInstance()
-
     }
 }

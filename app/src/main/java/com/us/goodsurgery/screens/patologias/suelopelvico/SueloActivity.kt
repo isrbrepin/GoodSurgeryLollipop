@@ -100,38 +100,5 @@ class SueloActivity : AppCompatActivity() {
             intent = Intent(this, ProlapsoActivity::class.java)
             startActivity(intent)
         }
-
-
-        // Lógica de los subtítulos
-
-        val textInfo = findViewById<TextView>(R.id.text_suelo)
-        val fullText = getString(R.string.text_suelo)
-
-        // Crear el texto con diferentes partes clicables
-        val spannableString = SpannableString(fullText)
-
-        // Definir los clics y sus comportamientos
-        val patologiaClick = object : ClickableSpan() {
-            override fun onClick(widget: View) {
-                val intent = Intent(this@SueloActivity, PatologiaActivity::class.java)
-                startActivity(intent)
-            }
-
-            override fun updateDrawState(ds: TextPaint) {
-                super.updateDrawState(ds)
-                ds.isUnderlineText = false
-                ds.color = Color.parseColor("#FFFFFF")
-            }
-        }
-
-
-
-        // Asignar los clics a las partes correspondientes del texto
-        spannableString.setSpan(patologiaClick, 0, 18, 0)
-
-        // Asignar el SpannableString al TextView
-        textInfo.text = spannableString
-        textInfo.movementMethod = LinkMovementMethod.getInstance()
-
     }
 }

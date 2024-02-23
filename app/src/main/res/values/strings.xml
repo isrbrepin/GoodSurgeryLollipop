@@ -8,8 +8,8 @@
     <string name="text_postoperatorio">Postoperatorio.\nTras la cirugía.</string>
     <string name="text_postoperatorio2">Postoperatorio - Tras la cirugía</string>
     <string name="text_cancer">Cáncer colorrectal</string>
-    <string name="text_proctologia">Elija su patología > Proctología</string>
-    <string name="text_suelo">Elija su patología > Suelo pélvico</string>
+    <string name="text_proctologia">¿Cuál es su patología? > Proctología</string>
+    <string name="text_suelo">¿Cuál es su patología? > Suelo pélvico</string>
     <string name="text_anestesia">Anestesia</string>
     <string name="text_preparacion">¿Cómo me debo preparar?</string>
     <string name="text_ingreso">El día del ingreso</string>
@@ -32,10 +32,10 @@
     <string name="text_instrucciones">\n1. Pulse en “pulse aquí para comenzar”\n\n2. Una vez presione, seleccione el tipo de intervención/proceso/patología que le hayan explicado en la consulta\n\n3. Una vez dentro encontrará la informacion necesaria para el proceso, preoperatorio y postoperatorio\n\n4. ----------\n\n5. ----------\n\n6. ------------
     </string>
     <string name="text_patologia">¿Cuál es su patología?</string>
-    <string name="text_abdominal">Elija su patología > Cirugía abdominal</string>
+    <string name="text_abdominal">¿Cuál es su patología? > Cirugía abdominal</string>
     <string name="polipos_colorrectales">Tumores colorrectales</string>
-    <string name="reconstrucci_n_del_tr_nsito">Elija su patología > Cirugía de abdomen > Reconstrucción del tránsito</string>
-    <string name="enfermedad_inflamatoria_intestinal">Elija su patología > Cirugía abdominal > Enfermedad inflamatoria intestinal</string>
+    <string name="reconstrucci_n_del_tr_nsito">¿Cuál es su patología? > Cirugía de abdomen > Reconstrucción del tránsito</string>
+    <string name="enfermedad_inflamatoria_intestinal">¿Cuál es su patología? > Cirugía abdominal > Enfermedad inflamatoria intestinal</string>
     <string name="polipo_colon">Tumor de colon</string>
     <string name="polipo_recto">Tumor de recto</string>
     <string name="ilestomia_lateral">Cierre de ileostomia lateral</string>
@@ -48,7 +48,7 @@
     <string name="incontinencia">Incontinencia fecal</string>
     <string name="rectocele">Rectocele</string>
     <string name="prolapso">Prolapso</string>
-    <string name="polipos"><![CDATA[Elija su patología > Cirugía abdominal > Tumores colorrectales]]></string>
+    <string name="polipos"><![CDATA[¿Cuál es su patología? > Cirugía abdominal > Tumores colorrectales]]></string>
     <string name="transito">Reconstrucción del tránsito</string>
     <string name="inflamatoria">Enfermedad inflamatoria intestinal</string>
     <string name="procto">Proctología</string>

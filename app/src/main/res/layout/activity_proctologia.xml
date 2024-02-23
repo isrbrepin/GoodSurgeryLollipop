@@ -25,7 +25,14 @@
         android:textAlignment="center"
         android:textSize="22sp"
         android:textColor="#FFFFFF"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="20sp"
+        android:autoSizeStepGranularity="1sp"
+        android:maxLines="1"/>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"

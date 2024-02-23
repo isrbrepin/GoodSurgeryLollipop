@@ -72,61 +72,28 @@ class AbdomenActivity : AppCompatActivity() {
         // Lógica de navegación
 
         btnInflamatoria = findViewById(R.id.btn_inflamatoria)
-        btnInflamatoria.setOnClickListener{
+        btnInflamatoria.setOnClickListener {
             intent = Intent(this, InflamatoriaActivity::class.java)
             startActivity(intent)
         }
 
         btnPolipos = findViewById(R.id.btn_polipos_colorrectales)
-        btnPolipos.setOnClickListener{
+        btnPolipos.setOnClickListener {
             intent = Intent(this, CancerActivity::class.java)
             startActivity(intent)
         }
 
         btnReconstruccion = findViewById(R.id.btn_reconstruccion_del_transito)
-        btnReconstruccion.setOnClickListener{
+        btnReconstruccion.setOnClickListener {
             intent = Intent(this, TransitoActivity::class.java)
             startActivity(intent)
         }
 
         val btnHome: ImageButton = findViewById(R.id.btn_home)
-        btnHome.setOnClickListener{
+        btnHome.setOnClickListener {
             intent = Intent(this, PrincipalActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
-
-
-        // Lógica de los subtitulos
-
-        val textInfo = findViewById<TextView>(R.id.text_abdomen)
-        val fullText = getString(R.string.text_abdominal)
-
-        // Crear el texto con diferentes partes clicables
-        val spannableString = SpannableString(fullText)
-
-        // Definir los clics y sus comportamientos
-        val patologiaClick = object : ClickableSpan() {
-            override fun onClick(widget: View) {
-                val intent = Intent(this@AbdomenActivity, PatologiaActivity::class.java)
-                startActivity(intent)
-            }
-
-            override fun updateDrawState(ds: TextPaint) {
-                super.updateDrawState(ds)
-                ds.isUnderlineText = false
-                ds.color = Color.parseColor("#FFFFFF")
-            }
-        }
-
-
-
-        // Asignar los clics a las partes correspondientes del texto
-        spannableString.setSpan(patologiaClick, 0, 18, 0)
-
-        // Asignar el SpannableString al TextView
-        textInfo.text = spannableString
-        textInfo.movementMethod = LinkMovementMethod.getInstance()
-
     }
 }
