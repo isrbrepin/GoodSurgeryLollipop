@@ -1,9 +1,14 @@
 package com.us.goodsurgery.screens.patologias.cirugiaabdominal.inflamatoria.colitis
 
 import android.Manifest
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.pdf.PdfRenderer
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
@@ -19,6 +24,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.viewpager2.widget.ViewPager2
@@ -48,9 +55,6 @@ class InfoEstomaActivity : AppCompatActivity() {
 
         //Logica pdf
 
-        //Inicialización de componentes UI
-        initializeUI()
-
         btnPdf = findViewById(R.id.btn_pdf)
 
         btnPdf.setOnClickListener(View.OnClickListener {
@@ -61,39 +65,6 @@ class InfoEstomaActivity : AppCompatActivity() {
                     MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE)
             } else {
                 downloadPdf()
-                // Nombre del PDF en la carpeta assets
-                val assetFileName = "COLITIS  ULCEROSA.pdf"
-                // Ruta de destino en el almacenamiento interno
-                val destinationPath =
-                    getExternalFilesDir(null).toString() + File.separator + assetFileName
-                try {
-                    // Copiar el archivo desde assets al almacenamiento interno
-                    val `in` = assets.open(assetFileName)
-                    val out: OutputStream = FileOutputStream(destinationPath)
-                    val buffer = ByteArray(1024)
-                    var read: Int
-                    while (`in`.read(buffer).also { read = it } != -1) {
-                        out.write(buffer, 0, read)
-                    }
-                    out.flush()
-                    out.close()
-                    `in`.close()
-
-                    // Abrir el PDF descargado
-                    val file = File(destinationPath)
-                    val uri = FileProvider.getUriForFile(
-                        this,
-                        BuildConfig.APPLICATION_ID + ".provider", file
-                    )
-                    val intent = Intent(Intent.ACTION_VIEW)
-                    intent.setDataAndType(uri, "application/pdf")
-                    intent.flags =
-                        Intent.FLAG_ACTIVITY_NO_HISTORY or Intent.FLAG_GRANT_READ_URI_PERMISSION
-                    startActivity(intent)
-                } catch (e: IOException) {
-                    e.printStackTrace()
-                    // Manejar el error
-                }
             }
 
         })
@@ -161,16 +132,51 @@ class InfoEstomaActivity : AppCompatActivity() {
             dialog.show()
         }
     }
-    private fun initializeUI() {
-        btnPdf = findViewById(R.id.btn_pdf)
-        txt_colitis1 = findViewById(R.id.text_colitis1)
-        txt_colitis2 = findViewById(R.id.text_colitis2)
-        btnVolverAtras = findViewById(R.id.btn_back)
-        // Aquí puedes agregar más inicializaciones si es necesario
-    }
 
     private fun downloadPdf() {
+
+        // Verifica si tienes el permiso de escritura en el almacenamiento externo
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            != PackageManager.PERMISSION_GRANTED) {
+            // Si no tienes permiso, muestra un mensaje o solicita el permiso nuevamente (según el flujo de tu app)
+            Toast.makeText(this, "Permiso de almacenamiento externo necesario", Toast.LENGTH_LONG).show()
+            // Puedes optar por solicitar el permiso aquí o simplemente regresar y no proceder con la descarga
+            return
+        }
         val assetFileName = "COLITIS  ULCEROSA.pdf"
+        val channelId = "download_notification"
+        val notificationId = 1
+
+        // Crear el NotificationChannel, pero solo para API 26+ porque
+        // la clase NotificationChannel es nueva y no está en la biblioteca de soporte
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = getString(R.string.descargar_en_pdf)
+            val descriptionText = getString(R.string.descargar_en_pdf)
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel = NotificationChannel(channelId, name, importance).apply {
+                description = descriptionText
+            }
+            // Registrar el canal en el sistema
+            val notificationManager: NotificationManager =
+                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
+
+        val builder = NotificationCompat.Builder(this, channelId).apply {
+            setContentTitle("Descargando PDF")
+            setContentText("Descarga en progreso")
+            setSmallIcon(R.drawable.icono_oscuro)
+            setPriority(NotificationCompat.PRIORITY_LOW)
+            setOngoing(true)
+            // Para versiones de Android menores, es recomendable usar NotificationCompat
+            setProgress(0, 0, true)
+        }
+
+        val notificationManager = NotificationManagerCompat.from(this)
+
+        // Mostrar notificación de inicio de descarga
+        notificationManager.notify(notificationId, builder.build())
+
         try {
             val inputStream = assets.open(assetFileName)
             val downloadFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
@@ -194,10 +200,41 @@ class InfoEstomaActivity : AppCompatActivity() {
             outputStream.close()
             inputStream.close()
 
+            // Crear un Intent para abrir el archivo con una aplicación de PDF
+            val fileUri = FileProvider.getUriForFile(
+                this,
+                "${BuildConfig.APPLICATION_ID}.provider", // Asegúrate de que esto coincida con tu autoridad de FileProvider definida en AndroidManifest.xml
+                file
+            )
+
+            val openIntent = Intent(Intent.ACTION_VIEW).apply {
+                setDataAndType(fileUri, "application/pdf")
+                flags = Intent.FLAG_GRANT_READ_URI_PERMISSION
+            }
+
+            val openPendingIntent: PendingIntent = PendingIntent.getActivity(
+                this, 0, openIntent, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+            )
+
+            // Actualizar la notificación para mostrar la descarga completa
+            // Actualizar la notificación para mostrar la descarga completa
+            builder.setContentText("Descarga completa").setContentTitle("Se ha descargado $fileName.")
+                .setProgress(0, 0, false) // Remover el modo indeterminado
+                .setOngoing(false) // Remover la notificación de ser "en curso"
+                .setContentIntent(openPendingIntent) // Establecer el PendingIntent para abrir el PDF
+            notificationManager.notify(notificationId, builder.build())
+
+
             Toast.makeText(this, "Se ha descargado $fileName.", Toast.LENGTH_LONG).show()
         } catch (e: IOException) {
             e.printStackTrace()
             Toast.makeText(this, "Error al descargar el archivo: ${e.message}", Toast.LENGTH_LONG).show()
+
+            // Actualizar la notificación para indicar el fallo en la descarga
+            builder.setContentText("Error en la descarga")
+                .setProgress(0, 0, false) // Remover el modo indeterminado
+                .setOngoing(false) // Remover la notificación de ser "en curso"
+            notificationManager.notify(notificationId, builder.build())
         }
     }
 

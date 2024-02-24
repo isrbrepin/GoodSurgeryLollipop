@@ -79,7 +79,7 @@
                     android:text="HOJA DE INDICACIONES AL ALTA PARA FÍSTULAS"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:justificationMode="inter_word"/>
+                    android:textAlignment="center" />
 
                 <TextView
                     android:layout_width="match_parent"

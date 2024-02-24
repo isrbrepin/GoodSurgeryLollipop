@@ -80,7 +80,7 @@
                     android:text="HOJA DE INSTRUCCIONES PARA EL DÍA DEL INGRESO"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:justificationMode="inter_word"/>
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/text_ingreso3"

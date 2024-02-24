@@ -78,6 +78,7 @@
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="HOJA DE INSTRUCCIONES PARA EL ESTUDIO PREANESTÉSICO"
+                    android:textAlignment="center"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
 

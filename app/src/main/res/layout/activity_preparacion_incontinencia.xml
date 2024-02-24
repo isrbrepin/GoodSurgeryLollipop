@@ -78,7 +78,7 @@
                     android:text="HOJA DE INDICACIONES PREOPERATORIAS DE SUELO PÉLVICO"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:justificationMode="inter_word"/>
+                    android:textAlignment="center" />
 
                 <TextView
                     android:layout_width="match_parent"

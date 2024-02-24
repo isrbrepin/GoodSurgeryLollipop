@@ -79,6 +79,7 @@
                     android:text="HOJA DE INDICACIONES AL ALTA PARA HEMORROIDES"
                     android:textSize="18sp"
                     android:textStyle="bold"
+                    android:textAlignment="center"
                     android:justificationMode="inter_word"/>
 
                 <TextView

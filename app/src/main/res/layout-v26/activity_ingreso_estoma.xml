@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginHorizontal="0dp"
     android:layout_marginVertical="0dp"
     android:background="@drawable/fondo"
-    tools:context=".screens.patologias.proctologia.hemorroides.preoperatorio.AnestesiaHemorroidesActivity"
     android:orientation="vertical">
 
     <!-- Incluir el header reutilizable -->
@@ -15,12 +13,12 @@
 
     <!-- Resto del contenido -->
     <TextView
-        android:id="@+id/text_hemorroides"
+        android:id="@+id/text_colostomia"
         android:layout_width="match_parent"
         android:gravity="center"
         android:background="@drawable/pagactual2_sin_curvas_drawable"
         android:layout_height="@dimen/dimen_titulo"
-        android:text="@string/hemorroides"
+        android:text="@string/colitis_ulcerosa"
         android:textSize="22sp"
         android:textColor="@color/letras_oscuras"
         android:textStyle="bold" />
@@ -32,7 +30,7 @@
         android:elevation="20dp"
         android:background="@drawable/pagactual_drawable"
         android:layout_height="@dimen/dimen_subtitulo"
-        android:text="@string/text_anestesia"
+        android:text="@string/text_ingreso"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textColor="#FFFFFF"
@@ -64,12 +62,12 @@
                 <ImageView
                     android:id="@+id/imageViewLogo"
                     android:layout_width="wrap_content"
-                    android:layout_height="85dp"
+                    android:layout_height="70dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="26dp"
                     android:adjustViewBounds="true"
                     android:scaleType="centerInside"
-                    app:srcCompat="@drawable/cuadro_negro"
+                    app:srcCompat="@drawable/logo_departamento_coloproctologia_sevilla"
                     android:contentDescription="@string/text_logo_app" />
 
                 <TextView
@@ -79,55 +77,52 @@
                     android:layout_marginTop="26dp"
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
-                    android:text="HOJA DE INSTRUCCIONES PARA EL ESTUDIO PREANESTÉSICO"
+                    android:text="HOJA DE INSTRUCCIONES PARA EL DÍA DEL INGRESO"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textAlignment="center" />
 
                 <TextView
+                    android:id="@+id/text_ingreso3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="26dp"
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
-                    android:text="Le llegará la cita para la consulta de anestesia por correo ordinario o por llamada telefónica."
+                    android:text="@string/text_ingreso3"
                     android:textSize="16sp"
                     android:justificationMode="inter_word"
                     />
 
                 <TextView
+                    android:id="@+id/text_ingreso1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-
                     android:layout_marginStart="36dp"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
-                    android:text="☐  Deberá solicitar cita en su centro de salud para extraerse la analítica en los días siguientes de la consulta.
-\n☐  Si se ha solicitado la realización de un electrocardiograma (ECG):
-"
+                    android:text="@string/text_ingreso1"
                     android:textSize="16sp"
                     android:justificationMode="inter_word"/>
 
                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="☐    Los antibióticos (Neomicina 1 gr y Metronidazol 1 gr) deberá tomarlos a las 13, 15 y 23 horas (las dos primeras dosis en domicilio, la última en el hospital).
+\n☐    Deberá tomar un bote de FOSFOSODA a las 9:00 de la mañana (en domcilio) y a las 20 horas (en el hospital)."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:id="@+id/text_ingreso2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
-                    android:layout_marginStart="56dp"
+                    android:layout_marginStart="36dp"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
-                    android:text="☐  Podrá realizárselo en su centro de salud, el mismo día que la realización de la analítica y traerlo en mano.
-\n☐  O realizarlo el mismo día de la cita con Anestesia. Deberá acudir 1 hora antes de la cita y solicitar en la Unidad de día.
-"
-                    android:textSize="16sp"
-                    android:justificationMode="inter_word"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margen_texto_contenido"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginStart="@dimen/margen_texto_contenido"
-                    android:layout_marginEnd="@dimen/margen_texto_contenido"
-                    android:text="Tras ser visto por el anestesista, recibirá una llamada telefónica en la que le indicarán el día de la intervención quirúrgica."
+                    android:text="@string/text_ingreso2"
                     android:textSize="16sp"
                     android:justificationMode="inter_word"/>
 
@@ -153,6 +148,5 @@
         android:elevation="8dp"
         android:stateListAnimator="@null"
         android:translationZ="1dp"/>
-
 
 </LinearLayout>
