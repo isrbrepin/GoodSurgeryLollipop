@@ -74,13 +74,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="26dp"
+                    android:layout_marginTop="@dimen/margen_texto_contenido"
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="HOJA DE INSTRUCCIONES PARA EL DÍA DEL INGRESO"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:justificationMode="inter_word"/>
 
                 <TextView
                     android:id="@+id/text_ingreso3"
@@ -89,7 +90,7 @@
                     android:layout_marginTop="26dp"
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
-                    android:text="Deberá acudir a ADMISIÓN de la planta baja del HOSPITAL MUÑOZ CARIÑANOS el día y a la hora que le hayan indicado cuando le llamaron por teléfono."
+                    android:text="@string/text_ingreso3"
                     android:textSize="16sp"
                     android:justificationMode="inter_word"
                     />
@@ -101,9 +102,7 @@
                     android:layout_marginTop="6dp"
                     android:layout_marginStart="36dp"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
-                    android:text="☐  El alta hospitalaria se le dará el mismo día de la intervención si no hay ninguna incidencia.
-\n☐  Deberá seguir las instrucciones para aplicarse el enema CASEN:
-"
+                    android:text="@string/text_ingreso1"
                     android:textSize="16sp"
                     android:justificationMode="inter_word"/>
 
@@ -112,7 +111,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="56dp"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
-                    android:text="☐  Ponerse el enema 4 ó 6 horas antes de la intervención, si ésta es por la tarde. En caso de ser por la mañana, ponérselo la noche de antes."
+                    android:text="☐    Los antibióticos (Neomicina 1 gr y Metronidazol 1 gr) deberá tomarlos a las 13, 15 y 23 horas (las dos primeras dosis en domicilio, la última en el hospital).
+\n☐    Deberá tomar un bote de FOSFOSODA a las 9:00 de la mañana (en domcilio) y a las 20 horas (en el hospital)."
                     android:textSize="16sp"
                     android:justificationMode="inter_word"/>
 
@@ -123,7 +123,7 @@
                     android:layout_marginBottom="12dp"
                     android:layout_marginStart="36dp"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
-                    android:text="☐  Es imprescindible acudir acompañado al hospital y que permanezca allí durante todo el proceso."
+                    android:text="@string/text_ingreso2"
                     android:textSize="16sp"
                     android:justificationMode="inter_word"/>
 

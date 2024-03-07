@@ -62,25 +62,25 @@
                 <ImageView
                     android:id="@+id/imageViewLogo"
                     android:layout_width="wrap_content"
-                    android:layout_height="85dp"
+                    android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
                     android:adjustViewBounds="true"
                     android:scaleType="centerInside"
-                    app:srcCompat="@drawable/cuadro_negro"
+                    app:srcCompat="@drawable/logo_departamento_coloproctologia_sevilla"
                     android:contentDescription="@string/text_logo_app" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginTop="26dp"
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="HOJA DE INSTRUCCIONES PARA EL ESTUDIO PREANESTÉSICO"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:justificationMode="inter_word"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -88,7 +88,7 @@
                     android:layout_marginTop="26dp"
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
-                    android:text="Le llegará la cita para la consulta de anestesia por correo ordinario o por llamada telefónica."
+                    android:text="Le llegará la cita para la consulta de anestesia por correo ordinario."
                     android:textSize="16sp"
                     android:justificationMode="inter_word"
                     />
@@ -97,37 +97,34 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-
-                    android:layout_marginStart="36dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
-                    android:text="☐  Deberá solicitar cita en su centro de salud para extraerse la analítica en los días siguientes de la consulta.
-\n☐  Si se ha solicitado la realización de un electrocardiograma (ECG):
-"
+                    android:text="☐  2-3 semanas antes de la fecha de la cita deberá solicitar cita en su centro de salud para extraerse la analítica que se le entregó en consulta.\n☐  Si se ha solicitado la realización de un electrocardiograma (ECG):"
                     android:textSize="16sp"
                     android:justificationMode="inter_word"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
                     android:layout_marginBottom="12dp"
-                    android:layout_marginStart="56dp"
+                    android:layout_marginStart="50dp"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
-                    android:text="☐  Podrá realizárselo en su centro de salud, el mismo día que la realización de la analítica y traerlo en mano.
-\n☐  O realizarlo el mismo día de la cita con Anestesia. Deberá acudir 1 hora antes de la cita y solicitar en la Unidad de día.
-"
+                    android:text="☐  Podrá realizárselo en su centro de salud, el mismo día que la realización de la analítica y traerlo en mano.\n☐  O realizarlo el mismo día de la cita con Anestesia. Deberá acudir 1 hora antes de la cita y solicitar su realización en la primera planta del Centro de Diagnóstico."
                     android:textSize="16sp"
                     android:justificationMode="inter_word"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margen_texto_contenido"
+                    android:layout_marginTop="12dp"
                     android:layout_marginBottom="16dp"
                     android:layout_marginStart="@dimen/margen_texto_contenido"
                     android:layout_marginEnd="@dimen/margen_texto_contenido"
                     android:text="Tras ser visto por el anestesista, recibirá una llamada telefónica en la que le indicarán el día de la intervención quirúrgica."
                     android:textSize="16sp"
-                    android:justificationMode="inter_word"/>
+                    android:justificationMode="inter_word"
+                    />
 
             </LinearLayout>
         </ScrollView>

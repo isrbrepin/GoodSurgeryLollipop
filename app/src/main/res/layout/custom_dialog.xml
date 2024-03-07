@@ -3,49 +3,69 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:paddingBottom="8dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="16dp">
 
     <TextView
         android:id="@+id/dialogTitle"
         android:textSize="20sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="@string/tittle_ayuda"
+        android:gravity="center"
+        android:text="TELÉFONO DE CIRUGÍA"
         android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/telefono"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialogTitle"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="955 013 114"
+        android:textStyle="bold"
+        />
 
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/dialogTitle"
+        android:layout_height="1.5dp"
+        android:layout_below="@id/telefono"
         android:layout_marginTop="8dp"
         android:background="?android:attr/dividerVertical"/>
-
-    <TextView
-        android:id="@+id/telefono"
-        android:textSize="18sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/divider"
-        android:layout_marginTop="8dp"
-        android:text="@string/telefono"
-        />
 
     <TextView
         android:id="@+id/dialogText"
         android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/telefono"
-        android:layout_marginTop="5dp"
-        android:text="@string/email"
+        android:layout_below="@id/divider"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="@string/dialogText"
+        android:textStyle="bold"
         />
+
+    <TextView
+        android:id="@+id/horas"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialogText"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:text="8,30h a 10,30h y 14h a 15h"
+        />
+
     <Button
         android:id="@+id/dismiss_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/dialogText"
+        android:layout_below="@id/horas"
         android:layout_alignParentRight="true"
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/white"

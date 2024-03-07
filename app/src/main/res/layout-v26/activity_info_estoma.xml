@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="0dp"
+    android:layout_marginVertical="0dp"
+    android:background="@drawable/fondo"
+    android:orientation="vertical">
+
+    <!-- Incluir el header reutilizable -->
+    <include layout="@layout/activity_header_con_atras" />
+
+
+    <!-- Resto del contenido -->
+    <TextView
+        android:id="@+id/text_ileostomia"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@drawable/pagactual2_sin_curvas_drawable"
+        android:layout_height="@dimen/dimen_titulo"
+        android:text="@string/colitis_ulcerosa"
+        android:textSize="22sp"
+        android:textColor="@color/letras_oscuras"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:elevation="20dp"
+        android:background="@drawable/pagactual_drawable"
+        android:layout_height="@dimen/dimen_subtitulo"
+        android:text="@string/text_info_proceso"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        app:cardCornerRadius="20dp">
+        <!-- Envuelve solo el último TextView en un ScrollView -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="true"
+            android:scrollbarFadeDuration="500">
+
+            <!-- Contenedor para los TextViews -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margen_texto_contenido"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="COLITIS ULCEROSA"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Qué es la colitis ulcerosa?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <!-- Texto después de la imagen -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="La colitis ulcerosa es una enfermedad inflamatoria del colon (el intestino grueso). Está caracterizada por la inflamación y ulceración de la pared interior del colon. Los síntomas típicos incluyen diarrea (algunas veces con sangre) y con frecuencia dolor abdominal.
+\n\nCuando la colitis ulcerosa afecta solamente la parte inferior del colon, el recto, se llama proctitis ulcerosa. Si la enfermedad afecta solamente el lado izquierdo del colon, es llamada colitis limitada o distal. Si involucra el colon completo, es llamada pancolitis.
+\n\nLa colitis ulcerosa difiere de otra enfermedad intestinal inflamatoria (IBD), la enfermedad de Crohn. La enfermedad de Crohn puede afectar cualquier área del tracto gastrointestinal (GI), incluyendo el intestino delgado. La colitis ulcerosa afecta solamente el colon. La inflamación involucra el recto en su totalidad y se extiende hasta el colon de una manera continua. No existen áreas de intestino normal entre las áreas de intestino enfermo. En contraste, estas llamadas áreas &quot;saltadas&quot; pueden ocurrir en la enfermedad de Crohn. La colitis ulcerosa afecta solamente el tejido más interno que cubre el colon, mientras que la enfermedad de Crohn puede afectar el espesor completo de la pared intestinal. La colitis ulcerosa y la enfermedad de Crohn son diferentes del síndrome de intestino irritable o IBS, un desorden que afecta la motilidad (contracciones musculares) del colon. Algunas veces llamado &quot;colon espástico&quot;, el IBS no se caracteriza por inflamación intestinal. Es por lo tanto, una enfermedad mucho menos seria que la colitis ulcerosa. El IBS no tiene ninguna relación directa con la colitis ulcerosa o la enfermedad de Crohn."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Qué tan común es la colitis ulcerosa?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Se estima que hay alrededor de 1,000,000 de norteamericanos con colitis ulcerosa o enfermedad de Crohn, aproximadamente la mitad de ese número por cada enfermedad. La colitis ulcerosa es predominantemente una enfermedad de jóvenes. La mayoría de los casos es diagnosticado antes de los 30 años, aunque la enfermedad puede ocurrir a cualquier edad, incluyendo en las últimas décadas de la vida de una persona. En efecto, es posible que un número mucho menor de pacientes se vea afectado por la enfermedad entre los 50 y los 70 años de edad. Existe mayor incidencia de colitis ulcerosa en las personas caucásicas que en grupos minoritarios y una mayor incidencia en personas de raza judía que en los no judíos."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Es la colitis ulcerosa hereditaria?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/text_colitis1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_colitis1"
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Cuáles son los síntomas de la colitis ulcerosa?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="El primer síntoma de la colitis ulcerosa es un aflojamiento progresivo del excremento. El excremento es generalmente tiene sangre y puede asociarse con retortijones de dolor abdominal y severa urgencia de evacuar. La diarrea puede empezar lentamente o de repente. Adicionalmente, puede haber lesiones en la piel, dolores en las articulaciones, y en niños, falta de crecimiento adecuado."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/colitis1"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Cómo se diagnostica la colitis ulcerosa?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Los médicos diagnostican la colitis ulcerosa basados en la historia clínica del paciente como se describe anteriormente. La principal meta de los exámenes médicos es diferenciar la colitis ulcerosa de otras causas infecciosas de diarrea. En consecuencia, se realizan exámenes de excremento para eliminar la posibilidad de diarrea causada por bacteria, virus y parásitos. A continuación, el paciente generalmente se somete a una evaluación del colon, usando uno de dos exámenes. Para hacer la sigmoidoscopía, el doctor introduce un instrumento flexible en el recto y el colon bajo. Este examen le permite al doctor visualizar la extensión y el grado de inflamación en estas áreas. Una colonoscopía total, es un examen similar, que permite la visualización del colon completo. Utilizando estas técnicas, el médico puede determinar la categoria de la enfermedad, ya sea proctitis ulcerosa, colitis limitada o pancolitis. El médico puede tomar muestras del tejido interno que cubre el colon, llamadas biopsias y enviarlas al patólogo para un estudio adicional. La colitis ulcerosa puede entonces distinguirse de otras enfermedades del colon que causan sangrado rectal, incluyendo la enfermedad de Crohn en el colon, diverticulitis y cáncer."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Qué medicamentos son usados para tratar la colitis ulcerosa?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/text_colitis2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_colitis2"
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Cuál es el papel de la cirugía en la colitis ulcerosa?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="En una cuarta a una tercera parte de pacientes, la terapia médica no es completamente exitosa o surgen complicaciones. Bajo estas circunstancias, puede considerarse la cirugía. Esta cirugía involucra la extirpación completa del colon (colectomía). A diferencia de la enfermedad de Crohn la cual puede recurrir después de la cirugía, la colitis ulcerosa es &quot;curada&quot; una vez que se extirpa el colon."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/colitis2"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Dependiendo de un número de factores, incluyendo la extensión de la enfermedad y la edad del paciente y su estado de salud general, se puede recomendar una de dos operaciones. La primera involucra la extirpación total del colon y recto, con la creación de una ileostomía o estoma externa (una abertura en el abdomen a través de la cual los desechos son vaciados en una bolsa, la cual esta adherida a la piel con adhesivos). Muchas personas en la actualidad pueden aprovechar nuevas técnicas quirúrgicas, que han sido desarrolladas para remover el colon, mantener la continuidad del intestino y la continencia y evitar una ileostomía. Estas técnicas involucran la creación de una bolsa interna en el intestino delgado y adherirla al músculo del esfínter anal, manteniendo así la integridad intestinal y eliminando la necesidad de un dispositivo externo. "
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Es importante la nutrición en la colitis ulcerosa?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="La buena nutrición es esencial en cualquier enfermedad crónica pero especialmente en ésta, porque la diarrea y el sangrado rectal pueden privar al cuerpo de líquidos, electrolitos y nutrientes. El mantenimiento de la nutrición adecuada es importante en el tratamiento de la colitis ulcerosa.
+\n\nNo hay alimentos específicos que jueguen un papel en causar la enfermedad. Sin embargo puede usted encontrar que los alimentos blandos y suaves pueden causar menos molestia que los condimentados o altos en fibra cuando la enfermedad está activa. Con la excepción de restringir los productos lácteos en pacientes intolerantes a la lactosa  o la cafeína cuando hay diarrea severa, la mayoría de los gastroenterólogos recomiendan una dieta bien balanceada para sus pacientes."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Puede el estrés emocional activar los ataques de la colitis ulcerosa?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Debido a que el cuerpo y la mente están muy interrelacionados, el estrés emocional puede influir en los síntomas de la colitis ulcerosa o, para el caso, cualquier enfermedad crónica. Aunque la enfermedad ocasionalmente recurre después de que el paciente ha experimentado problemas emocionales, no existe prueba que el estrés cause colitis ulcerosa.
+\n\nEs mucho más probable que la angustia emocional que los pacientes algunas veces sienten es una reacción a los síntomas de la misma enfermedad. Por lo tanto, las personas con colitis ulcerosa deberán recibir comprensión y apoyo emocional de sus familias y médicos. CCFA ofrece grupos locales de apoyo mutuo para ayudar a los pacientes y sus familias a hacer frente a la colitis ulcerosa y a la enfermedad de Crohn."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Es posible llevar una vida normal con colitis ulcerosa?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Aunque la colitis ulcerosa es una enfermedad crónica seria, no es mortal. Algunos pacientes experimentan síntomas cuya intensidad puede oscilar en ocasiones de leve a grave. La mayoría de las personas con colitis ulcerosa continúa llevando una vida normal, útil y productiva, aunque puedan necesitar tomar medicamentos y ocasionalmente necesiten ser hospitalizados. Los medicamentos de mantenimiento han demostrado reducir significativamente los brotes de colitis ulcerosa. Entre los brotes de la enfermedad, la mayoría de los pacientes se sienten bien y están relativamente libres de síntomas.
+"
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Qué causa la colitis ulcerosa?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Los investigadores desconocen la causa de esta enfermedad. No se cree que sea causada por estrés emocional o por alimentos, o que sea transmitida directamente de persona a persona. Los estudios de investigación han indicado que la inflamación en los casos de enfermedad inflamatoria intestinal involucra una interacción compleja entre los genes heredados por el paciente, su sistema inmunológico y algunos elementos del medio ambiente. Sustancias extrañas (antígenos) en el ambiente pueden ser la causa directa de la inflamación, o pueden estimular las defensas del cuerpo para producir inflamación que continua sin control. Los investigadores creen que una vez que el sistema inmunológico del paciente con IBD es &quot;detonado&quot;, no sabe como &quot;apagarse&quot; adecuadamente en el tiempo correcto. Como resultado, la inflamación daña el intestino y causa los síntomas de IBD. Es por esto que la meta principal de la terapia médica es ayudar a los pacientes a regular mejor su sistema inmunológico.
+\n\nMuchos estudios han sido llevados a cabo en los campos de inmunología, el estudio del sistema de defensa del cuerpo; microbiología, el estudio de los organismos microscópicos con poder suficiente para causar enfermedad; y genética. Muchos científicos ahora creen que la interacción de un agente externo (tal como un virus o bacteria) con el sistema inmunológico del cuerpo puede detonar la enfermedad o que dicho agente puede causar daño a la pared intestinal, iniciando o acelerando el proceso de la enfermedad. A través de nuestros esfuerzos de investigación, se aprenderá mucho más de la enfermedad y esto llevará a encontrar mejores tratamientos, prevención y, finalmente, una cura."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"
+                    android:layout_marginBottom="12dp"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btn_pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/rojo"
+        android:text="@string/descargar_en_pdf"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:strokeColor="@color/borde_rojo"
+        app:strokeWidth="1dp"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:translationZ="1dp"/>
+
+</LinearLayout>

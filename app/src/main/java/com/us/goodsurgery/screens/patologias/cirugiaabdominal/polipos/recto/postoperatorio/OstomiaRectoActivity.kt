@@ -10,9 +10,13 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.PrincipalActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.colon.postoperatorio.OstomiaColostomiaColonActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.colon.postoperatorio.OstomiaIleostomiaColonActivity
 
 class OstomiaRectoActivity : AppCompatActivity() {
 
+    private lateinit var btnOstomiaIleostomia:Button
+    private lateinit var btnOstomiaColostomia:Button
     private lateinit var btnVolverAtras: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,6 +64,22 @@ class OstomiaRectoActivity : AppCompatActivity() {
             }
 
             dialog.show()
+        }
+
+
+        // Lógica de la navegación
+
+        btnOstomiaColostomia = findViewById(R.id.btn_ostomia_colostomia)
+        btnOstomiaColostomia.setOnClickListener{
+            intent = Intent(this, OstomiaColostomiaRectoActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        btnOstomiaIleostomia = findViewById(R.id.btn_ostomia_ileostomia)
+        btnOstomiaIleostomia.setOnClickListener{
+            intent = Intent(this, OstomiaIleostomiaRectoActivity::class.java)
+            startActivity(intent)
         }
     }
 }

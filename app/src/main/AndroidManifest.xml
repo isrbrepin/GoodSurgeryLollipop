@@ -4,8 +4,7 @@
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -17,6 +16,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoodSurgery"
         tools:targetApi="31">
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.recto.postoperatorio.OstomiaIleostomiaRectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.recto.postoperatorio.OstomiaColostomiaRectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.recto.postoperatorio.DietaInviernoRectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.recto.postoperatorio.DietaVeranoRectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.recto.postoperatorio.DietasRectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.colon.postoperatorio.OstomiaIleostomiaColonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.colon.postoperatorio.OstomiaColostomiaColonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.colon.postoperatorio.DietaInviernoColonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.colon.postoperatorio.DietaVeranoColonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.patologias.cirugiaabdominal.polipos.colon.postoperatorio.DietasColonActivity"
+            android:exported="false" />
         <activity
             android:name=".screens.patologias.cirugiaabdominal.reconstruccion.ileostomia.postoperatorio.DietaInviernoIleostomiaActivity"
             android:exported="false" />

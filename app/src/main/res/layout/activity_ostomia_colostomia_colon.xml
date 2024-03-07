@@ -1,0 +1,325 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="0dp"
+    android:layout_marginVertical="0dp"
+    android:background="@drawable/fondo"
+    android:orientation="vertical">
+
+    <!-- Incluir el header reutilizable -->
+    <include layout="@layout/activity_header_con_atras" />
+
+    <TextView
+        android:id="@+id/text_ileostomia"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@drawable/pagactual2_sin_curvas_drawable"
+        android:layout_height="@dimen/dimen_titulo"
+        android:text="@string/polipo_colon"
+        android:textSize="22sp"
+        android:textColor="@color/letras_oscuras"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:elevation="20dp"
+        android:background="@drawable/pagactual_drawable"
+        android:layout_height="@dimen/dimen_subtitulo"
+        android:text="@string/text_ostomia"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        app:cardCornerRadius="20dp">
+        <!-- Envuelve solo el último TextView en un ScrollView -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="true"
+            android:scrollbarFadeDuration="500">
+
+            <!-- Contenedor para los TextViews -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="RECOMENDACIONES AL ALTA DE LA UNIDAD DE OSTOMIAS PARA PACIENTES CON COLOSTOMIA"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_titulo_azul" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Recomendaciones de salud:"
+                    android:textSize="16sp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:background="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/text_ostomia1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_ostomia1"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_ostomia2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_ostomia2"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="RECOMENDACIONES  para pacientes ostomizados.
+\nUnidad de ostomía. Teléfono: 955012298 (de 9 a 13h. De lunes a viernes)
+\n\nCuando alguien como usted tiene que afrontar una situación como es salir del hospital con un estoma, debe aprender a vivir con algunos cambios en sus hábitos de vida.
+\nCon estos cuidados pretendemos recordarle la información recibida durante el período de hospitalización.
+\nUsted tiene practicada una COLOSTOMÍA. Esto es la salida del colon o intestino grueso a través del abdomen.
+
+\n\nActividad:
+\nSu organismo necesitará varias semanas para recuperarse del todo, y es probable que se canse con facilidad. Son útiles los ejercicios de bajo esfuerzo, por ejemplo caminar, descansando frecuentemente.
+\nEvite las actividades físicas enérgicas, como tareas domésticas pesadas (coger un cubo de agua, limpiar el cuarto de baño...) Levantar pesos mayores durante 6-8 semanas.
+\nLimite la subida repetida de escaleras durante 1ó 2 semanas, aumentando de forma gradual.
+
+\n\nHigiene:
+\nLa higiene y cuidado de su estoma forma parte del aseo personal.
+\nLimpie el estoma y la piel con agua, esponja y papel de celulosa suave, su estoma puede sangrar si lo frota, si esto sucede presione suavemente con la esponja humedecida en agua fría, aclare y seque la piel con papel de celulosa o toalla suave.
+\nColoque el dispositivo (bolsa) de abajo hacia arriba, ajustándolo bien alrededor del estoma. Recuerde que el estoma puede sufrir modificaciones en su tamaño. El ajuste es correcto cuando existe uno o dos milímetros entre el estoma y la piel de alrededor.
+\nEl dispositivo se cambia cuando está prácticamente por la mitad. Quitarlo de forma frecuente puede provocar irritaciones y pequeñas heridas en la piel.
+Compruebe al hacer el cambio de la bolsa la coloración y la integridad de la piel. Use el dispositivo recomendado por el profesional que le ha atendido en el hospital.
+\nSi plantea algún problema (se despega, la piel se enrojece... etc) consulte con la Unidad de ostomía.
+\nEvite aplicar cremas o aceites que dificulten la adherencia del dispositivo o bolsa. Usted puede ducharse con la bolsa o sin ella. Lleve siempre una bolsa y un disco (si utiliza dispositivo de dos piezas) de repuesto cuando salga de casa, puede necesitarla. Puede seguir vistiendo como antes de la intervención, pero no utilice elásticos y cinturones que friccionen el estoma, ya que pueden dañar y provocar pequeñas úlceras o sangrado.
+"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:background="@android:color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Manejo de la nutrición.
+\nLas únicas restricciones dietéticas serán sólo las que tuviese anteriormente a la intervención por otras razones médicas o patologías (diabetes, hipertensión... etc.
+\nTome una dieta equilibrada (carne, pescado, huevo, fruta, verdura... etc), esto favorece la cicatrización y evitará el estreñimiento.
+\nBeba abundante líquido y evite las bebidas gaseosas. Mastique lentamente para evitar tragar aire (así disminuirán los gases.)
+\nSe le recomienda la dieta progresiva hacia su normalidad, rica en fibras.
+\n\nRecomendaciones en caso de DIARREA o heces líquidas:
+\n\nLas heces líquidas son un hecho normal después de los tratamientos de quimio o radioterapia. Por otro lado, un paciente Ostomizado, como cualquier persona, puede experimentar diarrea después de haber ingerido algún alimento determinado.
+\n\n\nLos alimentos aconsejables en caso de diarrea son:
+\n- Pan blanco y tostado con aceite crudo.
+\n- Abundante líquido:
+"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="- Agua.
+ 	\n- Infusiones astringentes.
+ 	\n- Licuados de frutas y verduras (ya que no aportan fibra).
+"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_ostomia3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_ostomia3"
+                    android:textSize="16sp"
+                    android:autoLink="web"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:background="@android:color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="A continuación proponemos un menú en caso de excesivas flatulencias:
+\n\n MENÚ PARA LAS FLATULENCIAS.-"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageViewLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="16dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/menu_flatulencias"
+                    android:contentDescription="@string/text_logo_app" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:background="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/text_ostomia4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_ostomia4"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_ostomia5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_ostomia5"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_ostomia6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_ostomia6"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_ostomia7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_ostomia7"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_ostomia8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_ostomia8"
+                    android:textSize="16sp"
+                    android:autoLink="web"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:background="@android:color/black"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btn_pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/rojo"
+        android:text="@string/descargar_en_pdf"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:strokeColor="@color/borde_rojo"
+        app:strokeWidth="1dp"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:translationZ="1dp"/>
+
+</LinearLayout>

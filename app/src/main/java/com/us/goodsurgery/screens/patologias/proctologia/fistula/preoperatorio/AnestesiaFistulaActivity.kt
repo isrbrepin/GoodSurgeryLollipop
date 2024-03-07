@@ -45,18 +45,23 @@ class AnestesiaFistulaActivity : AppCompatActivity() {
 
         btnPdf = findViewById(R.id.btn_pdf)
 
-        btnPdf.setOnClickListener(View.OnClickListener {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this,
+        btnPdf.setOnClickListener {
+            // Verificar la versión de Android del dispositivo
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q && ContextCompat.checkSelfPermission(
+                    this, Manifest.permission.WRITE_EXTERNAL_STORAGE
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                // Para Android 9 (Pie) o inferior, solicitar permiso de almacenamiento
+                ActivityCompat.requestPermissions(
+                    this,
                     arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
                     InfoEstomaActivity.MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE
                 )
             } else {
+                // Para Android 10 (Q) o superior, no es necesario el permiso para escribir en el almacenamiento específico de la app
                 downloadPdf()
             }
-
-        })
+        }
 
         // Lógica de la Header
 
@@ -101,119 +106,37 @@ class AnestesiaFistulaActivity : AppCompatActivity() {
             dialog.show()
         }
     }
+
     private fun downloadPdf() {
-
-        // Verifica si tienes el permiso de escritura en el almacenamiento externo
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-            != PackageManager.PERMISSION_GRANTED) {
-            // Si no tienes permiso, muestra un mensaje o solicita el permiso nuevamente (según el flujo de tu app)
-            Toast.makeText(this, "Permiso de almacenamiento externo necesario", Toast.LENGTH_LONG).show()
-            // Puedes optar por solicitar el permiso aquí o simplemente regresar y no proceder con la descarga
-            return
-        }
         val assetFileName = "Instrucciones EPA CMA.pdf"
-        val channelId = "download_notification"
-        val notificationId = 1
-
-        // Crear el NotificationChannel, pero solo para API 26+ porque
-        // la clase NotificationChannel es nueva y no está en la biblioteca de soporte
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val name = getString(R.string.descargar_en_pdf)
-            val descriptionText = getString(R.string.descargar_en_pdf)
-            val importance = NotificationManager.IMPORTANCE_DEFAULT
-            val channel = NotificationChannel(channelId, name, importance).apply {
-                description = descriptionText
-            }
-            // Registrar el canal en el sistema
-            val notificationManager: NotificationManager =
-                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-            notificationManager.createNotificationChannel(channel)
-        }
-
-        val builder = NotificationCompat.Builder(this, channelId).apply {
-            setContentTitle("Descargando PDF")
-            setContentText("Descarga en progreso")
-            setSmallIcon(R.drawable.icono_oscuro)
-            setPriority(NotificationCompat.PRIORITY_LOW)
-            setOngoing(true)
-            // Para versiones de Android menores, es recomendable usar NotificationCompat
-            setProgress(0, 0, true)
-        }
-
-        val notificationManager = NotificationManagerCompat.from(this)
-
-        // Mostrar notificación de inicio de descarga
-        notificationManager.notify(notificationId, builder.build())
-
         try {
-            val inputStream = assets.open(assetFileName)
-            val downloadFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+            // Abre el archivo desde los assets
+            assets.open(assetFileName).use { inputStream ->
+                // Define el archivo de destino en el almacenamiento específico de la aplicación
+                val file = File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), assetFileName)
 
-            var file = File(downloadFolder, assetFileName)
-            var fileName = assetFileName
-
-            // Verifica si el archivo ya existe y ajusta el nombre consecuentemente
-            var fileNumber = 0
-            while (file.exists()) {
-                fileNumber++
-                val fileNameWithoutExtension = assetFileName.substringBeforeLast(".")
-                val fileExtension = assetFileName.substringAfterLast(".", "")
-                fileName = "$fileNameWithoutExtension ($fileNumber).$fileExtension"
-                file = File(downloadFolder, fileName)
+                // Escribe el contenido del archivo de assets al archivo de destino
+                FileOutputStream(file).use { outputStream ->
+                    inputStream.copyTo(outputStream)
+                }
             }
-
-            val outputStream: FileOutputStream = FileOutputStream(file)
-            inputStream.copyTo(outputStream)
-            outputStream.flush()
-            outputStream.close()
-            inputStream.close()
 
             // Crear un Intent para abrir el archivo con una aplicación de PDF
             val fileUri = FileProvider.getUriForFile(
                 this,
-                "${BuildConfig.APPLICATION_ID}.provider", // Asegúrate de que esto coincida con tu autoridad de FileProvider definida en AndroidManifest.xml
-                file
+                "${BuildConfig.APPLICATION_ID}.provider",
+                File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), assetFileName)
             )
 
             val openIntent = Intent(Intent.ACTION_VIEW).apply {
                 setDataAndType(fileUri, "application/pdf")
                 flags = Intent.FLAG_GRANT_READ_URI_PERMISSION
             }
-
-            val openPendingIntent: PendingIntent = PendingIntent.getActivity(
-                this, 0, openIntent, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
-            )
-
-            // Actualizar la notificación para mostrar la descarga completa
-            // Actualizar la notificación para mostrar la descarga completa
-            builder.setContentText("Descarga completa").setContentTitle("Se ha descargado $fileName.")
-                .setProgress(0, 0, false) // Remover el modo indeterminado
-                .setOngoing(false) // Remover la notificación de ser "en curso"
-                .setContentIntent(openPendingIntent) // Establecer el PendingIntent para abrir el PDF
-            notificationManager.notify(notificationId, builder.build())
-
-
-            Toast.makeText(this, "Se ha descargado $fileName.", Toast.LENGTH_LONG).show()
+            startActivity(openIntent)
         } catch (e: IOException) {
             e.printStackTrace()
-            Toast.makeText(this, "Error al descargar el archivo: ${e.message}", Toast.LENGTH_LONG).show()
-
-            // Actualizar la notificación para indicar el fallo en la descarga
-            builder.setContentText("Error en la descarga")
-                .setProgress(0, 0, false) // Remover el modo indeterminado
-                .setOngoing(false) // Remover la notificación de ser "en curso"
-            notificationManager.notify(notificationId, builder.build())
-        }
-    }
-
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == InfoEstomaActivity.MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE) {
-            if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
-                downloadPdf()
-            } else {
-                Toast.makeText(this, "Permiso de almacenamiento denegado", Toast.LENGTH_SHORT).show()
-            }
+            Toast.makeText(this, "Error al descargar el archivo: ${e.message}", Toast.LENGTH_LONG)
+                .show()
         }
     }
 }

@@ -12,6 +12,7 @@ import androidx.appcompat.app.AlertDialog
 import com.us.goodsurgery.R
 import com.us.goodsurgery.screens.PrincipalActivity
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.colon.postoperatorio.AltaColonActivity
+import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.colon.postoperatorio.DietasColonActivity
 import com.us.goodsurgery.screens.patologias.cirugiaabdominal.polipos.colon.postoperatorio.OstomiaColonActivity
 
 class PostoperatorioRectoActivity : AppCompatActivity() {
@@ -19,6 +20,7 @@ class PostoperatorioRectoActivity : AppCompatActivity() {
     private lateinit var btnAlta:Button
     private lateinit var btnOstomia:Button
     private lateinit var btnVolverAtras: ImageButton
+    private lateinit var btnDietasAlta:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -79,6 +81,12 @@ class PostoperatorioRectoActivity : AppCompatActivity() {
         btnOstomia = findViewById(R.id.btn_ostomia)
         btnOstomia.setOnClickListener{
             intent = Intent(this, OstomiaRectoActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnDietasAlta = findViewById(R.id.btn_dietas_al_alta)
+        btnDietasAlta.setOnClickListener{
+            intent = Intent(this, DietasRectoActivity::class.java)
             startActivity(intent)
         }
     }

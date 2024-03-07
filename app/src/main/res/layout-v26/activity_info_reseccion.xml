@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="0dp"
+    android:layout_marginVertical="0dp"
+    android:background="@drawable/fondo"
+    android:orientation="vertical">
+
+    <!-- Incluir el header reutilizable -->
+    <include layout="@layout/activity_header_con_atras" />
+
+
+    <!-- Resto del contenido -->
+    <TextView
+        android:id="@+id/text_ileostomia"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@drawable/pagactual2_sin_curvas_drawable"
+        android:layout_height="@dimen/dimen_titulo"
+        android:text="@string/enfermedad_de_crohn"
+        android:textSize="22sp"
+        android:textColor="@color/letras_oscuras"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:elevation="20dp"
+        android:background="@drawable/pagactual_drawable"
+        android:layout_height="@dimen/dimen_subtitulo"
+        android:text="@string/text_info_proceso"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        app:cardCornerRadius="20dp">
+        <!-- Envuelve solo el último TextView en un ScrollView -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="true"
+            android:scrollbarFadeDuration="500">
+
+            <!-- Contenedor para los TextViews -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margen_texto_contenido"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="ENFERMEDAD DE CROHN"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Qué Es La Enfermedad De Crohn?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp">
+                <!-- Texto antes de la imagen -->
+                    <TextView
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="En 1932, el Dr. Burrill B. Crohn, el Dr. Leon Ginzburg y el Dr. Gordon D. Oppenheimer publicaron un trabajo que marcó un hito en la descripción de las "
+                        android:textSize="16sp"
+                        android:justificationMode="inter_word"/>
+
+                    <!-- Imagen -->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/imagen_info_crohn1"
+                        android:layout_gravity="center_vertical"/>
+
+
+                </LinearLayout>
+                <!-- Texto después de la imagen -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="características clínicas de lo que ahora es conocido como la enfermedad de Crohn. La enfermedad de Crohn y una enfermedad relacionada, la colitis ulcerosa, son las principales divisiones del grupo de enfermedades llamadas enfermedades inflamatorias gastrointestinales (IBD)."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/imagen_info_crohn2"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Debido a que los síntomas de estas dos enfermedades son tan similares aproximadamente en el 10 por ciento de los casos no es posible diagnosticar definitivamente si es colitis ulcerosa o enfermedad de Crohn. En ambas enfermedades, hay una respuesta inmunológica anormal. Las células de glóbulos blancos se infiltran en la pared intestinal, causando inflamación crónica. Entonces estas células producen productos nocivos que llevan finalmente a lesionar el tejido. Cuando esto sucede, el paciente experimenta los síntomas de IBD. La causa precisa de una inflamación crónica asociada con IBD no es conocida.
+\n\nA pesar que la enfermedad de Crohn afecta más comúnmente el final del intestino delgado (el ilión) y el principio del intestino grueso (el colon), puede involucrar cualquier parte del tracto gastrointestinal (GI). Por otro lado, la colitis ulcerosa limita su participación GI al colon. En la enfermedad de Crohn, todas las capas del intestino pueden estar involucradas y puede haber partes sanas entre tramos del intestino enfermo. En contraste la colitis ulcerosa afecta únicamente las capas superficiales (la mucosa) del colon en una distribución más pareja y continua que inicia al nivel del ano. Dependiendo de cual parte de su intestino esté afectado por la enfermedad de Crohn, su doctor puede referirse a su enfermedad como ileítis (inflamación del ilión), ileocolitis (inflamación de ambos, el ilión y el colon), colitis de Crohn (inflamación del colon solamente), etc.
+"
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/imagen_info_crohn3"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Qué Tan Común Es La Enfermedad Intestinal Inflamatoria (Ibd)?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Se estima que hay hasta 1,000,000 de norteamericanos con IBD. Los hombres y las mujeres parecen ser igualmente afectados. La enfermedad de Crohn puede afectar a personas de todas las edades, pero es principalmente una enfermedad de adultos jóvenes. La mayoría de los casos se diagnostica en pacientes de menos de 30 años de edad, si bien un número mucho menor de pacientes puede presentar dicha enfermedad entre los 50 y los 70 años de edad.Sin embargo, la enfermedad puede presentarse en niños pequeños o en personas en los setentas o aún mayores. "
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Es La Enfermedad De Crohn Hereditaria?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Sabemos que la enfermedad de Crohn tiende a ocurrir en familias y ciertos grupos étnicos. Estudios han demostrado que del 20 al 25 por ciento de los pacientes pueden tener un familiar cercano ya sea con enfermedad de Crohn o colitis ulcerosa. Se ha estimado que aproximadamente de 5 a 8 por ciento de pacientes con enfermedad de Crohn pueden tener un pariente en primer grado (hermano, hermana, padre o hijo) con IBD. No parece haber un patrón claro de agrupamiento familiar, y los patrones hereditarios son probablemente muy complejos. Los investigadores están tratando activamente de establecer un vínculo de genes específicos que pueden gobernar la transmisión de esta enfermedad. Los datos sugieren que más de un gen puede estar involucrado. Por el momento, no hay manera para predecir cual, si alguno, de los miembros de la familia desarrollarán la enfermedad de Crohn."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Cuáles Son Los Síntomas?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Los síntomas comunes incluyen movimientos intestinales frecuentes, sueltos o líquidos. Otros síntomas son espasmos abdominales, fiebre y algunas veces sangrado rectal. Pérdida de apetito y pérdida subsecuente de peso también pueden ocurrir. Durante los períodos de síntomas activos, los pacientes también pueden experimentar fatiga, dolores articulares y posibles problemas cutáneos. Algunos pacientes pueden desarrollar grietas en la pared anal (fisuras) que pueden causar dolor y sangrado especialmente durante los movimientos intestinales. La inflamación también puede causar que una fístula se desarrolle. Esta es un túnel que lleva de un tramo de intestino a otro o que conecta el intestino con la vejiga, vagina o piel. Las fístulas ocurren más comúnmente alrededor del área anal. Si estas complicaciones suceden, usted puede notar que hay drenaje de mucosa, pus o deposiciones por esta abertura. Debido a que la enfermedad de Crohn es una enfermedad crónica, los pacientes experimentarán períodos de brotes, seguidos por períodos de remisión. Pero en general, las personas con enfermedad de Crohn llevan una vida activa y productiva."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Cómo Se Diagnostica La Enfermedad De Crohn? "
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="No existe un examen único que inequívocamente diagnostique la enfermedad de Crohn. Para determinar el diagnóstico, los doctores consideran una combinación de información de la historia del paciente y un examen médico."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/imagen_info_crohn4"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Examinan los resultados de los exámenes de laboratorio, rayos X y los hallazgos de los exámenes endoscópicos y patológicos y excluyen otras causas conocidas de inflamación intestinal. Los exámenes con rayos X pueden incluir rayos X con Barium de la parte superior e inferior del tracto gastrointestinal (GI). Los exámenes endoscópicos pueden incluir sigmoidoscopía flexible y algunas veces colonoscopía, que permite al doctor examinar directamente el colon con un tubo iluminado que se inserta a través del ano. Durante estos exámenes pueden obtenerse biopsias. Es importante asegurarse que una infección no este causando los síntomas al paciente, así que exámenes de las heces fecales son hechos de rutina para buscar organismos nocivos. "
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/imagen_info_crohn5"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Debido a que la enfermedad de Crohn a menudo imita otras condiciones y los síntomas pueden variar ampliamente, un diagnóstico correcto puede llevar algún tiempo."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Qué Medicamentos Son Usados Para Tratar Esta Enfermedad?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/text_crohn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_crohn1"
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:id="@+id/text_crohn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="@string/text_crohn2"
+                    android:textSize="14sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Cuál Es El Papel De La Cirugía En La Enfermedad De Crohn?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="La cirugía llega a ser necesaria en la enfermedad de Crohn cuando el medicamento ya no controla los síntomas o cuando hay una obstrucción intestinal u otras complicaciones, tales como abscesos intestinales. En la mayoría de los casos, se remueve el segmento del intestino enfermo y cualquier absceso asociado (resección). Los dos extremos saludables del intestino se unen entonces (anastomosis). Mientras la resección y la anastomosis puede permitir muchos años libres de síntomas, esta cirugía no es considerada una cura para la enfermedad de Crohn, porque recurre frecuentemente cerca o en el sitio de la anastomosis.
+\n\nTambién puede requerirse una ileostomía cuando la cirugía es efectuada debido a la enfermedad de Crohn en el colon. Después de que el cirujano remueve el colon, trae el intestino delgado hacia la piel para que los desechos puedan ser vaciados en una bolsa adherida al abdomen. Este procedimiento es necesario si el recto esta enfermo y no puede ser usado para una anastomosis.
+\n\nLa cirugía también puede ser efectuada para reparar una fístula o fisura.
+"
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Cuál Es El Papel De La Cirugía En La Enfermedad De Crohn?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Una buena nutrición es esencial en cualquier enfermedad crónica pero especialmente en esta enfermedad, que se caracteriza por reducción del apetito, pobre absorción y diarrea. Todos estos síntomas privan al cuerpo de líquidos, nutrientes, vitaminas y minerales. Restaurar y mantener una nutrición adecuada es parte vital en el manejo médico de la enfermedad de Crohn.
+\n\nLos alimentos parecen no desempeñar ningún papel en las causas de la enfermedad. Sin embargo alimentos blandos y suaves pueden causar menos molestia que los condimentados o altos en fibra, cuando la enfermedad de Crohn está activa. Excepto por la restricción de leche para los pacientes que no toleran la lactosa, la mayoría de los gastroenterólogos tratan de ser flexibles en la planificación de dietas para sus pacientes con enfermedad de Crohn."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Puede el estrés emocional activar los ataques de la enfermedad de crohn?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Debido a que el cuerpo y la mente están intrínsecamente relacionados el estrés emocional puede influenciar el desarrollo de la enfermedad de Crohn o, para el caso, cualquier otra enfermedad crónica. Aunque ocasionalmente las personas experimentan problemas emocionales antes de un brote de su enfermedad esto no implica que el estrés emocional cause la enfermedad.
+\n\nEs mucho más probable que la angustia emocional sentida algunas veces por personas con enfermedad de Crohn sea una reacción a los síntomas de la misma enfermedad. Las personas con enfermedad de Crohn deberán recibir comprensión y apoyo emocional de sus familiares y médicos. Algunos pacientes son ayudados considerablemente por un terapeuta que tenga conocimientos acerca de IBD o de enfermedades crónicas en general. La CCFA ofrece grupos locales de apoyo para ayudar a los pacientes y a su familia a sobrellevar la IBD."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Es Posible Llevar Una Vida Normal Con Enfermedad De Crohn?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="Mientras que la enfermedad de Crohn es una enfermedad crónica seria, no es considerada mortal. La mayoría de las personas que sufren de esta enfermedad continúan llevando una vida útil y productiva aunque deban hospitalizarse en ocasiones y puedan necesitar tomar medicamentos. Cada paciente es diferente y la intensidad de la enfermedad puede variar en ocasiones de leve a moderada a grave. En los lapsos entre uno y otro brote de la enfermedad, la mayoría de las personas se sienten bien y están relativamente libres de síntomas.
+\n\nAunque no hay cura para esta enfermedad al momento, los programas de investigación y educación de la CCFA ya han mejorado la salud y la calidad de vida de las personas con enfermedad de Crohn."
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:text="¿Qué Causa La Enfermedad De Crohn?"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="@dimen/margen_texto_contenido"
+                    android:layout_marginEnd="@dimen/margen_texto_contenido"
+                    android:layout_marginBottom="12dp"
+                    android:text="Aunque se han hecho progresos considerables en la investigación del IBD, los investigadores aún no saben qué causa esta enfermedad. No creen que sea causada por estrés emocional o por alimentos o que sea transmitida directamente de persona a persona.
+\n\nLas investigaciones han mostrado que la inflamación en IBD involucra una compleja interacción de genes que el paciente ha heredado, el sistema inmunológico y algo en el ambiente. Sustancias extrañas (antígenos) en el medio ambiente pueden ser directamente causantes de la inflamación o pueden estimular las defensas del cuerpo para que produzcan una inflamación que continua fuera de control. Los investigadores creen que una vez que el sistema inmunológico del paciente con IBD es &quot;detonado&quot;, no sabe como &quot;apagarse&quot; adecuadamente en el tiempo correcto. Como resultado, la inflamación daña el intestino y causa los síntomas del IBD. Esta es la razón que la meta principal de la terapia médica es ayudar a los pacientes a regular su sistema inmunológico mejor.
+\n\nEl principal impulso a la investigación ha sido efectuado en los campos de la inmunología, el estudio del sistema de defensa del cuerpo; microbiología, el estudio de organismos microscópicos con el poder de causar enfermedades; y la genética. Muchos científicos ahora creen que la interacción de un agente externo (tal como un virus o bacteria) con el sistema inmunológico del cuerpo puede activar la enfermedad, o que tal agente puede causar daño a la pared intestinal, iniciando o acelerando el proceso de la enfermedad. A través del continuo esfuerzo de investigación, se aprenderá mucho más de la enfermedad y esto llevará a encontrar mejores tratamientos, prevención y finalmente, una cura.
+"
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word" />
+
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btn_pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/rojo"
+        android:text="@string/descargar_en_pdf"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:strokeColor="@color/borde_rojo"
+        app:strokeWidth="1dp"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:translationZ="1dp"/>
+
+</LinearLayout>
